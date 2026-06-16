@@ -1,0 +1,33 @@
+<section class="farm-hero">
+  <div class="farm-hero__content">
+    <p class="farm-hero__eyebrow">Cal Poly Pomona Farm Store</p>
+
+    <h1>Fresh from the farm, built for your table.</h1>
+
+    <p class="farm-hero__text">
+      Discover seasonal produce, local favorites, student-grown products, and exclusive rewards through a modern Farm Store shopping experience.
+    </p>
+
+    <div class="farm-hero__buttons">
+      <a href="/collections/all" class="farm-hero__btn farm-hero__btn--primary">
+        Shop Products
+      </a>
+
+      <a href="/pages/loyalty-rewards" class="farm-hero__btn farm-hero__btn--secondary">
+        Join Loyalty Rewards
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Farm Hero",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm Hero"
+    }
+  ]
+}
+{% endschema %} 

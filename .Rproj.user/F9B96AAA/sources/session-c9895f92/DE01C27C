@@ -1,0 +1,26 @@
+{
+    "id": "DE01C27C",
+    "path": "~/Documents/FarmStoreProject/cpp-farm-store-theme/sections/seasonal-harvest.liquid",
+    "project_path": "sections/seasonal-harvest.liquid",
+    "type": "text",
+    "hash": "2986664374",
+    "contents": "",
+    "dirty": false,
+    "created": 1781632293825.0,
+    "source_on_save": false,
+    "relative_order": 8,
+    "properties": {
+        "source_window_id": "",
+        "Source": "Source1",
+        "cursorPosition": "36,0",
+        "scrollLine": "0"
+    },
+    "folds": "",
+    "lastKnownWriteTime": 1781632615,
+    "encoding": "UTF-8",
+    "collab_server": "",
+    "source_window": "",
+    "last_content_update": 1781632615086,
+    "read_only": false,
+    "read_only_alternatives": []
+}
