@@ -434,3 +434,137 @@
     grid-template-columns: 1fr;
   }
 }
+
+.farm-newsletter {
+  padding: 100px 8%;
+  background: #4e3a32;
+  color: #ffffff;
+  text-align: center;
+}
+
+.farm-newsletter__content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.farm-newsletter__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 900;
+  color: #bf9568;
+  margin-bottom: 14px;
+}
+
+.farm-newsletter h2 {
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1;
+  margin: 0 0 22px;
+  color: #ffffff;
+}
+
+.farm-newsletter__content > p {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 0 auto 34px;
+  max-width: 720px;
+  color: #f7f2ea;
+}
+
+.farm-newsletter__form {
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.farm-newsletter__fields {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.farm-newsletter__fields input {
+  width: 100%;
+  padding: 18px 22px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  outline: none;
+}
+
+.farm-newsletter__fields input:focus {
+  border-color: #bf9568;
+}
+
+.farm-newsletter__checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  text-align: left;
+  max-width: 720px;
+  margin: 0 auto 24px;
+  color: #f7f2ea;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.farm-newsletter__checkbox input {
+  margin-top: 4px;
+  width: 18px;
+  height: 18px;
+  accent-color: #bf9568;
+}
+
+.farm-newsletter__form button {
+  padding: 18px 34px;
+  border-radius: 999px;
+  border: none;
+  background: #bf9568;
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.farm-newsletter__form button:hover {
+  background: #ffffff;
+  color: #4e3a32;
+}
+
+.farm-newsletter__success {
+  background: #ffffff;
+  color: #4e3a32;
+  padding: 16px 22px;
+  border-radius: 18px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.farm-newsletter__error {
+  background: #fff0f0;
+  color: #8a1f1f;
+  padding: 16px 22px;
+  border-radius: 18px;
+  font-weight: 800;
+  margin-bottom: 20px;
+}
+
+.farm-newsletter__note {
+  font-size: 0.95rem !important;
+  color: #ffffff !important;
+  opacity: 0.8;
+  margin-top: 22px !important;
+}
+
+@media (max-width: 700px) {
+  .farm-newsletter {
+    padding: 75px 6%;
+  }
+
+  .farm-newsletter__fields {
+    grid-template-columns: 1fr;
+  }
+
+  .farm-newsletter__form button {
+    width: 100%;
+  }
+}

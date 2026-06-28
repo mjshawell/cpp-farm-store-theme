@@ -1,0 +1,78 @@
+<section class="farm-newsletter">
+  <div class="farm-newsletter__content">
+    <p class="farm-newsletter__eyebrow">Stay Connected</p>
+
+    <h2>Get seasonal Farm Store updates.</h2>
+
+    <p>
+      Sign up for fresh produce alerts, seasonal product drops, pickup reminders,
+      loyalty rewards, and exclusive Farm Store announcements.
+    </p>
+
+    {% form 'customer', class: 'farm-newsletter__form' %}
+
+      {% if form.posted_successfully? %}
+        <div class="farm-newsletter__success">
+          Thanks for signing up! You’re now on the list for Farm Store updates.
+        </div>
+      {% endif %}
+
+      {% if form.errors %}
+        <div class="farm-newsletter__error">
+          Please check your information and try again.
+        </div>
+      {% endif %}
+
+      <div class="farm-newsletter__fields">
+        <input
+          type="text"
+          name="contact[first_name]"
+          placeholder="First name"
+          aria-label="First name"
+        >
+
+        <input
+          type="email"
+          name="contact[email]"
+          placeholder="Email address"
+          aria-label="Email address"
+          required
+        >
+      </div>
+
+      <label class="farm-newsletter__checkbox">
+        <input
+          type="checkbox"
+          name="contact[accepts_marketing]"
+          value="true"
+          required
+        >
+        <span>
+          Yes, send me Farm Store emails about seasonal produce, product drops,
+          promotions, events, and loyalty rewards.
+        </span>
+      </label>
+
+      <button type="submit">
+        Join Newsletter
+      </button>
+
+    {% endform %}
+
+    <p class="farm-newsletter__note">
+      You can unsubscribe at any time. No spam — just fresh updates from the CPP Farm Store.
+    </p>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Farm Newsletter",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm Newsletter"
+    }
+  ]
+}
+{% endschema %}

@@ -35,6 +35,11 @@
       "settings": {}
     },
 
+    "farm_newsletter": {
+      "type": "farm-newsletter",
+      "settings": {}
+    },
+
     "main": {
       "type": "hello-world",
       "settings": {}
@@ -49,6 +54,7 @@
     "seasonal_harvest",
     "loyalty_rewards",
     "farm_story",
+    "farm_newsletter",
     "main"
   ]
 }
