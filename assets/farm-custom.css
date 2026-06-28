@@ -322,3 +322,115 @@
   margin: 0;
   font-size: 0.95rem;
 }
+
+.featured-products-custom {
+  padding: 100px 8%;
+  background: #ffffff;
+}
+
+.featured-products-custom__header {
+  max-width: 850px;
+  margin-bottom: 48px;
+}
+
+.featured-products-custom__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 900;
+  color: #bf9568;
+  margin-bottom: 12px;
+}
+
+.featured-products-custom h2 {
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1;
+  color: #4e3a32;
+  margin: 0 0 20px;
+}
+
+.featured-products-custom__header p {
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: #4e3a32;
+}
+
+.featured-products-custom__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.featured-product-card {
+  background: #f7f2ea;
+  border-radius: 28px;
+  padding: 34px;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.10);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.featured-product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 24px 55px rgba(78, 58, 50, 0.16);
+}
+
+.featured-product-card__icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin-bottom: 22px;
+}
+
+.featured-product-card__tag {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  font-size: 0.8rem;
+  color: #bf9568;
+  margin: 0 0 10px;
+}
+
+.featured-product-card h3 {
+  font-size: 1.55rem;
+  line-height: 1.15;
+  color: #4e3a32;
+  margin: 0 0 14px;
+}
+
+.featured-product-card p {
+  color: #4e3a32;
+  line-height: 1.55;
+  margin: 0 0 24px;
+}
+
+.featured-product-card a {
+  color: #4e3a32;
+  font-weight: 900;
+  text-decoration: none;
+  border-bottom: 2px solid #bf9568;
+  width: fit-content;
+}
+
+@media (max-width: 1000px) {
+  .featured-products-custom__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .featured-products-custom {
+    padding: 70px 6%;
+  }
+
+  .featured-products-custom__grid {
+    grid-template-columns: 1fr;
+  }
+}
