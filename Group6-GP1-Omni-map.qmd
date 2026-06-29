@@ -1,6 +1,6 @@
 ---
 title: "GP1: Omnichannel Journey Map"
-subtitle: "CPP Farm Store — Customer Experience Strategy"
+subtitle: "CPP Farm Store — Omnichannel Customer Experience Strategy"
 author: "Jake Evans, [Name 2], [Name 3], [Name 4], [Name 5]"
 date: today
 format:
@@ -15,6 +15,9 @@ format:
     embed-resources: true
     theme: sandstone
     highlight-style: github
+    css: |
+      h1, h2, h3 { color: #2d5a27; }
+      blockquote { border-left: 4px solid #8b7355; background: #faf6f0; padding: 10px 15px; }
 editor: visual
 execute:
   freeze: auto
@@ -22,330 +25,331 @@ execute:
   message: false
 ---
 
-## Executive Summary
+![](slide-01.png){fig-align="center"}
 
-This report maps the current and proposed customer journey for the CPP Farm Store at Kellogg Ranch, Cal Poly Pomona. Using a combination of on-site field visits, competitive analysis, and review of prior DMC project work, we identify the key friction points that prevent a seamless omnichannel experience and translate each into concrete opportunities that will drive the rest of this project — our Shopify prototype, retail media setup, campaign plan, creative assets, and analytics dashboard.
+## Purpose
+
+The purpose of this assignment is to understand how customers currently discover, evaluate, purchase, receive, and engage with CPP Farm Store across different touchpoints. A strong omnichannel journey map should show how the physical store, website, search, social media, email, mobile, retail media, and post-purchase experiences connect.
+
+This assignment is the foundation for the rest of the project. Our Shopify prototype, retail-media setup, campaign plan, creative assets, and dashboard should all respond to the opportunities identified in this journey map.
 
 ::: callout-important
 ## Key Question
 
 **How can CPP Farm Store create a smoother, more connected customer journey across offline and online channels?**
-
-The store already has a genuinely unique product offering — campus-grown produce, exclusive campus-made goods, and a community-rooted identity that no competitor can replicate. The gap is not product; it is *discoverability, digital infrastructure, and post-visit retention*. This journey map translates that gap into an actionable omnichannel strategy.
 :::
 
-## Brand Foundation
+![](slide-02.png){fig-align="center"}
 
-Before mapping the journey, it is important to establish what the CPP Farm Store stands for and how that shapes every channel decision.
+## Step 1: Target Customer Segments {#sec-segments}
 
-### Brand Promise
+### CPP Students
 
-The CPP Farm Store is a farm-fresh retail outlet for Cal Poly Pomona-grown produce, campus-made specialty items, artisanal pantry staples, and seasonal goods. Located at Kellogg Ranch, the store carries products that are genuinely exclusive — campus-pressed wine, CPP craft beer, fresh-ground nut butters, seasonal citrus and avocados sourced directly from the university farm — alongside curated third-party artisanal brands in cheese, deli, and fermented foods.
+CPP students are currently enrolled undergraduate and graduate students at Cal Poly Pomona. They are a diverse group who spend much of their time on campus and regularly use campus services and retail locations. They are also comfortable using digital platforms such as social media, on demand food delivery platforms and online shopping to find products and services.
 
-### Voice and Aesthetic
+### Local Community Members
 
-The store's atmosphere is rustic, mission-focused, and deeply community-oriented. Field visit observations confirmed an environment that feels more like a welcoming farm stand than a retail chain: handwritten signage, a mural in progress, student and staff-run operations, and a manager who describes the store as *"the heart and treasure of campus."*[^1]
+Local community members include residents living in and around Cal Poly Pomona, including families, working professionals, and individuals who visit the area. They are interested in supporting local businesses and often shop for fresh produce, specialty foods, and locally made products. They are an important customer base that does not rely on the university community.
 
-[^1]: Direct quote from the CPP Farm Store manager, observed during field visit conducted by Jake Evans, Spring 2026.
-
-### Omnichannel Implication
-
-Digital channels should feel like a natural extension of that in-store warmth — clear, useful, product-led, and local. Large product photography, simple calls-to-action, seasonal collections, and prominent pickup messaging should anchor every digital touchpoint.
-
-## Target Customer Segments {#sec-segments}
-
-Rather than attempting to serve every possible customer type equally, this journey map focuses on one primary segment with three defined micro-personas that reflect meaningful variations in motivation and channel behavior.
-
-### Primary Persona: The CPP Student
+### Primary Persona: Emily Rodriguez
 
 ::: callout-note
 ## Emily Rodriguez — Primary Persona
 
-**22 · CPP Student · Mobile-first · Budget-conscious · Between-class shopper**
+Emily Rodriguez is a 22-year old CPP student who is mobile oriented, budget conscious and usually spends time shopping between classes. She wants a quick way to see what fresh, affordable, seasonal product is available for pickup.
 
-Emily is the highest-frequency potential customer. She walks past campus touchpoints daily and is reachable via Instagram, Google Maps, and campus signage — but she often does not know the Farm Store exists, cannot quickly find what is in stock, and has no clear digital path to plan or complete a purchase before or during her visit.
-
-**Core need:** A fast, convenient way to discover what is fresh, affordable, seasonal, and available for pickup.
-
-**Purchase triggers:** Instagram Reel, friend recommendation, seasonal campaign, student discount, Google Maps result.
-
-**Success moment:** *"I can plan my visit or order quickly, pick up without friction, and get reminded when seasonal items return."*
+Her main goals are to find store hours, product availability, prices, parking, pickup information, and seasonal items. She wants to feel confident that the CPP Farm Store is worth the trip and this also connects to her CPP campus pride. Her biggest barrier is unclear inventory, limited online product discovery, and disconnected promotions. Her purchase triggers include Instagram Reels, Google Listings, Seasonal Campaigns, student discounts, gift bundles, and friend recommendations.
 :::
 
-### Secondary Micro-Personas
+![](slide-04.png){fig-align="center"}
 
-The following three micro-personas share the same core journey structure but differ in motivation, channel preference, and what they need from each touchpoint.
+### Micro-Personas: Secondary Journey Segments
 
 ::: panel-tabset
 #### A — Campus Convenience Seeker
 
-**Student everyday buyer**
-
--   **Cue:** Backpack between classes; mobile-first errands; quick lunch or grocery runs.
--   **Hook:** Fresh grab-and-go items, student discounts, campus pickup windows, seasonal favorites.
--   **Message:** *Fresh campus staples between classes.*
--   **Channels:** Instagram Stories/Reels, Google Maps, Shopify pickup, campus signage.
--   **Must-haves:** Accurate hours, live product availability, mobile-friendly pages, simple pickup flow.
+A student everyday buyer who is searching for quick meals, easy snacks, affordable groceries, and pickup options that are quick between classes. Best channels would include: Instagram, Google Maps, Shopify Pickup, and Campus Signage. This segment needs accurate hours, live inventory, simple pickup, and mobile friendly pages.
 
 #### B — Proud CPP Gifter
 
-**Alumni, parents, and campus visitors**
-
--   **Cue:** Campus visits, graduation season, alumni pride, holiday gifting, thank-you baskets.
--   **Hook:** CPP-branded gift boxes, local honey, campus wine, jams, and souvenir-quality packaging.
--   **Message:** *Take home a piece of Cal Poly Pomona.*
--   **Channels:** Google Search, gift landing page, email campaigns, in-store displays, campus events.
--   **Must-haves:** Gift bundle options with clear pricing, pickup and shipping clarity, occasion-based categories.
+An alumni, parent, or campus visitor looking for any CPP branded gifts, merchandise, local honey, handmade jams, campus wine, that legendary CPP Orange Juice and, of course, gift baskets! Best channels include Google Search, gift landing pages, email campaigns, events, and in store displays. This segment needs clear gift options, pricing, pickup/shipping details, and occasion based categories.
 
 #### C — Local Food Supporter
 
-**Pomona community shopper**
-
--   **Cue:** Weekend shopping, farmers-market mindset, supporting local growers and students.
--   **Hook:** Seasonal produce, student-grown specialty items, local artisanal goods.
--   **Message:** *Fresh, local, and community-rooted.*
--   **Channels:** Google Maps, SEO, Facebook, neighborhood word-of-mouth, email newsletter.
--   **Must-haves:** Current inventory, seasonal availability calendar, parking and location details, recipe content.
+A Pomona community shopper interested in seasonal produce, local goods, and supporting the Farm store's community mission. Best channels include Google Maps, SEO, Facebook, word of mouth, and email newsletters. This segment needs current inventory, seasonal availability, parking details, and recipe content (for health and safety purposes regarding allergies or personal beliefs).
 :::
 
-::: callout-note
-## Strategic Implication
+![](slide-05.png){fig-align="center"}
 
-One core student journey can flex into targeted campaigns for convenience, gifting, and local-community shopping — without requiring separate infrastructure. A well-built Shopify store, a strong Google Business Profile, and a consistent Instagram presence serve all three simultaneously.
+### Competitive Context
+
+Three competitors were benchmarked based on overlapping product categories and proximity to the CPP Farm Store area: Trader Joe's, Whole Foods Market, and Sprouts Farmers Market.
+
+Sprouts is the most conceptually similar to CPP Farmstore, a farm fresh identity, midtier pricing, and a focus on natural or specialty products; Sprouts is also located approximately 10 minutes from campus off of Diamond Bar Blvd making it the most direct competitive threat for the local community shopper segment.
+
+All Three of the competitors have capabilities that the CPP Farm Store currently lacks: e-commerce platforms, loyalty apps, and digital checkout via Apple Pay or Google Pay (without having to tap their phones). Whole Foods has the highest prices and the largest assortment. Trader Joes wins on everyday staple value with their private label marketing.
+
+The CPP Farm store occupies a position that no other competitor can enter regardless of their price point, since their offer campus grown produce that is sourced directly from the university farm, with campus made exclusive products (CP Horseshoe Vineyard Wines, CPP Craft Beer, Fresh Nut Butters, Wildflower Honey, and of course the famous CPP Orange Juice!), and a genuine educational and community oriented mission area brand mission that is unreplicable. Shared products overlap exists in the cheeses, deli, and pick categories, but the CPP campus exclusives are the CPP Farm Store's true competitive advantage, and should anchor every digital channel and campaign.
+
+## Step 2: Customer Goals {#sec-goals}
+
+### CPP Students
+
+- Purchase healthy snacks, drinks, and meals between classes.
+- Buy fresh produce and locally made products.
+- Find affordable food and campus merchandise.
+- Learn about seasonal products and special promotions.
+- Place orders online for quick pickup.
+- Earn rewards and discounts through loyalty programs.
+
+### Local Community Members
+
+- Purchase fresh, locally grown produce and specialty foods.
+- Support Cal Poly Pomona and local agriculture.
+- Shop for seasonal and locally made products.
+- Find unique gifts and food items.
+- Stay informed about Farm Store events and promotions.
+- Enjoy a convenient shopping experience both online and in-store.
+
+## Step 3: Journey Stages {#sec-journey}
+
+For each stage, identify what the customer is doing, thinking, feeling, and needing.
+
+| Stage | Actions | Thoughts | Feelings | Needs |
+|---------------|---------------|---------------|---------------|---------------|
+| **Awareness** | Discover the Farm Store through Google, Instagram, or campus signage. | "I didn't know CPP had a Farm Store." | Curious | Learn about the store, location, and products. |
+| **Consideration** | Browses products, hours, and seasonal offerings. | "Do they have what I need?" | Interested | Product availability, pricing, and store information. |
+| **Purchase** | Shops in-store or places an online order. | "Can I buy this easily?" | Motivated | Fast, mobile-friendly checkout and payment options. |
+| **Fulfillment / Pickup** | Picks up the order or shops in-store. | "Where do I go?" | Satisfied | Clear pickup instructions and parking information. |
+| **Post-Purchase** | Uses products and follows updates. | "I'd like to know what's new." | Happy | Recipes, promotions, and seasonal updates. |
+| **Loyalty** | Returns for seasonal items and recommends the store. | "I'll come back." | Loyal | Rewards, reminders, and ongoing communication. |
+
+: Customer Journey Stage Overview
+
+### Emotion Scores and Customer Needs by Stage
+
+Based on field visit observations and assessment of the current digital experience, the following emotion scores reflect the student segment's journey today:
+
+::: panel-tabset
+#### Awareness — 2/5
+
+**Curious but unlikely to act; low digital visibility**
+
+Customer Needs: Clear information about the Farm Store's existence, location, hours, and unique products. They should be able to quickly understand why the Farm Store is different from other grocery retailers.
+
+#### Consideration — 2/5
+
+**Interested but blocked; no browsable catalog or inventory info**
+
+Customer Needs: Accurate product availability, pricing, store hours, and seasonal inventory information so they can decide whether visiting the Farm Store is worthwhile.
+
+#### Purchase — 1/5
+
+**Frustrated; no digital path to transact without a phone call**
+
+Customer Needs: A simple, mobile-friendly purchasing experience with clear payment options and an easy checkout process, whether shopping online or in person.
+
+#### Fulfillment/Pickup — 4/5
+
+**Satisfied; in-store service is warm, personal, and community-driven**
+
+Customer Needs: Clear pickup instructions, parking information, order confirmation, and timely updates so they can collect their purchases without confusion.
+
+#### Post-Purchase — 3/5
+
+**Happy with the product but disconnected; no follow-up**
+
+Customer Needs: Follow-up communication, product recommendations, recipes, and updates on seasonal products to remain engaged after their purchase.
+
+#### Loyalty — 2/5
+
+**No loyalty mechanism to reinforce the relationship**
+
+Customer Needs: Incentives to return, including promotions, loyalty rewards, seasonal reminders, and consistent communication that strengthens their connection to the CPP Farm Store.
 :::
 
-## Omnichannel Ecosystem
+> The emotional low point is the purchase stage, a student who discovers the store on Instagram and wants to buy something has no path to complete their transaction. Solving this single gap has the highest impact on overall journey satisfaction.
 
-The following diagram describes the five-channel ecosystem that connects the CPP Farm Store's physical presence to its digital touchpoints across the full customer lifecycle.
+## Step 4: Touchpoints {#sec-touchpoints}
+
+Customers interact with the CPP Farm Store through both digital and physical touchpoints throughout their customer journey. These touchpoints work together to create a seamless omnichannel experience.
+
+### Omnichannel Ecosystem Overview
 
 | Stage | Primary Channels |
-|---|---|
+|------------------------------------|------------------------------------|
 | **Discovery** | Google Search, Google Maps, Instagram, campus signage, word of mouth |
-| **Evaluation** | Website / Shopify store, product pages, seasonal content, reviews |
-| **Transaction** | Online cart, in-store POS, mobile checkout, student discounts |
-| **Fulfillment** | Store visit, BOPIS pickup counter, staff support, packaging |
+| **Evaluation** | CPP Farm Store website / Shopify store, product pages, seasonal content, reviews |
+| **Transaction** | Online cart, in-store POS, mobile checkout, Apple Pay, Google Pay, student discounts |
+| **Fulfillment** | Store visit, BOPIS pickup counter, staff support, packaging, parking |
 | **Retention** | Email automation, SMS, loyalty rewards, events, UGC and reviews |
 
-: CPP Farm Store Omnichannel Channel Map {#tbl-channels tbl-colwidths="[25,75]"}
+: Omnichannel Channel Map
 
-> *Omnichannel principle: each channel should reduce friction for the next step rather than operating as a separate experience. A student who discovers the store on Instagram should be able to check inventory on Shopify, place a pickup order, and receive a confirmation text — all without a phone call.*
+> Omnichannel principle: each channel should reduce friction for the next step rather than operating as a separate experience.
 
-## Customer Journey Map {#sec-journey}
-
-### Stage-by-Stage Breakdown
-
-The following section walks through each stage of the student-first journey, documenting what the customer is **doing**, **thinking**, **feeling**, and **needing** — alongside the touchpoints they encounter and the friction they experience.
+![](slide-06.png){fig-align="center"}
 
 ::: panel-tabset
 #### Awareness
 
-**What the customer does:** Sees an Instagram Reel, spots campus signage near Kellogg Ranch, hears about the store from a friend, or stumbles across a Google Maps result while searching for food near campus.
-
-**What the customer thinks:** *"I didn't know CPP had a farm store."*
-
-**What the customer feels:** Curious, mildly surprised — but not yet motivated to act because the digital presence does not reinforce the discovery.
-
-**Friction:** Low organic awareness. The store's Google Business Profile exists but is under-optimized. Instagram content is inconsistent. There is no paid discovery channel. Campus signage is limited to the immediate Kellogg Ranch area, which most students do not pass through regularly.
-
-**Touchpoints:** Instagram, Google Search, Google Maps, word of mouth, campus signage.
-
-**Opportunity:** Strengthen Google Business Profile with updated hours, photos, and product categories. Launch a consistent Instagram Reels content calendar anchored to seasonal drops and campus-exclusive products. Invest in Google Search and Maps visibility as the primary paid discovery lever.
+- Google Search
+- Google Maps
+- Instagram and other social media
+- Campus events
+- Community events
+- Word of mouth
+- Campus signage and flyers
 
 #### Consideration
 
-**What the customer does:** Searches for the Farm Store online, visits the current website (`cpp.edu/farmstore`), looks for store hours, checks what products are available, and tries to determine whether the trip is worth it.
-
-**What the customer thinks:** *"Do they have what I need? Are they even open right now?"*
-
-**What the customer feels:** Interested but uncertain — the current website does not surface product inventory clearly, and hours are not immediately prominent.
-
-**Friction:** Field visit observations confirmed that the current website does not function as a browsable product catalog. Product lines exist (campus produce, campus-made specialty items, artisanal cheese, deli, pickles, gift baskets) but are not organized in a way that lets a mobile user quickly identify what is in stock today. There is no seasonal availability calendar and no product photography at the inventory level.
-
-**Touchpoints:** `cpp.edu/farmstore`, Google Maps listing, Instagram profile.
-
-**Opportunity:** Build a Shopify product catalog organized around the six observed product lines, with seasonal collections that are updated regularly. Prioritize campus-exclusive SKUs — the CP Horseshoe Vineyard wines, CPP craft beer, dragon fruit, guava, and fresh-ground nut butters — because these are the items no competitor carries at any price point and represent the strongest conversion argument.
+- CPP Farm Store website
+- Online product listings
+- Google Merchant Center
+- Google Maps
+- Social media pages
+- Store signage
 
 #### Purchase
 
-**What the customer does:** Attempts to place an order online, or decides to visit in person without a clear sense of what to expect at checkout.
+- CPP Farm Store physical location
+- Mobile website
+- Online checkout
+- In-store checkout
 
-**What the customer thinks:** *"Can I actually buy this online? Or do I have to call?"*
+#### Fulfillment / Pickup
 
-**What the customer feels:** Frustrated. Field visit confirmed that the current ordering process is entirely manual — orders are taken by phone or email, payments are completed via Zelle or over the phone, and gift baskets require 24–48 hours advance notice because they are custom-assembled.
-
-**Friction:** No e-commerce checkout. No Apple Pay or Google Pay at point of sale. No BOPIS (buy online, pick up in store) workflow. Competitors — Whole Foods, Sprouts, and to a lesser extent Trader Joe's — all offer digital checkout infrastructure that the Farm Store currently lacks.
-
-**Touchpoints:** Phone call, email, in-store POS, word of mouth.
-
-**Opportunity:** Implement a Shopify-powered BOPIS workflow. Build a gift bundle pre-ordering system so the 24–48 hour lead time becomes a feature (custom-assembled to order) rather than a hidden friction point. Enable mobile-friendly checkout as the primary path for the student segment.
-
-#### Pickup
-
-**What the customer does:** Arrives at the Kellogg Ranch location to collect an order or make an in-store purchase.
-
-**What the customer thinks:** *"Where do I go? Is my order ready?"*
-
-**What the customer feels:** Satisfied with the in-store experience once they arrive — field visit confirmed the service is warm, personal, and community-driven — but the journey *to* that moment is unclear for a first-time visitor.
-
-**Friction:** No digital pickup confirmation. No SMS notification system. Parking and wayfinding to the Kellogg Ranch location are not well-communicated through any digital channel. First-time visitors navigating from Google Maps may find the entrance confusing.
-
-**Touchpoints:** Physical store, staff, parking, campus wayfinding.
-
-**Opportunity:** Add pickup confirmation SMS to the Shopify order workflow. Create a dedicated "Find Us / Pickup Info" page with parking instructions, a campus map embed, and expected pickup windows. Feature this prominently on the Shopify homepage and in the post-purchase email.
+- CPP Farm Store physical location
+- Order confirmation emails
+- Pickup instructions
+- Parking and directional signage
+- Staff assistance
 
 #### Post-Purchase
 
-**What the customer does:** Uses the product, potentially shares content on social media, and either returns or does not.
+- Follow-up emails
+- Social media
+- Product packaging
+- Customer reviews
+- Rewards program
 
-**What the customer thinks:** *"That was worth it"* — but there is no follow-up communication to reinforce that feeling or prompt a return.
+#### Loyalty / Repeat Purchase
 
-**What the customer feels:** Happy with the product, but disconnected from the store. There is no digital relationship after the transaction ends.
-
-**Friction:** No post-purchase email sequence. No review prompt. No recipe content or product use inspiration. No mechanism to announce seasonal restocks to past customers.
-
-**Touchpoints:** Product packaging, personal use, social sharing (informal).
-
-**Opportunity:** Launch a post-purchase email sequence: (1) order confirmation, (2) recipe or usage inspiration tied to the purchased product, (3) seasonal restock alert, (4) review request. Use product packaging as a QR code touchpoint that drives to the Shopify store and email signup.
-
-#### Loyalty
-
-**What the customer does:** Returns for seasonal items, recommends the store to friends, or purchases a gift basket for a campus occasion.
-
-**What the customer thinks:** *"This is my campus store."*
-
-**What the customer feels:** Connected to CPP identity and proud to support a campus institution — but only if the store has maintained a relationship through the channels above.
-
-**Friction:** No loyalty program. No referral mechanism. No structured way to communicate seasonal drops, limited-run products, or campus events to returning customers.
-
-**Touchpoints:** Email, Instagram, word of mouth, campus events.
-
-**Opportunity:** Implement a simple loyalty program through Shopify (points per purchase, redeemable on future orders). Create a seasonal email calendar tied to the Farm Store's natural inventory cycles — citrus season, avocado season, holiday gift baskets, campus wine releases. Build a referral incentive for students who bring new customers to the store.
+- Email newsletters
+- Loyalty and rewards program
+- Social media
+- Google Search
+- Seasonal promotions
+- Campus and community events
+- Personalized offers
 :::
 
-## Pain Points {#sec-pain}
-
-The following pain points were identified through field visit observations, review of the current website and social media presence, and competitive benchmarking against Trader Joe's, Whole Foods Market, and Sprouts Farmers Market in the Brea/Pomona area.
-
-| Pain Point | Evidence | Impact |
-|---|---|---|
-| **Low digital discoverability** | Google Business Profile exists but is under-optimized; Instagram content is inconsistent | Students do not know the store exists |
-| **No browsable online catalog** | `cpp.edu/farmstore` does not display product inventory; no product photography at the item level | Consideration stage fails before a visit is attempted |
-| **Fully manual ordering** | Orders taken by phone/email; no Apple Pay or Google Pay at POS; gift baskets require 24–48 hr notice | High friction purchase stage; lost impulse buyers |
-| **No BOPIS or mobile checkout** | All competitors offer digital checkout infrastructure; Farm Store does not | Students with 15 minutes between classes cannot transact |
-| **Below-market pricing on exclusives** | Manager acknowledged pricing gap; campus wine, beer, and nut butters are underpriced relative to their scarcity | Revenue left on the table; exclusivity not communicated |
-| **No post-purchase communication** | No email sequence, no review prompt, no restock notification | Retention and repeat purchase rate unknown and likely low |
-| **No loyalty or referral mechanism** | No points program; no structured referral incentive | Word-of-mouth growth is entirely passive |
-| **Pickup friction for first-time visitors** | Parking and wayfinding to Kellogg Ranch not well-communicated digitally | First visit experience is needlessly stressful |
-
-: Identified Pain Points with Evidence {#tbl-pain tbl-colwidths="[25,40,35]"}
+## Step 5: Pain Points {#sec-pain}
 
 ::: callout-important
-## Highest-Impact Pain Points
+## Highest-Impact Pain Point
 
-Two pain points stand out as the most structurally significant: **no browsable online catalog** and **fully manual ordering**. These two gaps mean that the entire consideration and purchase stages of the journey currently require a phone call — an experience that is incompatible with the mobile-first behavior of the primary student segment. Every other opportunity in this strategy depends on solving these two first.
+The **Conversion Gap** is the most structurally significant friction point. A student who discovers the store on Instagram and wants to make a purchase has no frictionless digital path to complete that transaction — every order currently requires a phone call or email.
 :::
 
-## Omnichannel Opportunities {#sec-opps}
+- **Discovery Gap: Customers do not know where the store exists.**
+  - The CPP Farm Store's Google Business Profile exists but is under-optimized. Instagram content is posted inconsistently with no regular posting schedule. There is no paid discovery channel. Campus signage is limited to the immediate Kellogg Ranch Area, where students don't regularly pass.
+- **Product Visibility Gap: Products are not easy to browse online.**
+  - The current website isn't functioning as a browsable product catalog. There are six distinct product lines that exist on the site (campus grown produce, campus made specialty items, artisanal cheese and dips, deli and charcuterie, pickles and fermented foods, and gift baskets).
+- **Conversion Gap: No Clear Digital Path to Purchase.**
+  - All ordering is currently manual, with orders being taken by phone or email, and payments are completed via Zelle or over the phone; because of this system gift baskets require 24-48 hours of advanced notice because they are custom assembled on site. There is currently no e-commerce checkout such as Apple pay or Google pay at the POS (although through Zelle they accept them as forms of payment), and no BOPIS workflow. All three major competitors offer digital checkout infrastructure that the Farm Store is currently lacking.
+- **Pricing Gap: Prices are outdated and need to be Updated.**
+  - Field visit observations and a conversation with the store manager confirmed that several product categories are priced far below the market rate. This gap the manager is actively working to correct by updating their inventory and the prices at the same time. Campus made products (wine, craft beer, nut butters) are particularly underpriced in relation to their scarcity and exclusivity being a CPP product. No Digital channel is currently surfacing the value proposition of these items.
+- **Retention Gap: There is no System to Maintain Contact.**
+  - There is no post purchase email sequence, no review prompts, no restock notifications, and the loyalty program is unreliable (a punch card) with no referral program. Once a customer leaves the store, there is no digital method of communication to bring them back for more.
 
-For each pain point identified above, the following opportunities translate friction into action. These opportunities are sequenced into three implementation phases and directly correspond to the deliverables that follow in the rest of the project.
+![](slide-08.png){fig-align="center"}
 
-### Phase 1 — Foundation: Fix Discovery and Trust Signals
+## Step 6: Omnichannel Opportunities {#sec-opps}
 
-These are the zero-cost or low-cost improvements that remove the biggest barriers to awareness and consideration.
+- **Discovery Gap:** Optimize the Google Business Profile with updated hours, product photos, and categories. Improve SEO and maintain a consistent Instagram posting schedule featuring seasonal products, campus-made items, and events. Search campaigns should focus on exclusive items unique to the farm store. Install QR code signage around high-traffic campus locations that links directly to the website or Google Maps listing.
 
--   **Optimize the Google Business Profile** with accurate hours, product categories, seasonal photos, and a direct link to the Shopify store. This is the single highest-leverage action for organic discovery.
--   **Standardize Instagram content** around a weekly posting cadence. Seasonal produce drops, campus-exclusive product reveals, and behind-the-scenes farm and store content are the three content pillars with the highest organic reach potential.
--   **Add campus signage** near high-traffic student areas (the University Village, the CLA building, the Recreation Center) that directs to the Farm Store Instagram and Google Maps listing with a QR code.
+- **Product Visibility Gap:** Develop a Shopify storefront with organized product categories, seasonal collections, high-quality product images, descriptions, pricing, and inventory updates. Highlight exclusive CPP products to encourage purchases.
 
-### Phase 2 — Commerce: Build a Shoppable Digital Layer
+- **Conversion Gap:** Implement a Shopify e-commerce platform with mobile-friendly checkout, Apple Pay, Google Pay, and Buy Online, Pick Up In Store (BOPIS). Add automated order confirmations and pickup instructions.
 
-These improvements require the Shopify build and represent the core of the GP2 deliverable.
+- **Pricing Gap:** Update pricing to better reflect product value while emphasizing the uniqueness of campus-made items through product descriptions, storytelling, featured collections, and seasonal marketing campaigns.
 
--   **Build a Shopify product catalog** organized around the six observed product lines: campus-grown produce, campus-made specialty items, artisanal cheese and dips, deli and charcuterie, pickles and fermented foods, and gift baskets. Campus-exclusive SKUs should anchor the homepage and seasonal collection pages.
--   **Implement BOPIS** as the primary checkout path for the student segment. The 24–48 hour lead time for gift baskets becomes a value-add (custom-assembled to order) when communicated proactively through the checkout flow.
--   **Enable mobile-friendly checkout** with Apple Pay and Google Pay as default payment options.
--   **Create a gift bundle landing page** organized by occasion (graduation, alumni gifting, holiday, thank-you) to serve the Gifter persona and capture higher average order values.
+- **Retention Gap:** Launch automated email campaigns with order confirmations, recipes, seasonal updates, review requests, and restock notifications. Introduce digital loyalty and referral program to encourage repeat purchases and strengthen long-term customer relationships.
 
-### Phase 3 — Activation: Launch Campaigns and Retention Loops
+- **Implementation Roadmap:** These opportunities can be implemented in three phases. Phase 1 (Foundation) focuses on improving customer discovery and trust through Google Business Profile optimization, SEO, Instagram content, and campus signage. Phase 2 (Commerce) focuses on developing the Shopify storefront, online product catalog, mobile checkout, and Buy Online, Pick Up In Store (BOPIS). Phase 3 (Activation) emphasizes customer retention through Google Shopping campaigns, automated email marketing, loyalty programs, and KPI dashboards that measure customer engagement and repeat purchases.
 
-These improvements represent the GP3–GP5 deliverables: retail media, campaign creative, and dashboard.
+![](slide-09.png){fig-align="center"}
 
--   **Launch Google Shopping and Search campaigns** anchored to the campus-exclusive product catalog. Campus-made wine, CPP craft beer, and seasonal citrus and avocado are the hero products — none of the three competitors carry them, and Google Shopping allows the Farm Store to surface them at the exact moment a consumer is searching.
--   **Build a post-purchase email sequence** (confirmation → inspiration → restock alert → review request) in Shopify Email or a connected ESP.
--   **Implement a simple loyalty program** through Shopify's native points infrastructure.
--   **Build a KPI dashboard** that maps journey-stage metrics to business outcomes: discovery (Google impressions, Maps views), evaluation (product page views, collection engagement), conversion (add-to-cart rate, checkout completion), fulfillment (BOPIS orders, pickup satisfaction), and retention (email open rate, repeat purchase rate, loyalty signups).
+## Step 7: Visual Journey Map {#sec-map}
 
-::: callout-note
-## Strategic Implication for the Rest of the Project
+The visual journey map below summarizes the student-first omnichannel path across all six stages — from initial awareness through long-term loyalty — capturing the key action, thought, friction point, and opportunity at each stage.[^1]
 
-This journey map is the strategic brief for all subsequent group deliverables. The Shopify prototype (GP2) should address the consideration and purchase gaps. The retail media setup (GP3) should address the discovery gap. The campaign plan and creative assets (GP4) should address the awareness and retention gaps. The dashboard (GP5) should make all of these measurable. Nothing in the remaining deliverables should be built without a clear line back to a pain point or opportunity identified here.
-:::
+[^1]: Visual journey map created in PowerPoint as part of the IBM 6300 Group Project 1 deliverable. CPP Farm Store CX Strategy, Spring 2026.
 
-## Competitive Context {#sec-competitive}
+![](slide-07.png){fig-align="center"}
 
-Field visit observations and competitive analysis of Trader Joe's (Diamond Bar), Whole Foods Market (Brea), and Sprouts Farmers Market (Brea) informed the pain point and opportunity identification above. The following summary places the Farm Store's omnichannel gaps in competitive context.
+### Measurement Framework
 
-### What the Competition Does That the Farm Store Currently Does Not
+The KPI dashboard below maps measurable metrics to each stage of the customer journey, ensuring every friction point identified in this map can be tracked and improved over time.
 
--   **E-commerce platforms** (Whole Foods via Amazon, Sprouts via Instacart, Trader Joe's via limited web presence)
--   **Loyalty apps** (Whole Foods Prime, Sprouts loyalty program)
--   **Digital checkout** with Apple Pay and Google Pay at POS
--   **Inventory visibility** through online product listings
-
-### What the Farm Store Has That the Competition Cannot Replicate
-
--   Campus-grown produce sourced directly from the CPP farm — *no competitor, at any price point, can source from a university farm*
--   Campus-made exclusive products: CP Horseshoe Vineyard wines, CPP craft beer, fresh-ground nut butters, wildflower honey
--   A community and educational identity that is genuinely mission-driven
--   Experiential offerings (farm tours, planned scavenger hunts, citrus-to-juice programming) that no grocery competitor offers
-
-::: callout-note
-## The Competitive Insight
-
-The CPP Farm Store does not need to out-spend Whole Foods on digital marketing. It needs to make its genuinely unique products *findable*. A student or alumni searching Google for "CPP avocados" or "Cal Poly wine" should immediately find a product page they can purchase from. That is the entire digital strategy in one sentence.
-:::
-
-## Measurement Framework
-
-The following KPIs correspond to each stage of the customer journey and will form the basis of the GP5 analytics dashboard.
+![](slide-10.png){fig-align="center"}
 
 | Journey Stage | Metric | Why It Matters |
-|---|---|---|
+|------------------------|------------------------|------------------------|
 | **Awareness** | Google impressions, Maps views, profile clicks | Indicates whether discovery channels are working |
 | **Consideration** | Product page views, collection views, IG link clicks | Indicates whether the catalog is compelling |
 | **Purchase** | Add-to-cart rate, checkout starts, conversion rate | Indicates whether the transaction path is functional |
 | **Fulfillment** | BOPIS orders placed, pickup completions | Indicates adoption of the new commerce infrastructure |
 | **Retention** | Email open rate, repeat purchase rate, loyalty signups | Indicates whether the post-purchase relationship is working |
 
-: GP5 Dashboard KPI Framework {#tbl-kpi tbl-colwidths="[20,40,40]"}
+: GP5 Dashboard KPI Framework
+
+> The dashboard should translate journey friction into measurable behavior. Discovery metrics show whether customers can find the Farm Store. Commerce metrics show whether they can evaluate and buy products. Retention metrics show whether the relationship continues after pickup.
+>
+> Core reporting views: channel performance • product category performance • customer lifecycle • campaign landing pages • pickup behavior • loyalty growth.
+
+## Step 8: Strategic Implications for the Rest of the Project {#sec-implications}
+
+This journey map serves as the strategic foundation for the remaining group deliverables. Each GP2-GP5 decision should connect directly back to a friction point identified in the customer journey above.
+
+For **GP2, the Shopify Prototype** should focus on reducing any friction during the consideration and purchasing stages. Limited inventory visibility can be addressed through a clear/organized Shopify catalog, while the lack of a digital purchase path can be improved through BOPIS and mobile checkout. The catalog should be organized around the six observed product lines, with the campus exclusive SKUs featured prominently on the homepage.
+
+Regarding **GP3, the Retail Media Setup** should address the awareness gap through SEO and Social media content. Google Shopping and Search campaigns should center on campus exclusive products (seasonal citrus, avocados, campus wine, CPP craft beer). These products are especially valuable because of their uniqueness to the CPP Farmstore, meaning competitors can't replicate the same authenticity or campus connection.
+
+For **GP4, the Campaign Plan and Creative Assets** should connect the awareness and loyalty stages by building a stronger SEO, social, loyalty, and referral strategies. Seasonal product drops, campus identity content, and gift bundle campaigns can serve as the three main creative pillars because they align most clearly with the customer motivation identified in the persona work.
+
+Finally, with **GP5, the Analytics Dashboard** should make the strategy measurable by assigning a KPI to each stage of the journey map. Awareness can be tracked through Google impressions and Map views, consideration through product page views, purchase through checkout conversion rate, pickup through BOPIS completion rate, post-purchase engagement through email open and repeat purchase rates, and loyalty through loyalty program signups.
+
+![](slide-11.png){fig-align="center"}
+
+![](slide-12.png){fig-align="center"}
 
 ## Appendix {.unnumbered}
 
-### Grading Criteria Self-Assessment {.unnumbered}
+### Grading Criteria {.unnumbered}
 
-| Criterion | Points Possible | Where Addressed in This Report |
-|---|---|---|
+| Criterion | Points Possible | Where Addressed |
+|------------------------|------------------------|------------------------|
 | Clear target customer segment | 15 | @sec-segments |
 | Complete journey stages | 15 | @sec-journey |
-| Strong identification of touchpoints | 15 | @sec-journey (each stage) |
+| Strong identification of touchpoints | 15 | @sec-touchpoints |
 | Insightful pain points | 20 | @sec-pain |
 | Practical omnichannel opportunities | 20 | @sec-opps |
-| Visual clarity and professionalism | 15 | Tables, callouts, panel tabsets throughout |
-| **Total** | **100** | |
+| Visual clarity and professionalism | 15 | @sec-map, tables, callouts throughout |
+| **Total** | **100** |  |
 
-: Rubric Self-Assessment {#tbl-rubric tbl-colwidths="[35,20,45]"}
+: Rubric Self-Assessment
 
 ### Project Links {.unnumbered}
 
 ::: callout-note
-## Group 6 Project Links
+## Group Project Links
 
--   **GitHub Repository:** [https://github.com/jakevns/RStudio](https://github.com/jakevns/RStudio)
--   **GitHub Pages (Live Report):** [https://jakevns.github.io/RStudio/](https://jakevns.github.io/RStudio/)
-
-*Update these links once the GP1 folder is published to GitHub Pages.*
+- **GitHub Repository:** <https://github.com/mjshawell/cpp-farm-store-theme>
+- **GitHub Pages (Live Report):** [https://mjshawell.github.io/cpp-farm-store-theme/](https://mjshawell.github.io/cpp-farm-store-theme/Group6-GP1-Omni-map.html){.uri}
 :::
 
-### Field Visit Reference {.unnumbered}
+### Sources {.unnumbered}
 
-Field visit observations were conducted by Jake Evans, Spring 2026, and documented in a separate competitive analysis report covering product assortment, pricing strategy, service model, store atmosphere, and perceptual mapping against Trader Joe's, Whole Foods Market, and Sprouts Farmers Market.
+Sources: GP1 Omnichannel Journey Map assignment brief; Cal Poly Pomona Farm Store brand book; DMC Farm Store proposal and final report materials; field visit observations conducted Spring 2026.
