@@ -1,6 +1,11 @@
 <section class="farm-story">
   <div class="farm-story__image">
-    <img src="{{ 'new-FS-logo.jpg' | asset_url }}" alt="Cal Poly Pomona Farm Store logo">
+    <img
+      src="{{ 'farm-store-logo.jpg' | asset_url }}"
+      alt="Cal Poly Pomona Farm Store logo"
+      class="farm-story__logo"
+      loading="lazy"
+    >
   </div>
 
   <div class="farm-story__content">
@@ -25,15 +30,3 @@
     </a>
   </div>
 </section>
-
-{% schema %}
-{
-  "name": "Farm Story",
-  "settings": [],
-  "presets": [
-    {
-      "name": "Farm Story"
-    }
-  ]
-}
-{% endschema %}
