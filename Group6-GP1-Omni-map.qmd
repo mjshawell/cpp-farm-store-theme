@@ -1,7 +1,7 @@
 ---
 title: "GP1: Omnichannel Journey Map"
 subtitle: "CPP Farm Store — Omnichannel Customer Experience Strategy"
-author: "Jake Evans, [Name 2], [Name 3], [Name 4], [Name 5]"
+author: "Mickyas Shawel, Luis Berumen, Tim Arana, Jake Evans"
 date: today
 format:
   html:
@@ -347,7 +347,6 @@ Finally, with **GP5, the Analytics Dashboard** should make the strategy measurab
 ## Group Project Links
 
 - **GitHub Repository:** <https://github.com/mjshawell/cpp-farm-store-theme>
-- **GitHub Pages (Live Report):** [https://mjshawell.github.io/cpp-farm-store-theme/](https://mjshawell.github.io/cpp-farm-store-theme/Group6-GP1-Omni-map.html){.uri}
 :::
 
 ### Sources {.unnumbered}
