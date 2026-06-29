@@ -575,4 +575,223 @@
   height: auto;
   display: block;
   margin: 0 auto;
+<<<<<<< HEAD
 } 
+=======
+} 
+
+.farm-footer {
+  background: #203c26;
+  color: #ffffff;
+  padding: 80px 8% 32px;
+}
+
+.farm-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 42px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.farm-footer__brand h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  margin: 0 0 18px;
+  color: #ffffff;
+}
+
+.farm-footer p {
+  color: #f7f2ea;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+.farm-footer__button {
+  display: inline-block;
+  background: #bf9568;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.farm-footer__button:hover {
+  background: #ffffff;
+  color: #203c26;
+}
+
+.farm-footer__column h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  margin: 0 0 18px;
+  color: #bf9568;
+}
+
+.farm-footer__column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.farm-footer__column li {
+  margin-bottom: 12px;
+}
+
+.farm-footer__column a,
+.farm-footer__socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.farm-footer__column a:hover,
+.farm-footer__socials a:hover {
+  color: #bf9568;
+}
+
+.farm-footer__socials {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.farm-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 1300px;
+  margin: 56px auto 0;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.farm-footer__bottom p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .farm-footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .farm-footer {
+    padding: 64px 6% 28px;
+  }
+
+  .farm-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
+.farm-footer {
+  background: #203c26;
+  color: #ffffff;
+  padding: 80px 8% 32px;
+}
+
+.farm-footer__inner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: 42px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.farm-footer__brand h2 {
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  margin: 0 0 18px;
+  color: #ffffff;
+}
+
+.farm-footer p {
+  color: #f7f2ea;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+
+.farm-footer__button {
+  display: inline-block;
+  background: #bf9568;
+  color: #ffffff;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+.farm-footer__button:hover {
+  background: #ffffff;
+  color: #203c26;
+}
+
+.farm-footer__column h3 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.13em;
+  margin: 0 0 18px;
+  color: #bf9568;
+}
+
+.farm-footer__column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.farm-footer__column li {
+  margin-bottom: 12px;
+}
+
+.farm-footer__column a,
+.farm-footer__socials a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+.farm-footer__column a:hover,
+.farm-footer__socials a:hover {
+  color: #bf9568;
+}
+
+.farm-footer__socials {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.farm-footer__bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.18);
+  max-width: 1300px;
+  margin: 56px auto 0;
+  padding-top: 24px;
+  text-align: center;
+}
+
+.farm-footer__bottom p {
+  font-size: 0.9rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+  .farm-footer__inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .farm-footer {
+    padding: 64px 6% 28px;
+  }
+
+  .farm-footer__inner {
+    grid-template-columns: 1fr;
+  }
+}
+>>>>>>> cc32f51 (Add custom Farm Store footer)

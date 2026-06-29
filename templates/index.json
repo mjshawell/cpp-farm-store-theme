@@ -49,6 +49,11 @@
       "settings": {}
     },
 
+    "farm_footer": {
+      "type": "farm-footer",
+      "settings": {}
+    },
+
     "main": {
       "type": "hello-world",
       "settings": {}
@@ -64,6 +69,7 @@
     "loyalty_rewards",
     "farm_story",
     "farm_newsletter",
+    "farm_footer",
     "main"
   ]
 }
