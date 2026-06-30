@@ -10,7 +10,7 @@
 {
   "sections": {
     "main": {
-      "type": "cart",
+      "type": "farm-custom-cart",
       "settings": {}
     }
   },
