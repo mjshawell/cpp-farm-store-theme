@@ -18,7 +18,14 @@
       {% if section.settings.story_image %}
         {{ section.settings.story_image | image_url: width: 900 | image_tag: alt: section.settings.heading, class: 'fsp-img' }}
       {% else %}
-        <img class="fsp-img" src="{{ 'farm-store-logo.jpg' | asset_url }}" alt="CPP Farm Store logo">
+        <img
+          class="fsp-img"
+          src="{{ 'farm-store-logo.jpg' | asset_url }}"
+          alt="CPP Farm Store logo"
+          width="900"
+          height="900"
+          loading="lazy"
+        >
       {% endif %}
     </div>
     <div class="fsp-story__text">
