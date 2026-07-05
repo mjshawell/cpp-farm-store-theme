@@ -1,10 +1,10 @@
 <article class="farm-product-card">
 
-  <a href="{{ product.url }}" class="farm-product-card__image-wrap">
+  <a href="{{ product.url }}" class="farm-product-card__image-wrap" aria-label="View {{ product.title | escape }}">
     {% if product.featured_image %}
       <img
         src="{{ product.featured_image | image_url: width: 700 }}"
-        alt="{{ product.featured_image.alt | escape }}"
+        alt="{% if product.featured_image.alt != blank %}{{ product.featured_image.alt | escape }}{% else %}{{ product.title | escape }}{% endif %}"
         loading="lazy"
         class="farm-product-card__image"
       >
@@ -16,20 +16,34 @@
 
     <div class="farm-product-card__badges">
 
+      {% if product.available == false %}
+        <span class="farm-product-card__badge farm-product-card__badge--pickup-only">
+          Sold Out
+        </span>
+      {% endif %}
+
       {% if product.tags contains 'pickup-available' %}
-        <span class="farm-product-card__badge">Pickup Available</span>
+        <span class="farm-product-card__badge">
+          Pickup Available
+        </span>
       {% endif %}
 
       {% if product.tags contains 'seasonal' %}
-        <span class="farm-product-card__badge farm-product-card__badge--seasonal">Seasonal</span>
+        <span class="farm-product-card__badge farm-product-card__badge--seasonal">
+          Seasonal
+        </span>
       {% endif %}
 
       {% if product.tags contains 'gift-box' or product.tags contains 'gift-basket' %}
-        <span class="farm-product-card__badge farm-product-card__badge--gift">Gift Item</span>
+        <span class="farm-product-card__badge farm-product-card__badge--gift">
+          Gift Item
+        </span>
       {% endif %}
 
       {% if product.tags contains 'pickup-only' %}
-        <span class="farm-product-card__badge farm-product-card__badge--pickup-only">Pickup Only</span>
+        <span class="farm-product-card__badge farm-product-card__badge--pickup-only">
+          Pickup Only
+        </span>
       {% endif %}
 
     </div>
@@ -58,8 +72,12 @@
     </p>
 
     <p class="farm-product-card__note">
-      {% if product.tags contains 'gift-box' or product.tags contains 'gift-basket' %}
+      {% if product.available == false %}
+        Currently unavailable.
+      {% elsif product.tags contains 'gift-box' or product.tags contains 'gift-basket' %}
         Requires 1–2 business days for preparation.
+      {% elsif product.tags contains 'pickup-only' %}
+        Available for local pickup only.
       {% elsif product.tags contains 'pickup-available' %}
         Available for Farm Store pickup.
       {% elsif product.tags contains 'seasonal' %}
@@ -71,17 +89,35 @@
 
     <div class="farm-product-card__actions">
 
-      {% if product.tags contains 'gift-box' or product.tags contains 'gift-basket' %}
+      {% if product.available == false %}
+        <a href="{{ product.url }}" class="farm-product-card__button">
+          View Details
+        </a>
+
+      {% elsif product.tags contains 'gift-box' or product.tags contains 'gift-basket' %}
         <a href="{{ product.url }}" class="farm-product-card__button">
           Customize Gift
         </a>
-      {% elsif product.available and product.variants.size == 1 %}
-        <form method="post" action="/cart/add">
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+      {% elsif product.variants.size == 1 %}
+        <form method="post" action="{{ routes.cart_add_url }}">
+          <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
+
+          <input
+            type="hidden"
+            name="quantity"
+            value="1"
+          >
+
           <button type="submit" class="farm-product-card__button">
             Quick Add
           </button>
         </form>
+
       {% else %}
         <a href="{{ product.url }}" class="farm-product-card__button">
           View Product
