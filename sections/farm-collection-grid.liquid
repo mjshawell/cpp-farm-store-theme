@@ -1,0 +1,218 @@
+<section class="farm-collection">
+
+  <div class="farm-collection__hero">
+    <p class="farm-collection__eyebrow">
+      CPP Farm Store Online
+    </p>
+
+    <h1>
+      {{ collection.title }}
+    </h1>
+
+    {% if collection.description != blank %}
+      <div class="farm-collection__description">
+        {{ collection.description }}
+      </div>
+    {% else %}
+      <p class="farm-collection__description">
+        Browse fresh produce, specialty foods, campus favorites, seasonal items,
+        and giftable local goods from the CPP Farm Store.
+      </p>
+    {% endif %}
+  </div>
+
+  <div class="farm-collection__category-nav">
+    <a href="/collections/all">All Products</a>
+    <a href="/collections/fresh-produce">Fresh Produce</a>
+    <a href="/collections/specialty-foods">Specialty Foods</a>
+    <a href="/collections/gifts">Gifts</a>
+    <a href="/collections/seasonal-items">Seasonal</a>
+    <a href="/collections/cpp-favorites">CPP Favorites</a>
+  </div>
+
+  <div class="farm-collection__toolbar">
+
+    <button class="farm-collection__filter-toggle" type="button">
+      Filter Products
+    </button>
+
+    <form method="get" class="farm-collection__sort-form">
+      <label for="SortBy">Sort by</label>
+
+      {%- assign sort_by = collection.sort_by | default: collection.default_sort_by -%}
+
+      <select name="sort_by" id="SortBy" onchange="this.form.submit()">
+        {% for option in collection.sort_options %}
+          <option
+            value="{{ option.value }}"
+            {% if option.value == sort_by %}selected="selected"{% endif %}
+          >
+            {{ option.name }}
+          </option>
+        {% endfor %}
+      </select>
+    </form>
+
+  </div>
+
+  <div class="farm-collection__layout">
+
+    <aside class="farm-collection__sidebar">
+
+      <div class="farm-collection__sidebar-header">
+        <h2>Filters</h2>
+        <a href="{{ collection.url }}">Clear all</a>
+      </div>
+
+      {% if collection.filters.size > 0 %}
+        <form class="farm-collection__filters" method="get">
+
+          {% for filter in collection.filters %}
+            <details class="farm-collection__filter-group" open>
+              <summary>
+                {{ filter.label }}
+              </summary>
+
+              <div class="farm-collection__filter-options">
+
+                {% case filter.type %}
+
+                  {% when 'list' %}
+                    {% for value in filter.values %}
+                      <label class="farm-collection__filter-option">
+                        <input
+                          type="checkbox"
+                          name="{{ value.param_name }}"
+                          value="{{ value.value }}"
+                          {% if value.active %}checked{% endif %}
+                          {% if value.count == 0 and value.active == false %}disabled{% endif %}
+                        >
+
+                        <span>{{ value.label }}</span>
+                        <small>{{ value.count }}</small>
+                      </label>
+                    {% endfor %}
+
+                  {% when 'price_range' %}
+                    <div class="farm-collection__price-range">
+                      <label>
+                        Min
+                        <input
+                          name="{{ filter.min_value.param_name }}"
+                          type="number"
+                          placeholder="0"
+                          min="0"
+                          {% if filter.min_value.value %}
+                            value="{{ filter.min_value.value | money_without_currency | replace: ',', '' }}"
+                          {% endif %}
+                        >
+                      </label>
+
+                      <label>
+                        Max
+                        <input
+                          name="{{ filter.max_value.param_name }}"
+                          type="number"
+                          placeholder="{{ filter.range_max | money_without_currency | replace: ',', '' }}"
+                          min="0"
+                          {% if filter.max_value.value %}
+                            value="{{ filter.max_value.value | money_without_currency | replace: ',', '' }}"
+                          {% endif %}
+                        >
+                      </label>
+                    </div>
+
+                {% endcase %}
+
+              </div>
+            </details>
+          {% endfor %}
+
+          <button type="submit" class="farm-collection__apply">
+            Apply Filters
+          </button>
+
+        </form>
+      {% else %}
+        <div class="farm-collection__empty-filters">
+          <p>
+            Filters can be added through Shopify product types, tags, vendors,
+            availability, and the Search & Discovery app.
+          </p>
+        </div>
+      {% endif %}
+
+      <div class="farm-collection__service-card">
+        <h3>Pickup & Availability</h3>
+        <p>
+          Product availability may vary by season and inventory. Gift orders may
+          require 1–2 business days for preparation.
+        </p>
+      </div>
+
+    </aside>
+
+    <div class="farm-collection__products">
+
+      <div class="farm-collection__results-count">
+        <p>
+          Showing products in <strong>{{ collection.title }}</strong>
+        </p>
+      </div>
+
+      {% paginate collection.products by 24 %}
+
+        {% if collection.products.size > 0 %}
+          <div class="farm-collection__grid">
+            {% for product in collection.products %}
+              {% render 'farm-product-card', product: product %}
+            {% endfor %}
+          </div>
+        {% else %}
+          <div class="farm-collection__empty">
+            <h2>No products found</h2>
+            <p>
+              Try clearing filters or browsing another Farm Store collection.
+            </p>
+            <a href="/collections/all">Shop all products</a>
+          </div>
+        {% endif %}
+
+        {% if paginate.pages > 1 %}
+          <nav class="farm-collection__pagination">
+            {{ paginate | default_pagination }}
+          </nav>
+        {% endif %}
+
+      {% endpaginate %}
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const toggle = document.querySelector('.farm-collection__filter-toggle');
+    const sidebar = document.querySelector('.farm-collection__sidebar');
+
+    if (toggle && sidebar) {
+      toggle.addEventListener('click', function () {
+        sidebar.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Farm Collection Grid",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm Collection Grid"
+    }
+  ]
+}
+{% endschema %}
