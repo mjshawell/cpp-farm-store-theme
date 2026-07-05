@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "collection",
+    "farm_collection_grid": {
+      "type": "farm-collection-grid",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "farm_collection_grid"
   ]
 }
