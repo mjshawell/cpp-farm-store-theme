@@ -1,0 +1,273 @@
+<section class="farm-contact">
+
+  <div class="farm-contact__hero">
+    <p class="farm-contact__eyebrow">Get In Touch</p>
+    <h1>Contact the Farm Store</h1>
+    <p>
+      Questions about products, pickup orders, gift baskets, or visiting the
+      store? Here is how to reach the Farm Store team at Kellogg Ranch.
+    </p>
+  </div>
+
+  <div class="farm-contact__grid">
+
+    <div class="farm-contact__card">
+      <span class="farm-contact__icon">🏪</span>
+      <h3>Farm Store Manager</h3>
+      <p>
+        Brianna Cox<br>
+        <a href="tel:+19098694906">(909) 869-4906</a><br>
+        <a href="mailto:farmstore@cpp.edu">farmstore@cpp.edu</a>
+      </p>
+    </div>
+
+    <div class="farm-contact__card">
+      <span class="farm-contact__icon">🌱</span>
+      <h3>Nursery Manager</h3>
+      <p>
+        Kelsey Swayze<br>
+        <a href="tel:+19098692299">(909) 869-2299</a><br>
+        <a href="mailto:nursery@cpp.edu">nursery@cpp.edu</a><br>
+        <em>Email for quickest response</em>
+      </p>
+    </div>
+
+    <div class="farm-contact__card">
+      <span class="farm-contact__icon">🚜</span>
+      <h3>Farm Field Trips &amp; Petting Farm</h3>
+      <p>
+        Kellogg Ranch<br>
+        <a href="tel:+19098696722">(909) 869-6722</a><br>
+        <a href="mailto:kelloggranch@cpp.edu">kelloggranch@cpp.edu</a>
+      </p>
+    </div>
+
+    <div class="farm-contact__card">
+      <span class="farm-contact__icon">💳</span>
+      <h3>Forms of Payment</h3>
+      <p>
+        We accept checks, credit/ATM cards, EBT, Bronco Bucks, and Meal Points.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="farm-contact__hours">
+    <div class="farm-contact__hours-info">
+      <p class="farm-contact__eyebrow">Hours &amp; Location</p>
+      <h2>Open daily, 10 a.m. – 6 p.m.</h2>
+      <p class="farm-contact__address">
+        <strong>Farm Store at Kellogg Ranch</strong><br>
+        4102 S University Dr, Pomona, CA 91768<br>
+        Located just south of Temple Ave.
+      </p>
+      <p class="farm-contact__closures-label">Closed on the following days:</p>
+      <ul class="farm-contact__closures">
+        <li>New Year's Day</li>
+        <li>Easter Sunday</li>
+        <li>Memorial Day</li>
+        <li>Independence Day</li>
+        <li>Labor Day</li>
+        <li>Thanksgiving Day</li>
+        <li>Christmas Eve &amp; Day</li>
+      </ul>
+    </div>
+    <div class="farm-contact__map">
+      <iframe
+        src="https://www.google.com/maps?q=Farm+Store+at+Kellogg+Ranch,+4102+S+University+Dr,+Pomona,+CA+91768&output=embed"
+        width="600"
+        height="440"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Map showing the CPP Farm Store at Kellogg Ranch"
+      ></iframe>
+    </div>
+  </div>
+
+  <div class="farm-contact__cta">
+    <p class="farm-contact__eyebrow farm-contact__eyebrow--gold">Before You Reach Out</p>
+    <h2>Your question may already be answered.</h2>
+    <p>
+      Pickup timing, gift order policies, shipping limits, and return
+      information are covered in our FAQ.
+    </p>
+    <a href="/pages/visit-pickup-gift-order-faq" class="farm-contact__button">
+      Visit &amp; Pickup FAQ
+    </a>
+  </div>
+
+</section>
+
+{% stylesheet %}
+  .farm-contact {
+    color: #1f2d1f;
+  }
+
+  .farm-contact__eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4d6b2f;
+    margin: 0 0 0.75rem;
+  }
+  .farm-contact__eyebrow--gold {
+    color: #f5c542;
+  }
+
+  .farm-contact__hero {
+    background: #f8f4ec;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 3rem;
+  }
+  .farm-contact__hero h1 {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    color: #23351f;
+  }
+  .farm-contact__hero p {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .farm-contact__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.5rem;
+    margin: 0 0 3rem;
+  }
+  .farm-contact__card {
+    background: #f8f4ec;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+  }
+  .farm-contact__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .farm-contact__card h3 {
+    margin: 0 0 0.5rem;
+    color: #23351f;
+    font-size: 1.15rem;
+  }
+  .farm-contact__card p {
+    margin: 0;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  .farm-contact__card a {
+    color: #4d6b2f;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .farm-contact__card a:hover {
+    text-decoration: underline;
+  }
+  .farm-contact__card em {
+    font-size: 0.85rem;
+    opacity: 0.8;
+  }
+
+  .farm-contact__hours {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: start;
+    background: #ffffff;
+    border: 1px solid #e5ded0;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin: 0 0 3rem;
+  }
+  .farm-contact__hours h2 {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    color: #23351f;
+    margin: 0 0 1rem;
+  }
+  .farm-contact__address {
+    line-height: 1.7;
+    margin: 0 0 1.5rem;
+  }
+  .farm-contact__closures-label {
+    font-weight: 700;
+    color: #23351f;
+    margin: 0 0 0.5rem;
+  }
+  .farm-contact__closures {
+    margin: 0;
+    padding-left: 1.25rem;
+    line-height: 1.8;
+    columns: 2;
+  }
+  .farm-contact__map iframe {
+    display: block;
+    width: 100%;
+    height: 440px;
+    border: 0;
+    border-radius: 10px;
+  }
+
+  .farm-contact__cta {
+    background: #23351f;
+    border-radius: 12px;
+    padding: 3.5rem 2rem;
+    margin: 0 0 3rem;
+    text-align: center;
+  }
+  .farm-contact__cta h2 {
+    color: #ffffff;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin: 0 0 1rem;
+  }
+  .farm-contact__cta p {
+    color: #f8f4ec;
+    opacity: 0.9;
+    max-width: 560px;
+    margin: 0 auto 2rem;
+    line-height: 1.7;
+  }
+  .farm-contact__button {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    background: #f5c542;
+    color: #1f2d1f;
+    transition: opacity 0.15s ease;
+  }
+  .farm-contact__button:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 749px) {
+    .farm-contact__hours {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      padding: 1.5rem;
+    }
+    .farm-contact__closures {
+      columns: 1;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Farm Contact",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm Contact"
+    }
+  ]
+}
+{% endschema %}
