@@ -1,23 +1,63 @@
-{% comment %}
-  This section is used in the 404 template to render page shown when customers
-  enter an invalid store URL.
+<section class="farm-error-page">
+  <div class="farm-error-page__content">
 
-  https://shopify.dev/docs/storefronts/themes/architecture/templates/404
-{% endcomment %}
+    <div class="farm-error-page__icon">
+      🌱
+    </div>
 
-<h1>{{ '404.title' | t }}</h1>
+    <p class="farm-error-page__eyebrow">
+      404 Page Not Found
+    </p>
 
-<p>
-  {{ '404.not_found' | t }}
-</p>
+    <h1>
+      We’re sorry — our devs are still planting this one.
+    </h1>
 
-<a href="{{ routes.all_products_collection_url }}">
-  {{ '404.back_to_shopping' | t }}
-</a>
+    <p class="farm-error-page__text">
+      This page is not ready to harvest yet. The link may be outdated, the collection may still be growing,
+      or the page may be under development as part of the CPP Farm Store prototype.
+    </p>
+
+    <div class="farm-error-page__card">
+      <h2>What you can do next</h2>
+
+      <ul>
+        <li>Return to the homepage.</li>
+        <li>Browse available Farm Store products.</li>
+        <li>Explore gift options and seasonal bundles.</li>
+        <li>Check back soon as we continue improving the store experience.</li>
+      </ul>
+    </div>
+
+    <div class="farm-error-page__buttons">
+      <a href="/" class="farm-error-page__btn farm-error-page__btn--primary">
+        Back to Home
+      </a>
+
+      <a href="/collections/featured-products" class="farm-error-page__btn farm-error-page__btn--secondary">
+        Shop Products
+      </a>
+
+      <a href="/collections/gifts" class="farm-error-page__btn farm-error-page__btn--outline">
+        View Gifts
+      </a>
+    </div>
+
+    <p class="farm-error-page__note">
+      Prototype note: Some links may still be in progress while the ecommerce experience is being built.
+    </p>
+
+  </div>
+</section>
 
 {% schema %}
 {
-  "name": "t:general.404",
-  "settings": []
+  "name": "Farm 404 Error Page",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm 404 Error Page"
+    }
+  ]
 }
 {% endschema %}

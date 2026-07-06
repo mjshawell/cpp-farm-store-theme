@@ -1781,3 +1781,171 @@
     padding-right: 0;
   }
 }
+
+
+.farm-error-page {
+  min-height: 80vh;
+  background:
+    radial-gradient(circle at top left, rgba(191, 149, 104, 0.18), transparent 34%),
+    radial-gradient(circle at bottom right, rgba(32, 60, 38, 0.18), transparent 30%),
+    #f7f2ea;
+  color: #4e3a32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 8%;
+  text-align: center;
+}
+
+.farm-error-page__content {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.farm-error-page__icon {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  margin: 0 auto 28px;
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.14);
+}
+
+.farm-error-page__eyebrow {
+  color: #bf9568;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin: 0 0 16px;
+  font-size: 0.9rem;
+}
+
+.farm-error-page h1 {
+  color: #203c26;
+  font-size: clamp(2.8rem, 7vw, 6.2rem);
+  line-height: 0.95;
+  margin: 0 auto 26px;
+  max-width: 900px;
+}
+
+.farm-error-page__text {
+  max-width: 760px;
+  margin: 0 auto 34px;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #4e3a32;
+}
+
+.farm-error-page__card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 30px;
+  max-width: 720px;
+  margin: 0 auto 34px;
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.10);
+  text-align: left;
+}
+
+.farm-error-page__card h2 {
+  color: #203c26;
+  margin: 0 0 18px;
+  font-size: 1.5rem;
+}
+
+.farm-error-page__card ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+.farm-error-page__card li {
+  margin-bottom: 10px;
+  line-height: 1.55;
+}
+
+.farm-error-page__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.farm-error-page__btn {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 14px 24px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.farm-error-page__btn:hover {
+  transform: translateY(-2px);
+}
+
+.farm-error-page__btn--primary {
+  background: #203c26;
+  color: #ffffff;
+}
+
+.farm-error-page__btn--primary:hover {
+  background: #bf9568;
+  color: #ffffff;
+}
+
+.farm-error-page__btn--secondary {
+  background: #bf9568;
+  color: #ffffff;
+}
+
+.farm-error-page__btn--secondary:hover {
+  background: #203c26;
+  color: #ffffff;
+}
+
+.farm-error-page__btn--outline {
+  background: transparent;
+  color: #203c26;
+  border: 2px solid #203c26;
+}
+
+.farm-error-page__btn--outline:hover {
+  background: #203c26;
+  color: #ffffff;
+}
+
+.farm-error-page__note {
+  color: #6b5a52;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 620px;
+}
+
+@media (max-width: 700px) {
+  .farm-error-page {
+    padding: 70px 6%;
+  }
+
+  .farm-error-page__icon {
+    width: 88px;
+    height: 88px;
+    font-size: 3rem;
+  }
+
+  .farm-error-page__card {
+    padding: 24px;
+  }
+
+  .farm-error-page__buttons {
+    flex-direction: column;
+  }
+
+  .farm-error-page__btn {
+    width: 100%;
+  }
+}
