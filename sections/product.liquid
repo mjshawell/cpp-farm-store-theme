@@ -1,164 +1,52 @@
-<section class="farm-product-standard">
+{% comment %}
+  This section is used in the product template to render product page with
+  media, content, and add-to-cart form.
 
-  <div class="farm-product-standard__media">
-    {% if product.featured_image %}
-      <img
-        src="{{ product.featured_image | image_url: width: 1000 }}"
-        alt="{{ product.featured_image.alt | default: product.title | escape }}"
-        class="farm-product-standard__image"
-        loading="lazy"
-      >
-    {% else %}
-      <div class="farm-product-standard__placeholder">
-        🧺
-      </div>
-    {% endif %}
-  </div>
+  https://shopify.dev/docs/storefronts/themes/architecture/templates/product
+{% endcomment %}
 
-  <div class="farm-product-standard__content">
+<div class="product-images">
+  {% for image in product.images %}
+    {% render 'image', class: 'product-image', image: image %}
+  {% endfor %}
+</div>
 
-    <p class="farm-product-standard__eyebrow">
-      {% if product.type != blank %}
-        {{ product.type }}
-      {% else %}
-        CPP Farm Store Item
-      {% endif %}
-    </p>
+<div class="product-info">
+  <h1>{{ product.title }}</h1>
+  <p>{{ product.price | money }}</p>
+  <p>{{ product.description }}</p>
+</div>
 
-    <h1>{{ product.title }}</h1>
+<div class="product-form">
+  {% form 'product', product %}
+    {% assign current_variant = product.selected_or_first_available_variant %}
 
-    <div class="farm-product-standard__badges">
-      {% if product.tags contains 'pickup-available' %}
-        <span>Pickup Available</span>
-      {% endif %}
-
-      {% if product.tags contains 'pickup-only' %}
-        <span>Pickup Only</span>
-      {% endif %}
-
-      {% if product.tags contains 'seasonal' %}
-        <span>Seasonal</span>
-      {% endif %}
-
-      {% if product.tags contains 'cpp-favorite' %}
-        <span>CPP Favorite</span>
-      {% endif %}
-
-      {% if product.tags contains 'student-friendly' %}
-        <span>Student Friendly</span>
-      {% endif %}
-    </div>
-
-    <div class="farm-product-standard__price" id="ProductPrice">
-      {% if product.price_varies %}
-        Starting at {{ product.price_min | money }}
-      {% else %}
-        {{ product.price | money }}
-      {% endif %}
-    </div>
-
-    {% if product.description != blank %}
-      <div class="farm-product-standard__description">
-        {{ product.description }}
-      </div>
-    {% endif %}
-
-    {% form 'product', product, class: 'farm-product-standard__form' %}
-
-      {% unless product.has_only_default_variant %}
-        <div class="farm-product-standard__options">
-          {% for option in product.options_with_values %}
-            <label for="Option-{{ forloop.index0 }}">
-              {{ option.name }}
-            </label>
-
-            <select
-              id="Option-{{ forloop.index0 }}"
-              class="farm-product-standard__select"
-              name="options[{{ option.name | escape }}]"
-            >
-              {% for value in option.values %}
-                <option
-                  value="{{ value | escape }}"
-                  {% if option.selected_value == value %}selected="selected"{% endif %}
-                >
-                  {{ value }}
-                </option>
-              {% endfor %}
-            </select>
-          {% endfor %}
-        </div>
-      {% endunless %}
-
-      <input
-        type="hidden"
-        name="id"
-        value="{{ product.selected_or_first_available_variant.id }}"
-      >
-
-      <div class="farm-product-standard__quantity">
-        <label for="Quantity-{{ section.id }}">Quantity</label>
-        <input
-          id="Quantity-{{ section.id }}"
-          type="number"
-          name="quantity"
-          value="1"
-          min="1"
+    <select name="id">
+      {% for variant in product.variants %}
+        <option
+          value="{{ variant.id }}"
+          {% if variant == current_variant %}
+            selected="selected"
+          {% endif %}
         >
-      </div>
+          {{ variant.title }} - {{ variant.price | money }}
+        </option>
+      {% endfor %}
+    </select>
 
-      <div class="farm-product-standard__notice">
-        {% if product.tags contains 'pickup-only' %}
-          <strong>Pickup only:</strong> This item is available for Farm Store pickup only.
-        {% elsif product.tags contains 'pickup-available' %}
-          <strong>Pickup available:</strong> This item can be ordered online and picked up at the CPP Farm Store.
-        {% else %}
-          <strong>Availability note:</strong> Product availability may vary by season and inventory.
-        {% endif %}
-      </div>
+    <input type="text" name="quantity" min="1" value="1">
 
-      {% if product.available %}
-        <button type="submit" class="farm-product-standard__submit">
-          Add to Cart
-        </button>
-      {% else %}
-        <button type="button" class="farm-product-standard__submit" disabled>
-          Currently Unavailable
-        </button>
-      {% endif %}
-
-    {% endform %}
-
-    <div class="farm-product-standard__info-grid">
-
-      <div class="farm-product-standard__info-card">
-        <h3>Pickup Information</h3>
-        <p>
-          Orders can be picked up at the CPP Farm Store. Frozen and perishable items may require special handling.
-        </p>
-      </div>
-
-      <div class="farm-product-standard__info-card">
-        <h3>Farm Store Experience</h3>
-        <p>
-          This product supports the prototype goal of helping customers discover Farm Store items online before visiting in person.
-        </p>
-      </div>
-
-    </div>
-
-  </div>
-
-</section>
+    <input type="submit" value="Add to cart">
+    {{ form | payment_button }}
+  {% endform %}
+</div>
 
 {% schema %}
 {
-  "name": "Farm Product Standard",
+  "name": "t:general.product",
   "settings": [],
-  "presets": [
-    {
-      "name": "Farm Product Standard"
-    }
-  ]
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  }
 }
 {% endschema %}
