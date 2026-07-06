@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "product",
+    "farm_product_standard": {
+      "type": "farm-product-standard",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "farm_product_standard"
   ]
 }
