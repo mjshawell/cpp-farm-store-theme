@@ -1949,3 +1949,210 @@
     width: 100%;
   }
 }
+.farm-product-standard {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  padding: 80px 8%;
+  background: #f7f2ea;
+  color: #4e3a32;
+}
+
+.farm-product-standard__media {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 28px;
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.12);
+  height: fit-content;
+  position: sticky;
+  top: 24px;
+}
+
+.farm-product-standard__image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 24px;
+  object-fit: contain;
+}
+
+.farm-product-standard__placeholder {
+  min-height: 420px;
+  border-radius: 24px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5rem;
+}
+
+.farm-product-standard__content {
+  background: #ffffff;
+  border-radius: 32px;
+  padding: 42px;
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.10);
+}
+
+.farm-product-standard__eyebrow {
+  color: #bf9568;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin: 0 0 12px;
+}
+
+.farm-product-standard h1 {
+  color: #203c26;
+  font-size: clamp(2.5rem, 5vw, 4.8rem);
+  line-height: 1;
+  margin: 0 0 18px;
+}
+
+.farm-product-standard__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.farm-product-standard__badges span {
+  background: #f7f2ea;
+  color: #203c26;
+  border: 1px solid #e5d8c8;
+  border-radius: 999px;
+  padding: 8px 12px;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.farm-product-standard__price {
+  color: #4e3a32;
+  font-size: 1.6rem;
+  font-weight: 900;
+  margin: 0 0 28px;
+}
+
+.farm-product-standard__description {
+  color: #4e3a32;
+  line-height: 1.7;
+  margin-bottom: 34px;
+}
+
+.farm-product-standard__description p {
+  margin-top: 0;
+}
+
+.farm-product-standard__form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.farm-product-standard__options {
+  display: grid;
+  gap: 10px;
+}
+
+.farm-product-standard__options label,
+.farm-product-standard__quantity label {
+  color: #203c26;
+  font-weight: 900;
+}
+
+.farm-product-standard__select,
+.farm-product-standard__quantity input {
+  width: 100%;
+  border: 2px solid #e5d8c8;
+  border-radius: 16px;
+  padding: 14px 16px;
+  font-size: 1rem;
+  color: #4e3a32;
+  background: #ffffff;
+}
+
+.farm-product-standard__select:focus,
+.farm-product-standard__quantity input:focus {
+  border-color: #bf9568;
+  outline: none;
+}
+
+.farm-product-standard__quantity {
+  display: grid;
+  gap: 10px;
+  max-width: 180px;
+}
+
+.farm-product-standard__notice {
+  background: #f7f2ea;
+  border-left: 6px solid #bf9568;
+  border-radius: 18px;
+  padding: 18px 22px;
+  color: #4e3a32;
+  line-height: 1.6;
+}
+
+.farm-product-standard__submit {
+  background: #203c26;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 18px 28px;
+  font-size: 1.05rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.farm-product-standard__submit:hover {
+  background: #bf9568;
+}
+
+.farm-product-standard__submit:disabled {
+  background: #8a7a70;
+  cursor: not-allowed;
+}
+
+.farm-product-standard__info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+  margin-top: 32px;
+}
+
+.farm-product-standard__info-card {
+  background: #f7f2ea;
+  border-radius: 22px;
+  padding: 22px;
+}
+
+.farm-product-standard__info-card h3 {
+  color: #203c26;
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+}
+
+.farm-product-standard__info-card p {
+  margin: 0;
+  color: #4e3a32;
+  line-height: 1.55;
+}
+
+@media (max-width: 950px) {
+  .farm-product-standard {
+    grid-template-columns: 1fr;
+    padding: 60px 6%;
+  }
+
+  .farm-product-standard__media {
+    position: static;
+  }
+
+  .farm-product-standard__content {
+    padding: 28px;
+  }
+
+  .farm-product-standard__info-grid {
+    grid-template-columns: 1fr;
+  }
+}
