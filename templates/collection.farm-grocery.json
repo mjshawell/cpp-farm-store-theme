@@ -8,18 +8,13 @@
  * ------------------------------------------------------------
  */
 {
-  "type": "header",
-  "name": "t:general.header",
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-        "menu": "main-menu",
-        "customer_account_menu": "customer-account-main-menu"
-      }
+    "farm_collection_grid": {
+      "type": "farm-collection-grid",
+      "settings": {}
     }
   },
   "order": [
-    "header"
+    "farm_collection_grid"
   ]
 }

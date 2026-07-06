@@ -8,18 +8,13 @@
  * ------------------------------------------------------------
  */
 {
-  "type": "header",
-  "name": "t:general.header",
   "sections": {
-    "header": {
-      "type": "header",
-      "settings": {
-        "menu": "main-menu",
-        "customer_account_menu": "customer-account-main-menu"
-      }
+    "farm_product_standard": {
+      "type": "farm-product-standard",
+      "settings": {}
     }
   },
   "order": [
-    "header"
+    "farm_product_standard"
   ]
 }

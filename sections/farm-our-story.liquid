@@ -1,0 +1,386 @@
+{% comment %}
+  Farm Our Story — styled story page section for the Our Story page template.
+  All text and images are editable in the theme editor.
+{% endcomment %}
+
+<div class="farm-story-page">
+
+  <!-- Hero band -->
+  <div class="fsp-hero">
+    <p class="fsp-eyebrow">{{ section.settings.eyebrow }}</p>
+    <h1>{{ section.settings.heading }}</h1>
+    <p class="fsp-hero__text">{{ section.settings.intro }}</p>
+  </div>
+
+  <!-- Story + image -->
+  <div class="fsp-story">
+    <div class="fsp-story__image">
+      {% if section.settings.story_image %}
+        {{ section.settings.story_image | image_url: width: 900 | image_tag: alt: section.settings.heading, class: 'fsp-img' }}
+      {% else %}
+        <img
+          class="fsp-img"
+          src="{{ 'farm-store-logo.jpg' | asset_url }}"
+          alt="CPP Farm Store logo"
+          width="900"
+          height="900"
+          loading="lazy"
+        >
+      {% endif %}
+    </div>
+    <div class="fsp-story__text">
+      <h2>{{ section.settings.story_heading }}</h2>
+      <p>{{ section.settings.story_body_1 }}</p>
+      <p>{{ section.settings.story_body_2 }}</p>
+    </div>
+  </div>
+
+  <!-- What you'll find cards -->
+  <div class="fsp-find">
+    <h2>{{ section.settings.find_heading }}</h2>
+    <div class="fsp-find__grid">
+      {% for block in section.blocks %}
+        <div class="fsp-find__card" {{ block.shopify_attributes }}>
+          <span class="fsp-find__icon">{{ block.settings.icon }}</span>
+          <h3>{{ block.settings.title }}</h3>
+          <p>{{ block.settings.text }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Visit band -->
+  <div class="fsp-visit">
+    <div class="fsp-visit__inner">
+      <p class="fsp-eyebrow fsp-eyebrow--gold">VISIT US</p>
+      <h2>{{ section.settings.visit_heading }}</h2>
+      <p class="fsp-visit__address">{{ section.settings.visit_address }}</p>
+      <p class="fsp-visit__note">{{ section.settings.visit_note }}</p>
+      <div class="fsp-visit__buttons">
+        <a href="{{ section.settings.button_1_link }}" class="fsp-btn fsp-btn--gold">{{ section.settings.button_1_label }}</a>
+        <a href="{{ section.settings.button_2_link }}" class="fsp-btn fsp-btn--outline">{{ section.settings.button_2_label }}</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% stylesheet %}
+  .farm-story-page {
+    color: #1f2d1f;
+  }
+  .fsp-eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #4d6b2f;
+    margin: 0 0 0.75rem;
+  }
+  .fsp-eyebrow--gold {
+    color: #f5c542;
+  }
+
+  .fsp-hero {
+    background: #f8f4ec;
+    text-align: center;
+    padding: 4rem 1.5rem;
+    border-radius: 12px;
+    margin: 1.5rem 0 3rem;
+  }
+  .fsp-hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.1;
+    margin: 0 0 1rem;
+    color: #23351f;
+  }
+  .fsp-hero__text {
+    max-width: 640px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .fsp-story {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    align-items: center;
+    margin: 0 0 4rem;
+  }
+  .fsp-img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    display: block;
+  }
+  .fsp-story__text h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: #23351f;
+    margin: 0 0 1rem;
+  }
+  .fsp-story__text p {
+    line-height: 1.7;
+    margin: 0 0 1rem;
+  }
+
+  .fsp-find {
+    text-align: center;
+    margin: 0 0 4rem;
+  }
+  .fsp-find h2 {
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    color: #23351f;
+    margin: 0 0 2rem;
+  }
+  .fsp-find__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+  .fsp-find__card {
+    background: #f8f4ec;
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: left;
+  }
+  .fsp-find__icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 0.75rem;
+  }
+  .fsp-find__card h3 {
+    margin: 0 0 0.5rem;
+    color: #23351f;
+    font-size: 1.15rem;
+  }
+  .fsp-find__card p {
+    margin: 0;
+    line-height: 1.6;
+    font-size: 0.95rem;
+  }
+
+  .fsp-visit {
+    background: #23351f;
+    border-radius: 12px;
+    padding: 4rem 1.5rem;
+    margin: 0 0 3rem;
+    text-align: center;
+  }
+  .fsp-visit__inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+  .fsp-visit h2 {
+    color: #ffffff;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    margin: 0 0 1rem;
+  }
+  .fsp-visit__address {
+    color: #f8f4ec;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem;
+  }
+  .fsp-visit__note {
+    color: #f8f4ec;
+    opacity: 0.85;
+    line-height: 1.6;
+    margin: 0 0 2rem;
+  }
+  .fsp-visit__buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .fsp-btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: opacity 0.15s ease;
+  }
+  .fsp-btn:hover {
+    opacity: 0.85;
+  }
+  .fsp-btn--gold {
+    background: #f5c542;
+    color: #1f2d1f;
+  }
+  .fsp-btn--outline {
+    border: 2px solid #ffffff;
+    color: #ffffff;
+  }
+
+  @media (max-width: 749px) {
+    .fsp-story {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+    .fsp-hero {
+      padding: 3rem 1rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Farm Our Story",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Eyebrow",
+      "default": "OUR STORY"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Rooted in Cal Poly Pomona agriculture."
+    },
+    {
+      "type": "textarea",
+      "id": "intro",
+      "label": "Intro text",
+      "default": "The Cal Poly Pomona Farm Store at Kellogg Ranch connects the campus and surrounding community with fresh produce, local goods, dairy products, pantry staples, and seasonal items grown or supported through the university's agricultural programs."
+    },
+    {
+      "type": "image_picker",
+      "id": "story_image",
+      "label": "Story image (falls back to Farm Store logo)"
+    },
+    {
+      "type": "text",
+      "id": "story_heading",
+      "label": "Story heading",
+      "default": "More than a retail store."
+    },
+    {
+      "type": "textarea",
+      "id": "story_body_1",
+      "label": "Story paragraph 1",
+      "default": "As part of the Huntley College of Agriculture, the Farm Store reflects Cal Poly Pomona's learn-by-doing tradition. Many of the products on our shelves are grown, harvested, or made by students."
+    },
+    {
+      "type": "textarea",
+      "id": "story_body_2",
+      "label": "Story paragraph 2",
+      "default": "Every purchase supports student learning and campus agriculture, making the Farm Store a local, educational, and community-driven destination."
+    },
+    {
+      "type": "text",
+      "id": "find_heading",
+      "label": "What you'll find heading",
+      "default": "What you'll find here"
+    },
+    {
+      "type": "text",
+      "id": "visit_heading",
+      "label": "Visit heading",
+      "default": "Fresh from the farm, built for your table."
+    },
+    {
+      "type": "text",
+      "id": "visit_address",
+      "label": "Address",
+      "default": "Farm Store at Kellogg Ranch · 4102 S University Dr, Pomona, CA 91768"
+    },
+    {
+      "type": "textarea",
+      "id": "visit_note",
+      "label": "Visit note",
+      "default": "Browse online, then stop by the store or order eligible items for pickup. Check current hours before visiting."
+    },
+    {
+      "type": "text",
+      "id": "button_1_label",
+      "label": "Button 1 label",
+      "default": "Shop Products"
+    },
+    {
+      "type": "url",
+      "id": "button_1_link",
+      "label": "Button 1 link"
+    },
+    {
+      "type": "text",
+      "id": "button_2_label",
+      "label": "Button 2 label",
+      "default": "Visit & Pickup FAQ"
+    },
+    {
+      "type": "url",
+      "id": "button_2_link",
+      "label": "Button 2 link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card",
+      "name": "Find card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "icon",
+          "label": "Emoji icon",
+          "default": "🥬"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Fresh Produce"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Seasonal fruits and vegetables from campus fields and local harvest picks."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Farm Our Story",
+      "blocks": [
+        {
+          "type": "card",
+          "settings": {
+            "icon": "🥬",
+            "title": "Fresh Produce",
+            "text": "Seasonal fruits and vegetables from campus fields and local harvest picks."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "icon": "🍦",
+            "title": "CPP Favorites",
+            "text": "Campus-made items like CPP Farms Ice Cream that you can only find here."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "icon": "🍯",
+            "title": "Specialty Foods",
+            "text": "Raw local honey, salsa, jams, and pantry staples from local partners."
+          }
+        },
+        {
+          "type": "card",
+          "settings": {
+            "icon": "🎁",
+            "title": "Gifts & Baskets",
+            "text": "Curated gift baskets and boxes for holidays, families, and proud CPP alumni."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

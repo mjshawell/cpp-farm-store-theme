@@ -1,0 +1,371 @@
+{% assign is_pickup_only = false %}
+
+{% if product.tags contains 'pickup only' or product.type == 'Gift Basket' %}
+  {% assign is_pickup_only = true %}
+{% endif %}
+
+<section class="gift-product">
+  <div class="gift-product__media">
+    {% if product.featured_image %}
+      <img
+        src="{{ product.featured_image | image_url: width: 1000 }}"
+        alt="{{ product.featured_image.alt | default: product.title | escape }}"
+        loading="lazy"
+      >
+    {% else %}
+      <div class="gift-product__placeholder">
+        🎁
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="gift-product__content">
+    <p class="gift-product__eyebrow">
+      {{ product.type | default: 'CPP Farm Store Gift' }}
+    </p>
+
+    <h1>{{ product.title }}</h1>
+
+    <p class="gift-product__price">
+      {% if product.has_only_default_variant %}
+        {{ product.price | money }}
+      {% else %}
+        Starting at {{ product.price_min | money }}
+      {% endif %}
+    </p>
+
+    <div class="gift-product__description">
+      {{ product.description }}
+    </div>
+
+    {% if product.available %}
+
+      <form method="post" action="/cart/add" class="gift-product__form" data-gift-form>
+
+        {% if product.has_only_default_variant %}
+          <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
+        {% else %}
+          <div class="gift-product__field">
+            <label for="gift-variant">Choose Option</label>
+            <select id="gift-variant" name="id" required>
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% unless variant.available %}disabled{% endunless %}
+                >
+                  {{ variant.title }} — {{ variant.price | money }}
+                  {% unless variant.available %} — Sold Out{% endunless %}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% endif %}
+
+        <div class="gift-product__section-heading">
+          Customer Information
+        </div>
+
+        <div class="gift-product__grid">
+          <div class="gift-product__field">
+            <label for="customer-name">Customer Name</label>
+            <input
+              id="customer-name"
+              type="text"
+              name="properties[Customer Name]"
+              required
+            >
+          </div>
+
+          <div class="gift-product__field">
+            <label for="customer-email">Customer Email</label>
+            <input
+              id="customer-email"
+              type="email"
+              name="properties[Customer Email]"
+              required
+            >
+          </div>
+
+          <div class="gift-product__field">
+            <label for="customer-phone">Customer Phone</label>
+            <input
+              id="customer-phone"
+              type="tel"
+              name="properties[Customer Phone]"
+              required
+            >
+          </div>
+        </div>
+
+        <div class="gift-product__section-heading">
+          Fulfillment Details
+        </div>
+
+        {% if is_pickup_only %}
+          <div class="gift-product__notice">
+            <strong>Pickup only:</strong> This basket cannot be shipped.
+          </div>
+
+          <input
+            type="hidden"
+            name="properties[Fulfillment Method]"
+            value="Pickup Only"
+          >
+        {% else %}
+          <div class="gift-product__field">
+            <label>Fulfillment Method</label>
+
+            <div class="gift-product__radios">
+              <label>
+                <input
+                  type="radio"
+                  name="properties[Fulfillment Method]"
+                  value="Pickup"
+                  checked
+                  data-fulfillment-option
+                >
+                Pickup
+              </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="properties[Fulfillment Method]"
+                  value="Shipping"
+                  data-fulfillment-option
+                >
+                Shipping
+              </label>
+            </div>
+          </div>
+        {% endif %}
+
+        <div class="gift-product__grid">
+          <div class="gift-product__field">
+            <label for="desired-date">
+              {% if is_pickup_only %}
+                Desired Pickup Date
+              {% else %}
+                Desired Pickup or Ship Date
+              {% endif %}
+            </label>
+            <input
+              id="desired-date"
+              type="date"
+              name="properties[Desired Pickup or Ship Date]"
+              required
+            >
+          </div>
+
+          <div class="gift-product__field">
+            <label for="quantity">Quantity</label>
+            <input
+              id="quantity"
+              type="number"
+              name="quantity"
+              value="1"
+              min="1"
+              required
+            >
+          </div>
+        </div>
+
+        {% unless is_pickup_only %}
+          <div class="gift-product__shipping" data-shipping-fields>
+            <div class="gift-product__section-heading">
+              Shipping / Recipient Information
+            </div>
+
+            <div class="gift-product__grid">
+              <div class="gift-product__field">
+                <label for="recipient-name">Recipient Name</label>
+                <input
+                  id="recipient-name"
+                  type="text"
+                  name="properties[Recipient Name]"
+                >
+              </div>
+
+              <div class="gift-product__field gift-product__field--wide">
+                <label for="recipient-address">Recipient Address</label>
+                <input
+                  id="recipient-address"
+                  type="text"
+                  name="properties[Recipient Address]"
+                >
+              </div>
+
+              <div class="gift-product__field">
+                <label for="recipient-city">City</label>
+                <input
+                  id="recipient-city"
+                  type="text"
+                  name="properties[Recipient City]"
+                >
+              </div>
+
+              <div class="gift-product__field">
+                <label for="recipient-apt">Apt / Suite</label>
+                <input
+                  id="recipient-apt"
+                  type="text"
+                  name="properties[Recipient Apt or Suite]"
+                >
+              </div>
+
+              <div class="gift-product__field">
+                <label for="recipient-state">State</label>
+                <input
+                  id="recipient-state"
+                  type="text"
+                  name="properties[Recipient State]"
+                >
+              </div>
+
+              <div class="gift-product__field">
+                <label for="recipient-zip">Zip Code</label>
+                <input
+                  id="recipient-zip"
+                  type="text"
+                  name="properties[Recipient Zip Code]"
+                >
+              </div>
+            </div>
+          </div>
+        {% endunless %}
+
+        <div class="gift-product__section-heading">
+          Gift Message & Notes
+        </div>
+
+        <div class="gift-product__field">
+          <label for="card-message">Card Message</label>
+          <textarea
+            id="card-message"
+            name="properties[Card Message]"
+            rows="3"
+            placeholder="Write the message you want included with the gift."
+          ></textarea>
+        </div>
+
+        <div class="gift-product__field">
+          <label for="allergies">Notes / Allergies</label>
+          <textarea
+            id="allergies"
+            name="properties[Notes or Allergies]"
+            rows="3"
+            placeholder="List allergies, dietary concerns, or special instructions."
+          ></textarea>
+        </div>
+
+        <div class="gift-product__field">
+          <label for="specific-items">Specific Item Requests</label>
+          <textarea
+            id="specific-items"
+            name="properties[Specific Item Requests]"
+            rows="3"
+            placeholder="Example: CPP branded items, honey, jam, fruit preserves, candy, etc."
+          ></textarea>
+        </div>
+
+        <div class="gift-product__section-heading">
+          Important Order Notes
+        </div>
+
+        <div class="gift-product__disclaimers">
+
+          <label>
+            <input type="checkbox" required>
+            I understand that the Farm Store needs at least 1–2 business days
+            for this order to be processed.
+          </label>
+
+          <label>
+            <input type="checkbox" required>
+            I understand that all items are based on inventory and may be
+            substituted depending on availability.
+          </label>
+
+          {% if is_pickup_only %}
+            <label>
+              <input type="checkbox" required>
+              I understand that this gift basket is pickup only and cannot be shipped.
+            </label>
+          {% else %}
+            <label>
+              <input type="checkbox" required>
+              I understand that shipping is not included in the product price.
+              If shipping is selected, the Farm Store will contact me once
+              shipping has been calculated.
+            </label>
+
+            <label>
+              <input type="checkbox" required>
+              I understand that the Farm Store does not ship to PO Boxes.
+            </label>
+          {% endif %}
+
+        </div>
+
+        <button type="submit" class="gift-product__submit">
+          Add to Cart
+        </button>
+
+      </form>
+
+    {% else %}
+
+      <div class="gift-product__notice">
+        This product is currently sold out.
+      </div>
+
+    {% endif %}
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const forms = document.querySelectorAll('[data-gift-form]');
+
+    forms.forEach(function (form) {
+      const shippingFields = form.querySelector('[data-shipping-fields]');
+      const fulfillmentOptions = form.querySelectorAll('[data-fulfillment-option]');
+
+      if (!shippingFields || fulfillmentOptions.length === 0) {
+        return;
+      }
+
+      function updateShippingFields() {
+        const selected = form.querySelector('[data-fulfillment-option]:checked');
+
+        if (selected && selected.value === 'Shipping') {
+          shippingFields.style.display = 'block';
+        } else {
+          shippingFields.style.display = 'none';
+        }
+      }
+
+      fulfillmentOptions.forEach(function (option) {
+        option.addEventListener('change', updateShippingFields);
+      });
+
+      updateShippingFields();
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Gift Product Form",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Gift Product Form"
+    }
+  ]
+}
+{% endschema %}
