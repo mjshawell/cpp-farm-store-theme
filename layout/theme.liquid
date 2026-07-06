@@ -27,6 +27,7 @@
     {{ content_for_header }}
   </head>
 
+{{ 'farm-cart-ajax.js' | asset_url | script_tag }}
   <body>
     {% sections 'header-group' %}
 
