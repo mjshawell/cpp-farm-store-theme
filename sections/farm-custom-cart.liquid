@@ -1,216 +1,306 @@
 <section class="farm-cart">
   <div class="farm-cart__header">
-    <p class="farm-cart__eyebrow">Review Your Order</p>
-    <h1>Shopping Cart</h1>
+    <p class="farm-cart__eyebrow">Cart Review</p>
+    <h1>Check your cart — got everything?</h1>
     <p>
-      Review your Farm Store gift order details before checkout. Pickup and shipping
-      details will be confirmed by the Farm Store team.
+      Review your Farm Store items before checkout. You can update quantities,
+      check pickup notes, and add popular items before placing your order.
     </p>
   </div>
 
   {% if cart.item_count > 0 %}
 
-    <form action="{{ routes.cart_url }}" method="post" class="farm-cart__form">
+    <form action="{{ routes.cart_url }}" method="post" class="farm-cart__layout">
 
-      <div class="farm-cart__layout">
+      <div class="farm-cart__items">
 
-        <div class="farm-cart__items">
+        {% for item in cart.items %}
+          <article class="farm-cart__item">
 
-          {% for item in cart.items %}
+            <div class="farm-cart__image">
+              {% if item.image %}
+                <img
+                  src="{{ item.image | image_url: width: 500 }}"
+                  alt="{{ item.image.alt | default: item.product.title | escape }}"
+                  loading="lazy"
+                >
+              {% else %}
+                <div class="farm-cart__placeholder">🧺</div>
+              {% endif %}
+            </div>
 
-            <article class="farm-cart__item">
+            <div class="farm-cart__item-content">
 
-              <div class="farm-cart__image">
-                {% if item.image %}
-                  <img
-                    src="{{ item.image | image_url: width: 500 }}"
-                    alt="{{ item.image.alt | default: item.product.title | escape }}"
-                    loading="lazy"
-                  >
-                {% else %}
-                  <div class="farm-cart__placeholder">
-                    🎁
-                  </div>
-                {% endif %}
-              </div>
-
-              <div class="farm-cart__details">
-
-                <div class="farm-cart__item-heading">
-                  <div>
+              <div class="farm-cart__item-heading">
+                <div>
+                  {% if item.product.type != blank %}
                     <p class="farm-cart__product-type">
-                      {{ item.product.type | default: 'Farm Store Gift' }}
+                      {{ item.product.type }}
                     </p>
+                  {% endif %}
 
-                    <h2>
-                      <a href="{{ item.url }}">
-                        {{ item.product.title }}
-                      </a>
-                    </h2>
+                  <h2>
+                    <a href="{{ item.product.url }}">
+                      {{ item.product.title }}
+                    </a>
+                  </h2>
 
-                    {% unless item.variant.title == 'Default Title' %}
-                      <p class="farm-cart__variant">
-                        {{ item.variant.title }}
-                      </p>
-                    {% endunless %}
-                  </div>
-
-                  <p class="farm-cart__line-price">
-                    {{ item.final_line_price | money }}
-                  </p>
+                  {% unless item.product.has_only_default_variant %}
+                    <p class="farm-cart__variant">
+                      {{ item.variant.title }}
+                    </p>
+                  {% endunless %}
                 </div>
 
-                {% if item.properties.size > 0 %}
-                  <div class="farm-cart__properties">
-                    <h3>Gift Order Details</h3>
-
-                    <dl>
-                      {% for property in item.properties %}
-                        {% assign property_first_character = property.first | slice: 0 %}
-
-                        {% unless property.last == blank or property_first_character == '_' %}
-                          <div class="farm-cart__property-row">
-                            <dt>{{ property.first }}</dt>
-
-                            <dd>
-                              {% if property.last contains '/uploads/' %}
-                                <a href="{{ property.last }}" target="_blank">
-                                  View uploaded file
-                                </a>
-                              {% else %}
-                                {{ property.last }}
-                              {% endif %}
-                            </dd>
-                          </div>
-                        {% endunless %}
-                      {% endfor %}
-                    </dl>
-                  </div>
-                {% endif %}
-
-                <div class="farm-cart__controls">
-                  <label for="updates_{{ item.key }}">
-                    Quantity
-                  </label>
-
-                  <input
-                    id="updates_{{ item.key }}"
-                    type="number"
-                    name="updates[]"
-                    value="{{ item.quantity }}"
-                    min="0"
-                  >
-
-                  <a
-                    href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0"
-                    class="farm-cart__remove"
-                  >
-                    Remove
-                  </a>
-                </div>
-
+                <p class="farm-cart__line-price">
+                  {{ item.final_line_price | money }}
+                </p>
               </div>
 
-            </article>
+              {% if item.properties.size > 0 %}
+                <div class="farm-cart__properties">
+                  <h3>Order Details</h3>
 
-          {% endfor %}
+                  <dl>
+                    {% for property in item.properties %}
+                      {% assign property_first_char = property.first | slice: 0 %}
 
-        </div>
+                      {% if property.last != blank and property_first_char != '_' %}
+                        <div class="farm-cart__property-row">
+                          <dt>{{ property.first }}</dt>
+                          <dd>{{ property.last }}</dd>
+                        </div>
+                      {% endif %}
+                    {% endfor %}
+                  </dl>
+                </div>
+              {% endif %}
 
-        <aside class="farm-cart__summary">
+              <div class="farm-cart__controls">
+                <label for="Quantity-{{ item.index | plus: 1 }}">
+                  Quantity
+                </label>
 
-          <h2>Order Summary</h2>
+                <input
+                  id="Quantity-{{ item.index | plus: 1 }}"
+                  type="number"
+                  name="updates[]"
+                  value="{{ item.quantity }}"
+                  min="0"
+                >
 
-          <div class="farm-cart__summary-row">
-            <span>Subtotal</span>
-            <strong>{{ cart.items_subtotal_price | money }}</strong>
-          </div>
+                <a href="{{ item.url_to_remove }}" class="farm-cart__remove">
+                  Remove
+                </a>
+              </div>
 
-          <div class="farm-cart__summary-row">
-            <span>Shipping</span>
-            <strong>TBD</strong>
-          </div>
+            </div>
 
-          <div class="farm-cart__summary-row farm-cart__summary-row--total">
-            <span>Estimated Total</span>
-            <strong>{{ cart.total_price | money }}</strong>
-          </div>
-
-          <div class="farm-cart__notice">
-            <p>
-              <strong>Shipping note:</strong> Shipping is not included for gift boxes
-              unless calculated after review. If shipping is selected, the Farm Store
-              will contact the customer with the final shipping total.
-            </p>
-
-            <p>
-              <strong>Pickup note:</strong> Gift baskets and pickup-only items must be
-              collected from the CPP Farm Store.
-            </p>
-
-            <p>
-              <strong>Important:</strong> We do not ship to PO Boxes.
-            </p>
-          </div>
-
-          <div class="farm-cart__note">
-            <label for="cart-note">
-              Additional Order Notes
-            </label>
-
-            <textarea
-              id="cart-note"
-              name="note"
-              rows="5"
-              placeholder="Add any final notes for the Farm Store team."
-            >{{ cart.note }}</textarea>
-          </div>
-
-          <div class="farm-cart__actions">
-            <button type="submit" name="update" class="farm-cart__update">
-              Update Cart
-            </button>
-
-            <button type="submit" name="checkout" class="farm-cart__checkout">
-              Place Order
-            </button>
-          </div>
-
-          <a href="/collections/all" class="farm-cart__continue">
-            Continue Shopping
-          </a>
-
-        </aside>
+          </article>
+        {% endfor %}
 
       </div>
 
+      <aside class="farm-cart__summary">
+
+        <h2>Order Summary</h2>
+
+        <div class="farm-cart__summary-row">
+          <span>Items</span>
+          <strong>{{ cart.item_count }}</strong>
+        </div>
+
+        <div class="farm-cart__summary-row farm-cart__summary-row--total">
+          <span>Subtotal</span>
+          <strong>{{ cart.total_price | money }}</strong>
+        </div>
+
+        <div class="farm-cart__notice">
+          <p>
+            <strong>Pickup reminder:</strong> Some products may require preparation time.
+            Gift baskets and gift boxes may require at least 1–2 business days.
+          </p>
+
+          <p>
+            Taxes, shipping, pickup details, and final payment information are confirmed during checkout.
+          </p>
+        </div>
+
+        <div class="farm-cart__note">
+          <label for="CartNote">Order note</label>
+          <textarea
+            id="CartNote"
+            name="note"
+            rows="4"
+            placeholder="Add pickup notes, order questions, or special instructions."
+          >{{ cart.note }}</textarea>
+        </div>
+
+        <div class="farm-cart__checkout-choice">
+          <h3>Choose your checkout path</h3>
+
+          <div class="farm-cart__checkout-options">
+
+            <div class="farm-cart__checkout-option">
+              <span>Returning customer</span>
+              <h4>Sign in or register</h4>
+              <p>
+                Sign in before checkout to use saved customer information when available.
+              </p>
+
+              <div class="farm-cart__account-links">
+                <a href="/account/login?return_url=/checkout">
+                  Sign in
+                </a>
+
+                <a href="/account/register">
+                  Create account
+                </a>
+              </div>
+            </div>
+
+            <div class="farm-cart__checkout-option">
+              <span>Quick checkout</span>
+              <h4>Checkout as guest</h4>
+              <p>
+                Continue without an account and manually enter your checkout information.
+              </p>
+
+              <button
+                type="submit"
+                name="checkout"
+                class="farm-cart__guest-checkout"
+              >
+                Checkout as Guest
+              </button>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="farm-cart__actions">
+          <button type="submit" name="update" class="farm-cart__update">
+            Update Cart
+          </button>
+
+          <button type="submit" name="checkout" class="farm-cart__checkout">
+            Continue to Checkout
+          </button>
+        </div>
+
+        <a href="/collections/featured-products" class="farm-cart__continue">
+          Continue shopping
+        </a>
+
+      </aside>
+
     </form>
+
+    {% assign recommended_collection = collections['featured-products'] %}
+
+    {% if recommended_collection.products.size > 0 %}
+      <section class="farm-cart__recommendations">
+        <div class="farm-cart__recommendations-header">
+          <p class="farm-cart__eyebrow">Popular Add-ons</p>
+          <h2>Before you checkout, you may also like</h2>
+          <p>
+            Add a Farm Store favorite, drink, snack, or giftable item before completing your order.
+          </p>
+        </div>
+
+        <div class="farm-cart__recommendation-grid">
+          {% assign shown_count = 0 %}
+
+          {% for product in recommended_collection.products %}
+            {% assign product_in_cart = false %}
+
+            {% for item in cart.items %}
+              {% if item.product.id == product.id %}
+                {% assign product_in_cart = true %}
+              {% endif %}
+            {% endfor %}
+
+            {% if product_in_cart == false and shown_count < 4 %}
+              <article class="farm-cart__recommendation-card">
+
+                <a href="{{ product.url }}" class="farm-cart__recommendation-image">
+                  {% if product.featured_image %}
+                    <img
+                      src="{{ product.featured_image | image_url: width: 500 }}"
+                      alt="{{ product.featured_image.alt | default: product.title | escape }}"
+                      loading="lazy"
+                    >
+                  {% else %}
+                    <div class="farm-cart__placeholder">🧺</div>
+                  {% endif %}
+                </a>
+
+                <div class="farm-cart__recommendation-content">
+                  {% if product.type != blank %}
+                    <p>{{ product.type }}</p>
+                  {% endif %}
+
+                  <h3>
+                    <a href="{{ product.url }}">
+                      {{ product.title }}
+                    </a>
+                  </h3>
+
+                  <strong>
+                    {% if product.price_varies %}
+                      From {{ product.price_min | money }}
+                    {% else %}
+                      {{ product.price | money }}
+                    {% endif %}
+                  </strong>
+
+                  {% if product.available and product.variants.size == 1 %}
+                    <form method="post" action="/cart/add">
+                      <input
+                        type="hidden"
+                        name="id"
+                        value="{{ product.selected_or_first_available_variant.id }}"
+                      >
+
+                      <input
+                        type="hidden"
+                        name="quantity"
+                        value="1"
+                      >
+
+                      <button type="submit">
+                        Add to Cart
+                      </button>
+                    </form>
+                  {% else %}
+                    <a href="{{ product.url }}" class="farm-cart__view-product">
+                      View Product
+                    </a>
+                  {% endif %}
+                </div>
+
+              </article>
+
+              {% assign shown_count = shown_count | plus: 1 %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </section>
+    {% endif %}
 
   {% else %}
 
     <div class="farm-cart__empty">
-      <h2>Your cart is empty.</h2>
-
+      <h2>Your cart is still waiting for its first harvest.</h2>
       <p>
-        Add a gift basket, gift box, fruit box, or Farm Store product to begin your order.
+        Browse Farm Store products, gifts, snacks, produce, and campus favorites.
       </p>
 
-      <a href="/collections/all" class="farm-cart__checkout">
-        Browse Products
+      <a href="/collections/featured-products" class="farm-cart__checkout">
+        Shop Products
       </a>
     </div>
 
   {% endif %}
-</section>
 
-{% schema %}
-{
-  "name": "Farm Custom Cart",
-  "settings": [],
-  "presets": [
-    {
-      "name": "Farm Custom Cart"
-    }
-  ]
-}
-{% endschema %}
+</section>
