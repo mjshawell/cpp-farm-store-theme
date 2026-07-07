@@ -11,6 +11,14 @@
   "type": "footer",
   "name": "t:general.footer",
   "sections": {
+    "farm_footer_4T9LCc": {
+      "type": "farm-footer",
+      "name": "Farm Footer",
+      "settings": {
+        "menu": "",
+        "show_payment_icons": true
+      }
+    },
     "footer": {
       "type": "footer",
       "disabled": true,
@@ -21,6 +29,7 @@
     }
   },
   "order": [
+    "farm_footer_4T9LCc",
     "footer"
   ]
 }

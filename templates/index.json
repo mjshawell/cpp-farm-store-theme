@@ -1,51 +1,51 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "farm_announcement": {
       "type": "farm-announcement",
       "settings": {}
     },
-
     "farm_hero": {
       "type": "farm-hero",
       "settings": {}
     },
-
     "featured_categories": {
       "type": "featured-categories",
       "settings": {}
     },
-
     "featured_products_custom": {
       "type": "featured-products-custom",
       "settings": {}
     },
-
     "seasonal_harvest": {
       "type": "seasonal-harvest",
       "settings": {}
     },
-
     "loyalty_rewards": {
       "type": "loyalty-rewards",
       "settings": {}
     },
-
-    "farm_story": {
-      "type": "farm-story",
-      "settings": {}
-    },
-
     "farm_newsletter": {
       "type": "farm-newsletter",
       "settings": {}
     },
-
     "farm_footer": {
       "type": "farm-footer",
-      "settings": {}
+      "disabled": true,
+      "settings": {
+        "menu": "",
+        "show_payment_icons": true
+      }
     }
   },
-
   "order": [
     "farm_announcement",
     "farm_hero",
@@ -53,8 +53,7 @@
     "featured_products_custom",
     "seasonal_harvest",
     "loyalty_rewards",
-    "farm_story",
     "farm_newsletter",
     "farm_footer"
   ]
-} 
+}
