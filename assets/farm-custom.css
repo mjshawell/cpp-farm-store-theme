@@ -2530,3 +2530,11 @@
 .header__icons svg {
   --icon-stroke-width: 1.5;
 }
+.search-toggle {
+  padding: 4px;
+}
+
+.header__icons a,
+.header__icons shopify-account {
+  padding: 4px;
+}
