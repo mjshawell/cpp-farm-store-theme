@@ -9,7 +9,18 @@
       for discounts on future Farm Store orders.
     </p>
 
-    <a href="#" class="loyalty-btn" onclick="event.preventDefault(); document.querySelector('[data-smile-ui-launcher]') && document.querySelector('[data-smile-ui-launcher]').click();">
+    <a href="#" class="loyalty-btn" onclick="
+  event.preventDefault();
+  var frame = document.querySelector('[id*=smile-lite-launcher-frame]');
+  if(frame) {
+    var btn = frame.contentDocument.querySelector('button[aria-label*=Smile]') || 
+              frame.contentDocument.querySelector('button');
+    if(btn) btn.click();
+  } else {
+    var btn = document.querySelector('button[aria-label*=Smile]');
+    if(btn) btn.click();
+  }
+">
   Join Rewards Program
 </a>
   </div>
