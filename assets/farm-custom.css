@@ -586,12 +586,15 @@
   background: #203c26;
   color: #ffffff;
   padding: 80px 8% 32px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .farm-footer__inner {
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr 1fr;
   gap: 42px;
+  width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   align-items: start;
