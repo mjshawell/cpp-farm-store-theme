@@ -28,30 +28,32 @@
       </p>
     </div>
 
-    <div class="farm-footer__column">
-      <h3>Quick Links</h3>
+   <div class="farm-footer__column">
+  <h3>Visit Us</h3>
 
-      {% if section.settings.menu != blank %}
-        <ul>
-          {% for link in section.settings.menu.links %}
-            <li>
-              <a href="{{ link.url }}">
-                {{ link.title }}
-              </a>
-            </li>
-          {% endfor %}
-        </ul>
-      {% else %}
-        <ul>
-          <li><a href="/collections/all">Shop All Products</a></li>
-          <li><a href="/collections/fresh-produce">Fresh Produce</a></li>
-          <li><a href="/collections/gifts">Gift Baskets</a></li>
-          <li><a href="/pages/visit-pickup-gift-order-faq">Visit & Pickup FAQ</a></li>
-          <li><a href="/pages/about">Our Story</a></li>
-          <li><a href="/pages/contact">Contact</a></li>
-        </ul>
-      {% endif %}
-    </div>
+  <p>
+    Farm Store at Kellogg Ranch<br>
+    4102 S University Dr<br>
+    Pomona, CA 91768
+  </p>
+
+  <div class="farm-footer__map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3307.1488457522!2d-117.82140492358!3d34.057249973168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c32b3f7a1b1f05%3A0xe3d749f66b5bdc21!2sCPP%20Farm%20Store!5e0!3m2!1sen!2sus!4v1688000000000!5m2!1sen!2sus"
+      width="100%"
+      height="180"
+      style="border: 0; border-radius: 8px; margin-top: 12px;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="CPP Farm Store location map">
+    </iframe>
+  </div>
+
+  <p>
+    Open daily for fresh produce, local products, gifts, and seasonal favorites.
+  </p>
+</div>
 
     <div class="farm-footer__column">
       <h3>Stay Connected</h3>
