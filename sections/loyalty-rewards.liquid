@@ -13,12 +13,17 @@
   event.preventDefault();
   var frame = document.querySelector('[id*=smile-lite-launcher-frame]');
   if(frame) {
-    var btn = frame.contentDocument.querySelector('button[aria-label*=Smile]') || 
-              frame.contentDocument.querySelector('button');
-    if(btn) btn.click();
-  } else {
-    var btn = document.querySelector('button[aria-label*=Smile]');
-    if(btn) btn.click();
+    try {
+      var btn = frame.contentDocument.querySelector('button');
+      if(btn) { btn.click(); return; }
+    } catch(e) {}
+  }
+  var btns = document.querySelectorAll('button');
+  for(var i = 0; i < btns.length; i++) {
+    if(btns[i].getAttribute('aria-label') && btns[i].getAttribute('aria-label').indexOf('Smile') > -1) {
+      btns[i].click();
+      return;
+    }
   }
 ">
   Join Rewards Program
