@@ -259,16 +259,14 @@
     width: 2rem;
   }
 
-  /* Icon row: no shared gap here — spacing is set per-icon below
-     so search can sit closer while account <-> cart stays even. */
+  /* Icon row: even spacing across all three icons */
   .site-header .header__icons {
     display: flex;
     align-items: center;
+    gap: 1.5rem;
   }
 
-  /* Space between search and account icon (tighter) */
   .search-toggle {
-    margin-right: 0.5rem;
     background: transparent;
     border: none;
     padding: 8px;
@@ -279,13 +277,6 @@
   }
   .search-toggle svg {
     width: 1.75rem;
-  }
-
-  /* Space between account and cart icon (even, matches original feel) */
-  .header__icons shopify-account {
-    margin-right: 1.75rem;
-    display: flex;
-    align-items: center;
   }
 
   /* Hamburger button */
