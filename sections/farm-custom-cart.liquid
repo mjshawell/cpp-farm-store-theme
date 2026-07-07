@@ -1,3 +1,7 @@
+{% comment %}
+  Farm Custom Cart Section
+{% endcomment %}
+
 <section class="farm-cart">
   <div class="farm-cart__header">
     <p class="farm-cart__eyebrow">Cart Review</p>
@@ -216,7 +220,7 @@
           </button>
         </div>
 
-        <a href="/collections/featured-products" class="farm-cart__continue">
+        <a href="/collections/all" class="farm-cart__continue">
           Continue shopping
         </a>
 
@@ -224,7 +228,7 @@
 
     </form>
 
-    {% assign recommended_collection = collections['featured-products'] %}
+    {% assign recommended_collection = collections['all'] %}
 
     {% if recommended_collection.products.size > 0 %}
       <section class="farm-cart__recommendations">
@@ -333,7 +337,7 @@
         Browse Farm Store products, gifts, snacks, produce, and campus favorites.
       </p>
 
-      <a href="/collections/featured-products" class="farm-cart__checkout">
+      <a href="/collections/all" class="farm-cart__checkout">
         Shop Products
       </a>
     </div>
