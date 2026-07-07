@@ -1,4 +1,4 @@
-<header class="site-header">
+<header class="site-header" id="site-header">
   <button
     class="menu-toggle"
     aria-label="Open menu"
@@ -65,6 +65,48 @@
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') farmMenuClose();
   });
+
+  /* ---- Sticky header: hide on scroll down, reveal on scroll up ---- */
+  (function () {
+    var header = document.getElementById('site-header');
+    if (!header) return;
+
+    var lastScrollY = window.scrollY;
+    var ticking = false;
+
+    // How many px you must scroll up before the header reappears.
+    // Lower = more sensitive (reappears almost immediately).
+    var revealThreshold = 5;
+
+    // Don't hide the header until the user has scrolled past this point,
+    // so it doesn't flicker right at the top of the page.
+    var hideAfter = header.offsetHeight;
+
+    function onScroll() {
+      var currentScrollY = window.scrollY;
+
+      if (currentScrollY <= hideAfter) {
+        // Always show header near the top of the page
+        header.classList.remove('site-header--hidden');
+      } else if (currentScrollY > lastScrollY + 1) {
+        // Scrolling down
+        header.classList.add('site-header--hidden');
+      } else if (currentScrollY < lastScrollY - revealThreshold) {
+        // Scrolling up by more than the threshold
+        header.classList.remove('site-header--hidden');
+      }
+
+      lastScrollY = currentScrollY;
+      ticking = false;
+    }
+
+    window.addEventListener('scroll', function () {
+      if (!ticking) {
+        window.requestAnimationFrame(onScroll);
+        ticking = true;
+      }
+    }, { passive: true });
+  })();
 </script>
 
 {% stylesheet %}
@@ -74,7 +116,28 @@
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
+
+    /* Make it stick to the viewport and animate in/out */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 80;
+    background: var(--color-background, #fff);
+    transform: translateY(0);
+    transition: transform 0.25s ease;
   }
+  .site-header--hidden {
+    transform: translateY(-100%);
+  }
+
+  /* Push page content down so it isn't hidden behind the fixed header.
+     Adjust the selector below if your theme wraps main content differently. */
+  body {
+    padding-top: 5rem;
+  }
+
   .site-header a {
     position: relative;
     text-decoration: none;
