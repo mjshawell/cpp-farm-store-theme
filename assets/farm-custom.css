@@ -2534,7 +2534,17 @@
   padding: 4px;
 }
 
+.header__icons {
+  gap: 0.5rem;
+}
+
+.search-toggle {
+  padding: 4px;
+  margin: 0;
+}
+
 .header__icons a,
 .header__icons shopify-account {
   padding: 4px;
+  margin: 0;
 }
