@@ -188,25 +188,17 @@
     var lastScrollY = window.scrollY;
     var ticking = false;
 
-    // How many px you must scroll up before the header reappears.
-    // Lower = more sensitive (reappears almost immediately).
     var revealThreshold = 5;
-
-    // Don't hide the header until the user has scrolled past this point,
-    // so it doesn't flicker right at the top of the page.
     var hideAfter = header.offsetHeight;
 
     function onScroll() {
       var currentScrollY = window.scrollY;
 
       if (currentScrollY <= hideAfter) {
-        // Always show header near the top of the page
         header.classList.remove('site-header--hidden');
       } else if (currentScrollY > lastScrollY + 1) {
-        // Scrolling down
         header.classList.add('site-header--hidden');
       } else if (currentScrollY < lastScrollY - revealThreshold) {
-        // Scrolling up by more than the threshold
         header.classList.remove('site-header--hidden');
       }
 
@@ -231,7 +223,6 @@
     justify-content: space-between;
     gap: 1rem;
 
-    /* Make it stick to the viewport and animate in/out */
     position: fixed;
     top: 0;
     left: 0;
@@ -246,8 +237,6 @@
     transform: translateY(-100%);
   }
 
-  /* Push page content down so it isn't hidden behind the fixed header.
-     Adjust the selector below if your theme wraps main content differently. */
   body {
     padding-top: 5rem;
   }
@@ -269,10 +258,34 @@
   .site-header svg {
     width: 2rem;
   }
+
+  /* Icon row: no shared gap here — spacing is set per-icon below
+     so search can sit closer while account <-> cart stays even. */
   .site-header .header__icons {
     display: flex;
     align-items: center;
-    gap: 1rem;
+  }
+
+  /* Space between search and account icon (tighter) */
+  .search-toggle {
+    margin-right: 0.5rem;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .search-toggle svg {
+    width: 1.75rem;
+  }
+
+  /* Space between account and cart icon (even, matches original feel) */
+  .header__icons shopify-account {
+    margin-right: 1.75rem;
+    display: flex;
+    align-items: center;
   }
 
   /* Hamburger button */
@@ -294,20 +307,6 @@
     width: 100%;
     background: #23351f;
     border-radius: 2px;
-  }
-
-  /* Search toggle button */
-  .search-toggle {
-    background: transparent;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .search-toggle svg {
-    width: 1.75rem;
   }
 
   /* Overlay (shared visual style, separate elements for menu vs search) */
