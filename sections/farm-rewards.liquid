@@ -91,13 +91,6 @@
   margin: 0 0 18px;
 }
 
-.farm-rewards-page__link {
-  color: #bf9568;
-  font-weight: 900;
-  text-decoration: none;
-  border-bottom: 2px solid #bf9568;
-}
-
 .farm-rewards-page__table-section {
   padding: 100px 8%;
   background: #ffffff;
@@ -155,45 +148,8 @@
   font-size: 1.15rem;
   line-height: 1.7;
   max-width: 680px;
-  margin: 0 auto 34px;
+  margin: 0 auto 20px;
   color: #f7f2ea;
-}
-
-.farm-rewards-page__cta-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.farm-rewards-page__cta-btn {
-  display: inline-block;
-  border-radius: 999px;
-  padding: 16px 28px;
-  font-weight: 900;
-  text-decoration: none;
-  font-size: 1rem;
-}
-
-.farm-rewards-page__cta-btn--primary {
-  background: #bf9568;
-  color: #ffffff;
-}
-
-.farm-rewards-page__cta-btn--primary:hover {
-  background: #ffffff;
-  color: #4e3a32;
-}
-
-.farm-rewards-page__cta-btn--secondary {
-  background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
-}
-
-.farm-rewards-page__cta-btn--secondary:hover {
-  background: #ffffff;
-  color: #4e3a32;
 }
 
 @media (max-width: 900px) {
@@ -204,6 +160,7 @@
 </style>
 
 <section class="farm-rewards-page">
+
   <div class="farm-rewards-page__hero">
     <p class="farm-rewards-page__eyebrow">Farm Rewards Program</p>
     <h1>Earn rewards every time you shop.</h1>
@@ -214,11 +171,13 @@
     <p class="farm-rewards-page__eyebrow">How It Works</p>
     <h2>Three simple steps</h2>
 
-    <div class="farm-rewards-page__card">
-  <div class="farm-rewards-page__icon">1</div>
-  <h3>Create an Account</h3>
-  <p>Sign up for a free CPP Farm Store account using the account icon in the top right corner of any page to start tracking your points and rewards automatically.</p>
-</div>
+    <div class="farm-rewards-page__grid">
+
+      <div class="farm-rewards-page__card">
+        <div class="farm-rewards-page__icon">1</div>
+        <h3>Create an Account</h3>
+        <p>Sign up for a free CPP Farm Store account using the account icon in the top right corner of any page to start tracking your points and rewards automatically.</p>
+      </div>
 
       <div class="farm-rewards-page__card">
         <div class="farm-rewards-page__icon">2</div>
@@ -231,6 +190,7 @@
         <h3>Redeem for Discounts</h3>
         <p>Every <strong>100 points = $1 off</strong> your order. Redeem your points at checkout for instant savings.</p>
       </div>
+
     </div>
   </div>
 
@@ -274,12 +234,12 @@
   </div>
 
   <div class="farm-rewards-page__cta">
-  <p class="farm-rewards-page__eyebrow">Get Started</p>
-  <h2>Ready to start earning?</h2>
-  <p>Click the <strong>account icon</strong> in the top right corner of any page to sign in or create an account. Once logged in, your points will be tracked automatically with every purchase.</p>
-  <p>Already a member? Click the <strong>Rewards</strong> button in the bottom right corner to check your points balance.</p>
-</div>
+    <p class="farm-rewards-page__eyebrow">Get Started</p>
+    <h2>Ready to start earning?</h2>
+    <p>Click the <strong>account icon</strong> in the top right corner of any page to sign in or create an account. Once logged in, your points will be tracked automatically with every purchase.</p>
+    <p>Already a member? Click the <strong>Rewards</strong> button in the bottom right corner to check your points balance.</p>
   </div>
+
 </section>
 
 {% schema %}
