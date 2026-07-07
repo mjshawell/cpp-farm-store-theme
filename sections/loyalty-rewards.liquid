@@ -9,25 +9,9 @@
       for discounts on future Farm Store orders.
     </p>
 
-    <a href="#" class="loyalty-btn" onclick="
-  event.preventDefault();
-  var frame = document.querySelector('[id*=smile-lite-launcher-frame]');
-  if(frame) {
-    try {
-      var btn = frame.contentDocument.querySelector('button');
-      if(btn) { btn.click(); return; }
-    } catch(e) {}
-  }
-  var btns = document.querySelectorAll('button');
-  for(var i = 0; i < btns.length; i++) {
-    if(btns[i].getAttribute('aria-label') && btns[i].getAttribute('aria-label').indexOf('Smile') > -1) {
-      btns[i].click();
-      return;
-    }
-  }
-">
-  Join Rewards Program
-</a>
+    <a href="#" class="loyalty-btn" onclick="event.preventDefault(); openSmile();">
+      Join Rewards Program
+    </a>
   </div>
 
   <div class="loyalty-rewards__right">
@@ -48,6 +32,26 @@
     </div>
 
   </div>
+
+  <script>
+    function openSmile() {
+      var frame = document.querySelector('[id*=smile-lite-launcher-frame]');
+      if (frame && frame.contentDocument) {
+        var btn = frame.contentDocument.querySelector('button');
+        if (btn) {
+          btn.click();
+          return;
+        }
+      }
+      var allButtons = document.querySelectorAll('button');
+      allButtons.forEach(function(b) {
+        if (b.style.position === 'fixed' || (b.getAttribute('aria-label') || '').toLowerCase().includes('smile')) {
+          b.click();
+        }
+      });
+    }
+  </script>
+
 </section>
 
 {% schema %}
