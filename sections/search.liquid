@@ -1,66 +1,281 @@
-{% comment %}
-  This section is used in the search template to render search results for
-  products, articles, and pages.
+<style>
+.farm-search {
+  background: #f7f2ea;
+  min-height: 60vh;
+  padding: 80px 8%;
+  color: #4e3a32;
+}
 
-  https://shopify.dev/docs/storefronts/themes/architecture/templates/search
-{% endcomment %}
+.farm-search__header {
+  max-width: 900px;
+  margin-bottom: 48px;
+}
 
-<h1>{{ 'search.title' | t }}</h1>
+.farm-search__eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-weight: 900;
+  color: #bf9568;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+}
 
-<form action="{{ routes.search_url }}" method="get" role="search">
-  <input
-    type="search"
-    size="50"
-    name="q"
-    value="{{ search.terms | escape }}"
-    placeholder="{{ 'search.placeholder' | t }}"
-  >
-  <button type="submit">{{ 'search.submit' | t }}</button>
-</form>
+.farm-search__header h1 {
+  color: #203c26;
+  font-size: clamp(2.8rem, 6vw, 5.5rem);
+  line-height: 1;
+  margin: 0 0 32px;
+}
 
-{% if search.performed %}
-  {% if search.results_count == 0 %}
-    <p>{{ 'search.no_results_html' | t: terms: search.terms }}</p>
-  {% else %}
-    <p>{{ 'search.results_for_html' | t: terms: search.terms, count: search.results_count }}</p>
+.farm-search__form {
+  display: flex;
+  gap: 12px;
+  max-width: 720px;
+}
 
-    <div class="search-results">
-      {% paginate search.results by 20 %}
-        {% # Search result items may be an article, a page, or a product. %}
-        {% for result in search.results %}
-          <div class="search-result">
+.farm-search__input {
+  flex: 1;
+  border: 2px solid #e5d8c8;
+  border-radius: 999px;
+  padding: 16px 24px;
+  font-size: 1rem;
+  color: #4e3a32;
+  background: #ffffff;
+  outline: none;
+}
+
+.farm-search__input:focus {
+  border-color: #bf9568;
+}
+
+.farm-search__submit {
+  background: #203c26;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 16px 28px;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+.farm-search__submit:hover {
+  background: #bf9568;
+}
+
+.farm-search__meta {
+  margin: 32px 0 24px;
+  color: #4e3a32;
+  font-size: 1.05rem;
+}
+
+.farm-search__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+.farm-search__card {
+  background: #ffffff;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(78, 58, 50, 0.10);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.farm-search__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 45px rgba(78, 58, 50, 0.16);
+}
+
+.farm-search__card-image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f7f2ea;
+}
+
+.farm-search__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 20px;
+}
+
+.farm-search__card-content {
+  padding: 18px 20px 22px;
+}
+
+.farm-search__card-title {
+  color: #203c26;
+  font-size: 1rem;
+  font-weight: 900;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.farm-search__card-title:hover {
+  color: #bf9568;
+}
+
+.farm-search__card-price {
+  color: #4e3a32;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.farm-search__empty {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 48px;
+  max-width: 600px;
+  box-shadow: 0 12px 30px rgba(78, 58, 50, 0.10);
+}
+
+.farm-search__empty h2 {
+  color: #203c26;
+  margin: 0 0 14px;
+  font-size: 1.8rem;
+}
+
+.farm-search__empty p {
+  color: #4e3a32;
+  line-height: 1.65;
+  margin: 0 0 24px;
+}
+
+.farm-search__empty a {
+  display: inline-block;
+  background: #203c26;
+  color: #ffffff;
+  border-radius: 999px;
+  padding: 14px 24px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.farm-search__empty a:hover {
+  background: #bf9568;
+}
+
+.farm-search__pagination {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.farm-search__pagination a,
+.farm-search__pagination span {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-weight: 900;
+  text-decoration: none;
+  background: #ffffff;
+  color: #203c26;
+  border: 2px solid #e5d8c8;
+}
+
+.farm-search__pagination a:hover {
+  background: #203c26;
+  color: #ffffff;
+  border-color: #203c26;
+}
+
+@media (max-width: 1100px) {
+  .farm-search__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .farm-search__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .farm-search__grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<section class="farm-search">
+  <div class="farm-search__header">
+    <p class="farm-search__eyebrow">Farm Store Search</p>
+    <h1>Find what you're looking for.</h1>
+
+    <form action="{{ routes.search_url }}" method="get" role="search" class="farm-search__form">
+      <input type="hidden" name="type" value="product">
+      <input
+        type="search"
+        name="q"
+        value="{{ search.terms | escape }}"
+        placeholder="Search products..."
+        class="farm-search__input"
+        aria-label="Search products"
+      >
+      <button type="submit" class="farm-search__submit">Search</button>
+    </form>
+  </div>
+
+  {% if search.performed %}
+    {% if search.results_count == 0 %}
+      <div class="farm-search__empty">
+        <h2>No results found.</h2>
+        <p>We couldn't find anything matching "{{ search.terms | escape }}". Try a different search term or browse our collections.</p>
+        <a href="/collections/all">Browse All Products</a>
+      </div>
+    {% else %}
+      <p class="farm-search__meta">
+        {{ search.results_count }} result{% if search.results_count != 1 %}s{% endif %} for "<strong>{{ search.terms | escape }}</strong>"
+      </p>
+
+      <div class="farm-search__grid">
+        {% paginate search.results by 20 %}
+          {% for result in search.results %}
             {% assign featured_image = result.featured_image | default: result.image %}
-            {% if featured_image %}
-              {% render 'image', class: 'search-result__image', image: featured_image, url: result.url, width: 400 %}
-            {% endif %}
-            <div class="search-result__content">
-              <p>
-                {{ result.title | link_to: result.url }}
-                {% if result.price %}
-                  {{ result.price | money_with_currency }}
+            <article class="farm-search__card">
+              <a href="{{ result.url }}" class="farm-search__card-image">
+                {% if featured_image %}
+                  <img
+                    src="{{ featured_image | image_url: width: 500 }}"
+                    alt="{{ featured_image.alt | default: result.title | escape }}"
+                    loading="lazy"
+                  >
                 {% endif %}
-              </p>
+              </a>
+              <div class="farm-search__card-content">
+                <a href="{{ result.url }}" class="farm-search__card-title">
+                  {{ result.title }}
+                </a>
+                {% if result.price %}
+                  <p class="farm-search__card-price">
+                    {% if result.price_varies %}
+                      From {{ result.price_min | money }}
+                    {% else %}
+                      {{ result.price | money }}
+                    {% endif %}
+                  </p>
+                {% endif %}
+              </div>
+            </article>
+          {% endfor %}
+
+          {% if paginate.pages > 1 %}
+            <div class="farm-search__pagination">
+              {{ paginate | default_pagination }}
             </div>
-          </div>
-        {% endfor %}
-
-        {{ paginate | default_pagination }}
-      {% endpaginate %}
-    </div>
+          {% endif %}
+        {% endpaginate %}
+      </div>
+    {% endif %}
   {% endif %}
-{% endif %}
-
-{% stylesheet %}
-  .search-results {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  }
-  .search-results .prev,
-  .search-results .page,
-  .search-results .next {
-    grid-column: 1 / -1;
-  }
-{% endstylesheet %}
+</section>
 
 {% schema %}
 {
