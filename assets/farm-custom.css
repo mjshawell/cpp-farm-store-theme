@@ -2508,3 +2508,8 @@
   border-radius: 8px;
   display: block;
 }
+.farm-cart {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 80px 8%;
+}
