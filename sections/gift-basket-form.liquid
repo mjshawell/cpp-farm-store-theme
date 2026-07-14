@@ -1,0 +1,257 @@
+<section class="gift-basket-form">
+  <div class="gift-basket-form__layout">
+
+    <div class="gift-basket-form__media">
+      {% if product.featured_image %}
+        <img
+          src="{{ product.featured_image | image_url: width: 1000 }}"
+          alt="{{ product.featured_image.alt | default: product.title | escape }}"
+          class="gift-basket-form__image"
+          loading="lazy"
+        >
+      {% else %}
+        <div class="gift-basket-form__placeholder">
+          🎁
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="gift-basket-form__content">
+      <p class="gift-basket-form__eyebrow">
+        CPP Farm Store Gift
+      </p>
+
+      <h1>{{ product.title }}</h1>
+
+      <div class="gift-basket-form__price">
+        {% if product.price_varies %}
+          Starting at {{ product.price_min | money }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      </div>
+
+      {% if product.description != blank %}
+        <div class="gift-basket-form__description">
+          {{ product.description }}
+        </div>
+      {% else %}
+        <p class="gift-basket-form__description">
+          A curated Farm Store gift option featuring seasonal goods, local favorites,
+          specialty foods, and campus-connected products.
+        </p>
+      {% endif %}
+
+      <form method="post" action="/cart/add" class="gift-basket-form__form">
+
+        {% if product.variants.size > 1 %}
+          <div class="gift-basket-form__field">
+            <label for="GiftBasketVariant">
+              Choose an option
+            </label>
+
+            <select id="GiftBasketVariant" name="id" required>
+              {% for variant in product.variants %}
+                <option
+                  value="{{ variant.id }}"
+                  {% unless variant.available %}disabled{% endunless %}
+                >
+                  {{ variant.title }}
+                  {% if variant.available %}
+                    — {{ variant.price | money }}
+                  {% else %}
+                    — Sold out
+                  {% endif %}
+                </option>
+              {% endfor %}
+            </select>
+          </div>
+        {% else %}
+          <input
+            type="hidden"
+            name="id"
+            value="{{ product.selected_or_first_available_variant.id }}"
+          >
+        {% endif %}
+
+        <input type="hidden" name="properties[Gift Order]" value="Yes">
+
+        <div class="gift-basket-form__section">
+          <h2>Gift Details</h2>
+
+          <div class="gift-basket-form__grid">
+            <div class="gift-basket-form__field">
+              <label for="RecipientName">
+                Recipient Name
+              </label>
+              <input
+                id="RecipientName"
+                type="text"
+                name="properties[Recipient Name]"
+                placeholder="Who is this gift for?"
+              >
+            </div>
+
+            <div class="gift-basket-form__field">
+              <label for="GiftOccasion">
+                Gift Occasion
+              </label>
+              <select id="GiftOccasion" name="properties[Gift Occasion]">
+                <option value="">Select an occasion</option>
+                <option value="Birthday">Birthday</option>
+                <option value="Thank You">Thank You</option>
+                <option value="Holiday">Holiday</option>
+                <option value="Congratulations">Congratulations</option>
+                <option value="Alumni Gift">Alumni Gift</option>
+                <option value="Family Gift">Family Gift</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="gift-basket-form__field">
+            <label for="CardMessage">
+              Card Message
+            </label>
+            <textarea
+              id="CardMessage"
+              name="properties[Card Message]"
+              rows="4"
+              placeholder="Write the message you want included with the gift."
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="gift-basket-form__section">
+          <h2>Preferences & Notes</h2>
+
+          <div class="gift-basket-form__field">
+            <label for="AllergyNotes">
+              Allergies / Dietary Concerns
+            </label>
+            <textarea
+              id="AllergyNotes"
+              name="properties[Allergies or Dietary Concerns]"
+              rows="3"
+              placeholder="List allergies, dietary concerns, or special instructions."
+            ></textarea>
+          </div>
+
+          <div class="gift-basket-form__field">
+            <label for="ItemRequests">
+              Specific Item Requests
+            </label>
+            <textarea
+              id="ItemRequests"
+              name="properties[Specific Item Requests]"
+              rows="3"
+              placeholder="Example: CPP branded items, honey, jam, fruit preserves, candy, etc."
+            ></textarea>
+          </div>
+
+          <div class="gift-basket-form__field">
+            <label for="SubstitutionPreference">
+              Substitution Preference
+            </label>
+            <select
+              id="SubstitutionPreference"
+              name="properties[Substitution Preference]"
+            >
+              <option value="">Select a preference</option>
+              <option value="Substitutions are okay">
+                Substitutions are okay
+              </option>
+              <option value="Contact me before substituting">
+                Contact me before substituting
+              </option>
+              <option value="No substitutions if unavailable">
+                No substitutions if unavailable
+              </option>
+            </select>
+          </div>
+        </div>
+
+        <div class="gift-basket-form__section">
+          <h2>Fulfillment Details</h2>
+
+          <div class="gift-basket-form__grid">
+            <div class="gift-basket-form__field">
+              <label for="FulfillmentPreference">
+                Fulfillment Preference
+              </label>
+              <select
+                id="FulfillmentPreference"
+                name="properties[Fulfillment Preference]"
+                required
+              >
+                <option value="">Select one</option>
+                <option value="Pickup at CPP Farm Store">
+                  Pickup at CPP Farm Store
+                </option>
+                <option value="Shipping request">
+                  Shipping request
+                </option>
+              </select>
+            </div>
+
+            <div class="gift-basket-form__field">
+              <label for="PreferredDate">
+                Preferred Pickup or Ship Date
+              </label>
+              <input
+                id="PreferredDate"
+                type="date"
+                name="properties[Preferred Pickup or Ship Date]"
+              >
+            </div>
+          </div>
+
+          <div class="gift-basket-form__field gift-basket-form__quantity">
+            <label for="GiftQuantity">
+              Quantity
+            </label>
+            <input
+              id="GiftQuantity"
+              type="number"
+              name="quantity"
+              value="1"
+              min="1"
+            >
+          </div>
+        </div>
+
+        <div class="gift-basket-form__note">
+          <p>
+            Gift baskets and custom gift orders may require 1–2 business days for preparation.
+            Items are based on availability and may be substituted when needed. Shipping details,
+            final costs, and delivery options are confirmed during checkout.
+          </p>
+        </div>
+
+        {% if product.available %}
+          <button type="submit" class="gift-basket-form__button">
+            Add Gift to Cart
+          </button>
+        {% else %}
+          <button type="button" class="gift-basket-form__button" disabled>
+            Sold Out
+          </button>
+        {% endif %}
+
+      </form>
+    </div>
+
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Gift Basket Form",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Gift Basket Form"
+    }
+  ]
+}
+{% endschema %}
