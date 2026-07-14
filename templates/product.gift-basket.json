@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "main": {
-      "type": "product",
+    "gift_basket_form": {
+      "type": "gift-basket-form",
       "settings": {}
     }
   },
   "order": [
-    "main"
+    "gift_basket_form"
   ]
 }
