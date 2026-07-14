@@ -2548,3 +2548,218 @@
   padding: 4px;
   margin: 0;
 }
+
+/* ================================
+   Gift Basket Product Form
+================================ */
+
+.gift-basket-form {
+  background: #f7f2ea;
+  color: #4e3a32;
+  padding: 80px 8%;
+}
+
+.gift-basket-form__layout {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 56px;
+  align-items: start;
+}
+
+.gift-basket-form__media {
+  position: sticky;
+  top: 24px;
+}
+
+.gift-basket-form__image {
+  width: 100%;
+  display: block;
+  border-radius: 34px;
+  background: #ffffff;
+  box-shadow: 0 24px 60px rgba(78, 58, 50, 0.12);
+}
+
+.gift-basket-form__placeholder {
+  min-height: 520px;
+  border-radius: 34px;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 6rem;
+  box-shadow: 0 24px 60px rgba(78, 58, 50, 0.12);
+}
+
+.gift-basket-form__content {
+  background: #ffffff;
+  border-radius: 34px;
+  padding: 42px;
+  box-shadow: 0 24px 60px rgba(78, 58, 50, 0.10);
+}
+
+.gift-basket-form__eyebrow {
+  color: #bf9568;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.85rem;
+  margin: 0 0 14px;
+}
+
+.gift-basket-form h1 {
+  color: #203c26;
+  font-size: clamp(2.8rem, 5vw, 5.6rem);
+  line-height: 0.95;
+  margin: 0 0 18px;
+}
+
+.gift-basket-form__price {
+  color: #4e3a32;
+  font-size: 1.8rem;
+  font-weight: 900;
+  margin-bottom: 22px;
+}
+
+.gift-basket-form__description {
+  color: #4e3a32;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 34px;
+}
+
+.gift-basket-form__description p {
+  margin-top: 0;
+}
+
+.gift-basket-form__form {
+  display: block;
+}
+
+.gift-basket-form__section {
+  border-top: 3px solid #e3d6c7;
+  padding-top: 28px;
+  margin-top: 34px;
+}
+
+.gift-basket-form__section h2 {
+  color: #203c26;
+  font-size: 1.8rem;
+  margin: 0 0 24px;
+}
+
+.gift-basket-form__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 22px;
+}
+
+.gift-basket-form__field {
+  margin-bottom: 22px;
+}
+
+.gift-basket-form__field label {
+  display: block;
+  color: #203c26;
+  font-weight: 900;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.gift-basket-form__field input,
+.gift-basket-form__field select,
+.gift-basket-form__field textarea {
+  width: 100%;
+  border: 2px solid #e3d6c7;
+  border-radius: 18px;
+  padding: 16px 18px;
+  font: inherit;
+  color: #4e3a32;
+  background: #ffffff;
+  outline: none;
+}
+
+.gift-basket-form__field textarea {
+  resize: vertical;
+}
+
+.gift-basket-form__field input:focus,
+.gift-basket-form__field select:focus,
+.gift-basket-form__field textarea:focus {
+  border-color: #bf9568;
+  box-shadow: 0 0 0 3px rgba(191, 149, 104, 0.18);
+}
+
+.gift-basket-form__quantity {
+  max-width: 220px;
+}
+
+.gift-basket-form__note {
+  margin-top: 28px;
+  padding: 22px;
+  background: #f7f2ea;
+  border-left: 6px solid #bf9568;
+  border-radius: 18px;
+}
+
+.gift-basket-form__note p {
+  margin: 0;
+  color: #4e3a32;
+  line-height: 1.65;
+}
+
+.gift-basket-form__button {
+  width: 100%;
+  margin-top: 28px;
+  border: none;
+  border-radius: 999px;
+  background: #203c26;
+  color: #ffffff;
+  padding: 18px 26px;
+  font-size: 1.1rem;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.gift-basket-form__button:hover {
+  background: #bf9568;
+  transform: translateY(-2px);
+}
+
+.gift-basket-form__button:disabled {
+  background: #b8b8b8;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 1000px) {
+  .gift-basket-form__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .gift-basket-form__media {
+    position: static;
+  }
+}
+
+@media (max-width: 700px) {
+  .gift-basket-form {
+    padding: 56px 6%;
+  }
+
+  .gift-basket-form__content {
+    padding: 28px;
+    border-radius: 26px;
+  }
+
+  .gift-basket-form__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .gift-basket-form h1 {
+    font-size: 2.8rem;
+  }
+}
