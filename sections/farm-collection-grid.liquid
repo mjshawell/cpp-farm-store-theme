@@ -21,15 +21,15 @@
     {% endif %}
   </div>
 
-<div class="farm-collection__category-nav">
-  <a href="/collections/all">All Products</a>
-  <a href="/collections/fresh-produce">Fresh Produce</a>
-  <a href="/collections/cpp-favorites">CPP Favorites</a>
-  <a href="/collections/specialty-foods">Specialty Foods</a>
-  <a href="/collections/gifts">Gifts</a>
-  <a href="/collections/student-snacks-drinks">Student Snacks & Drinks</a>
-  <a href="/collections/seasonal-bundles">Seasonal Bundles</a>
-</div>
+  <div class="farm-collection__category-nav">
+    <a href="/collections/all">All Products</a>
+    <a href="/collections/fresh-produce">Fresh Produce</a>
+    <a href="/collections/cpp-favorites">CPP Favorites</a>
+    <a href="/collections/specialty-foods">Specialty Foods</a>
+    <a href="/collections/gifts">Gifts</a>
+    <a href="/collections/student-snacks-drinks">Student Snacks & Drinks</a>
+    <a href="/collections/seasonal-bundles">Seasonal Bundles</a>
+  </div>
 
   <div class="farm-collection__toolbar">
 
@@ -201,6 +201,46 @@
     if (toggle && sidebar) {
       toggle.addEventListener('click', function () {
         sidebar.classList.toggle('is-open');
+      });
+    }
+  });
+</script>
+
+<div class="farm-cart-toast" id="FarmCollectionCartToast" aria-live="polite">
+  <div class="farm-cart-toast__icon">🌱</div>
+
+  <div class="farm-cart-toast__content">
+    <h3>Added to cart</h3>
+    <p>Your Farm Store item has been added successfully.</p>
+
+    <div class="farm-cart-toast__actions">
+      <a href="/cart">View Cart</a>
+      <button type="button" id="FarmCollectionToastClose">
+        Keep Shopping
+      </button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const params = new URLSearchParams(window.location.search);
+    const toast = document.getElementById('FarmCollectionCartToast');
+    const closeButton = document.getElementById('FarmCollectionToastClose');
+
+    if (params.get('added') === 'cart' && toast) {
+      toast.classList.add('is-visible');
+
+      window.history.replaceState({}, document.title, window.location.pathname);
+
+      setTimeout(function () {
+        toast.classList.remove('is-visible');
+      }, 4500);
+    }
+
+    if (closeButton && toast) {
+      closeButton.addEventListener('click', function () {
+        toast.classList.remove('is-visible');
       });
     }
   });
