@@ -2845,22 +2845,22 @@
 }
 
 /* ================================
-   Farm Order Tracker
+   Live Farm Order Tracker
 ================================ */
 
-.farm-order-tracker {
+.farm-live-order-tracker {
   background: #f7f2ea;
-  padding: 72px 8%;
   color: #4e3a32;
+  padding: 72px 8%;
 }
 
-.farm-order-tracker__hero {
-  max-width: 920px;
+.farm-live-order-tracker__hero {
+  max-width: 900px;
   margin: 0 auto 44px;
   text-align: center;
 }
 
-.farm-order-tracker__eyebrow {
+.farm-live-order-tracker__eyebrow {
   color: #bf9568;
   font-size: 0.82rem;
   font-weight: 900;
@@ -2869,21 +2869,21 @@
   margin-bottom: 10px;
 }
 
-.farm-order-tracker__hero h1 {
+.farm-live-order-tracker__hero h1 {
   color: #203c26;
-  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
   line-height: 0.95;
   margin: 0 0 18px;
 }
 
-.farm-order-tracker__hero p {
+.farm-live-order-tracker__hero p {
   max-width: 720px;
   margin: 0 auto;
   font-size: 1.05rem;
   line-height: 1.7;
 }
 
-.farm-order-tracker__layout {
+.farm-live-order-tracker__layout {
   max-width: 1240px;
   margin: 0 auto;
   display: grid;
@@ -2892,38 +2892,38 @@
   align-items: start;
 }
 
-.farm-order-tracker__card {
+.farm-live-order-tracker__card {
   background: #ffffff;
   border: 1px solid #e3d6c7;
   border-radius: 28px;
   box-shadow: 0 18px 50px rgba(78, 58, 50, 0.12);
 }
 
-.farm-order-tracker__lookup-card {
+.farm-live-order-tracker__lookup {
   padding: 28px;
   position: sticky;
   top: 24px;
 }
 
-.farm-order-tracker__lookup-card h2,
-.farm-order-tracker__result-card h2 {
+.farm-live-order-tracker__lookup h2,
+.farm-live-order-tracker__results h2 {
   color: #203c26;
   margin: 0 0 10px;
 }
 
-.farm-order-tracker__lookup-card p {
+.farm-live-order-tracker__lookup p {
   line-height: 1.6;
 }
 
-.farm-order-tracker__form {
+.farm-live-order-tracker__form {
   margin-top: 24px;
 }
 
-.farm-order-tracker__field {
+.farm-live-order-tracker__field {
   margin-bottom: 18px;
 }
 
-.farm-order-tracker__field label {
+.farm-live-order-tracker__field label {
   display: block;
   color: #203c26;
   font-size: 0.88rem;
@@ -2931,7 +2931,7 @@
   margin-bottom: 8px;
 }
 
-.farm-order-tracker__field input {
+.farm-live-order-tracker__field input {
   width: 100%;
   border: 1px solid #d7c5b3;
   border-radius: 16px;
@@ -2941,13 +2941,13 @@
   color: #4e3a32;
 }
 
-.farm-order-tracker__field input:focus {
+.farm-live-order-tracker__field input:focus {
   outline: none;
   border-color: #bf9568;
   box-shadow: 0 0 0 4px rgba(191, 149, 104, 0.18);
 }
 
-.farm-order-tracker__button {
+.farm-live-order-tracker__button {
   width: 100%;
   border: none;
   border-radius: 999px;
@@ -2959,12 +2959,12 @@
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
-.farm-order-tracker__button:hover {
+.farm-live-order-tracker__button:hover {
   background: #bf9568;
   transform: translateY(-2px);
 }
 
-.farm-order-tracker__demo-note {
+.farm-live-order-tracker__note {
   margin-top: 22px;
   background: #f7f2ea;
   border-radius: 18px;
@@ -2973,21 +2973,12 @@
   line-height: 1.55;
 }
 
-.farm-order-tracker__demo-note code {
-  background: #ffffff;
-  color: #203c26;
-  border: 1px solid #e3d6c7;
-  border-radius: 8px;
-  padding: 2px 6px;
-  font-weight: 900;
-}
-
-.farm-order-tracker__result-card {
+.farm-live-order-tracker__results {
   min-height: 480px;
   padding: 30px;
 }
 
-.farm-order-tracker__empty-state {
+.farm-live-order-tracker__empty {
   min-height: 420px;
   display: flex;
   flex-direction: column;
@@ -2997,16 +2988,16 @@
   text-align: center;
 }
 
-.farm-order-tracker__empty-state p {
+.farm-live-order-tracker__empty p {
   max-width: 560px;
   line-height: 1.65;
 }
 
-.farm-order-tracker__empty-state--error h2 {
+.farm-live-order-tracker__empty--error h2 {
   color: #8a3a2b;
 }
 
-.farm-order-tracker__empty-icon {
+.farm-live-order-tracker__empty-icon {
   width: 82px;
   height: 82px;
   border-radius: 50%;
@@ -3017,7 +3008,7 @@
   font-size: 2rem;
 }
 
-.farm-order-tracker__status-header {
+.farm-live-order-tracker__status-header {
   display: flex;
   justify-content: space-between;
   gap: 24px;
@@ -3027,17 +3018,18 @@
   margin-bottom: 24px;
 }
 
-.farm-order-tracker__status-header h2 {
+.farm-live-order-tracker__status-header h2 {
+  color: #203c26;
   font-size: clamp(1.8rem, 4vw, 3rem);
   line-height: 1;
-  margin-bottom: 12px;
+  margin: 0 0 12px;
 }
 
-.farm-order-tracker__status-header p {
+.farm-live-order-tracker__status-header p {
   line-height: 1.65;
 }
 
-.farm-order-tracker__status-pill {
+.farm-live-order-tracker__status-pill {
   background: #203c26;
   color: #ffffff;
   border-radius: 999px;
@@ -3047,21 +3039,21 @@
   white-space: nowrap;
 }
 
-.farm-order-tracker__summary {
+.farm-live-order-tracker__summary {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
   margin-bottom: 28px;
 }
 
-.farm-order-tracker__summary div {
+.farm-live-order-tracker__summary div {
   background: #fffaf3;
   border: 1px solid #eadccd;
   border-radius: 18px;
   padding: 16px;
 }
 
-.farm-order-tracker__summary span {
+.farm-live-order-tracker__summary span {
   display: block;
   color: #8b6f5d;
   font-size: 0.78rem;
@@ -3071,18 +3063,19 @@
   margin-bottom: 6px;
 }
 
-.farm-order-tracker__summary strong {
+.farm-live-order-tracker__summary strong {
   color: #203c26;
   font-size: 0.95rem;
+  word-break: break-word;
 }
 
-.farm-order-tracker__timeline {
+.farm-live-order-tracker__timeline {
   display: grid;
   gap: 0;
   margin-top: 10px;
 }
 
-.farm-order-tracker__step {
+.farm-live-order-tracker__step {
   display: grid;
   grid-template-columns: 48px 1fr;
   gap: 16px;
@@ -3090,7 +3083,7 @@
   padding-bottom: 24px;
 }
 
-.farm-order-tracker__step:not(:last-child)::before {
+.farm-live-order-tracker__step:not(:last-child)::before {
   content: "";
   position: absolute;
   left: 23px;
@@ -3100,12 +3093,12 @@
   background: #e3d6c7;
 }
 
-.farm-order-tracker__step.is-complete:not(:last-child)::before,
-.farm-order-tracker__step.is-current:not(:last-child)::before {
+.farm-live-order-tracker__step.is-complete:not(:last-child)::before,
+.farm-live-order-tracker__step.is-current:not(:last-child)::before {
   background: #203c26;
 }
 
-.farm-order-tracker__step-marker {
+.farm-live-order-tracker__step-marker {
   width: 48px;
   height: 48px;
   border-radius: 50%;
@@ -3120,69 +3113,55 @@
   z-index: 1;
 }
 
-.farm-order-tracker__step.is-complete .farm-order-tracker__step-marker {
+.farm-live-order-tracker__step.is-complete .farm-live-order-tracker__step-marker {
   background: #203c26;
   border-color: #203c26;
   color: #ffffff;
 }
 
-.farm-order-tracker__step.is-current .farm-order-tracker__step-marker {
+.farm-live-order-tracker__step.is-current .farm-live-order-tracker__step-marker {
   background: #f7c948;
   border-color: #203c26;
   color: #203c26;
 }
 
-.farm-order-tracker__step-content {
-  padding-top: 2px;
-}
-
-.farm-order-tracker__step-content h4 {
+.farm-live-order-tracker__step-content h4 {
   color: #203c26;
   font-size: 1.05rem;
   margin: 0 0 5px;
 }
 
-.farm-order-tracker__step-content p {
+.farm-live-order-tracker__step-content p {
   margin: 0;
   color: #6e5a4d;
   line-height: 1.55;
 }
 
-.farm-order-tracker__notice {
-  margin-top: 18px;
-  background: #f7f2ea;
-  border-left: 5px solid #bf9568;
-  border-radius: 16px;
-  padding: 16px;
-  line-height: 1.6;
-  font-size: 0.95rem;
-}
-
 @media (max-width: 950px) {
-  .farm-order-tracker__layout {
+  .farm-live-order-tracker__layout {
     grid-template-columns: 1fr;
   }
 
-  .farm-order-tracker__lookup-card {
+  .farm-live-order-tracker__lookup {
     position: static;
   }
 
-  .farm-order-tracker__summary {
+  .farm-live-order-tracker__summary {
     grid-template-columns: 1fr;
   }
 
-  .farm-order-tracker__status-header {
+  .farm-live-order-tracker__status-header {
     flex-direction: column;
   }
 }
 
 @media (max-width: 650px) {
-  .farm-order-tracker {
+  .farm-live-order-tracker {
     padding: 56px 6%;
   }
 
-  .farm-order-tracker__lookup-card,
-  .farm-order-tracker__result-card {
+  .farm-live-order-tracker__lookup,
+  .farm-live-order-tracker__results {
     padding: 22px;
     border-radius: 22px;
   }
