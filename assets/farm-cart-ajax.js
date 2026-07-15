@@ -32,13 +32,13 @@ document.addEventListener('DOMContentLoaded', function () {
           return response.json();
         })
         .then(function () {
-          showFarmCartToast();
           updateFarmCartCount();
 
-          if (submitButton) {
-            submitButton.disabled = false;
-            submitButton.textContent = originalButtonText;
-          }
+          /*
+            Redirect customer back to the product collection page after add-to-cart.
+            The ?added=cart flag lets the collection page show the success toast.
+          */
+          window.location.href = '/collections/all?added=cart';
         })
         .catch(function () {
           showFarmCartToast('Sorry, this item could not be added. Please try again.');
