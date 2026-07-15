@@ -9,12 +9,12 @@
  */
 {
   "sections": {
-    "farm_order_tracker": {
-      "type": "farm-order-tracker",
+    "farm_live_order_tracker": {
+      "type": "farm-live-order-tracker",
       "settings": {}
     }
   },
   "order": [
-    "farm_order_tracker"
+    "farm_live_order_tracker"
   ]
 }
