@@ -1,0 +1,262 @@
+<section class="farm-order-tracker">
+
+  <div class="farm-order-tracker__hero">
+    <p class="farm-order-tracker__eyebrow">
+      CPP Farm Store Orders
+    </p>
+
+    <h1>
+      Track Your Farm Store Order
+    </h1>
+
+    <p>
+      Check the preparation status of gift baskets, pickup orders, seasonal bundles,
+      and specialty Farm Store items.
+    </p>
+  </div>
+
+  <div class="farm-order-tracker__layout">
+
+    <div class="farm-order-tracker__card farm-order-tracker__lookup-card">
+      <h2>Order Lookup</h2>
+
+      <p>
+        Enter your order number and email address to view your current order status.
+      </p>
+
+      <form class="farm-order-tracker__form" id="FarmOrderTrackerForm">
+
+        <div class="farm-order-tracker__field">
+          <label for="FarmOrderNumber">Order Number</label>
+          <input
+            type="text"
+            id="FarmOrderNumber"
+            name="order_number"
+            placeholder="Example: FS1001"
+            required
+          >
+        </div>
+
+        <div class="farm-order-tracker__field">
+          <label for="FarmOrderEmail">Email Address</label>
+          <input
+            type="email"
+            id="FarmOrderEmail"
+            name="email"
+            placeholder="example@email.com"
+            required
+          >
+        </div>
+
+        <button type="submit" class="farm-order-tracker__button">
+          Track Order
+        </button>
+
+      </form>
+
+      <div class="farm-order-tracker__demo-note">
+        <strong>Prototype demo orders:</strong>
+        <br>
+        Try <code>FS1001</code>, <code>FS1002</code>, or <code>FS1003</code> with any email address.
+      </div>
+    </div>
+
+    <div class="farm-order-tracker__card farm-order-tracker__result-card" id="FarmOrderTrackerResult">
+
+      <div class="farm-order-tracker__empty-state">
+        <div class="farm-order-tracker__empty-icon">🧺</div>
+
+        <h2>Order status will appear here</h2>
+
+        <p>
+          Once an order is found, this area will show the current Farm Store preparation stage,
+          pickup or shipping notes, and estimated readiness.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const trackerForm = document.getElementById('FarmOrderTrackerForm');
+    const resultContainer = document.getElementById('FarmOrderTrackerResult');
+
+    const demoOrders = {
+      'FS1001': {
+        customerName: 'Demo Customer',
+        orderType: 'Farm Store Gift Basket',
+        status: 'basket_in_production',
+        statusLabel: 'Basket in Production',
+        fulfillment: 'Pickup at CPP Farm Store',
+        estimatedReady: 'Tomorrow after 2:00 PM',
+        message: 'Your gift basket details have been reviewed and the Farm Store team is preparing your order.',
+        currentStep: 3
+      },
+      'FS1002': {
+        customerName: 'Demo Customer',
+        orderType: 'Seasonal Produce Box',
+        status: 'ready_for_pickup',
+        statusLabel: 'Ready for Pickup',
+        fulfillment: 'Pickup at CPP Farm Store',
+        estimatedReady: 'Ready now',
+        message: 'Your order is ready for pickup. Please wait for confirmation before arriving for future live orders.',
+        currentStep: 4
+      },
+      'FS1003': {
+        customerName: 'Demo Customer',
+        orderType: 'Custom Gift Box',
+        status: 'gift_details_reviewed',
+        statusLabel: 'Gift Details Reviewed',
+        fulfillment: 'Shipping request',
+        estimatedReady: '1–2 business days',
+        message: 'Your gift details, card message, and preferences have been reviewed. The order will move into production next.',
+        currentStep: 2
+      }
+    };
+
+    const steps = [
+      {
+        label: 'Order Received',
+        description: 'Your order has been placed successfully.'
+      },
+      {
+        label: 'Gift Details Reviewed',
+        description: 'Farm Store staff reviewed notes, preferences, and fulfillment details.'
+      },
+      {
+        label: 'Basket in Production',
+        description: 'Your basket, bundle, or specialty item is being prepared.'
+      },
+      {
+        label: 'Ready for Pickup / Ship',
+        description: 'Your order is ready for pickup or prepared for shipment.'
+      },
+      {
+        label: 'Completed',
+        description: 'The order has been picked up, shipped, or completed.'
+      }
+    ];
+
+    if (!trackerForm || !resultContainer) return;
+
+    trackerForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      const orderNumberInput = document.getElementById('FarmOrderNumber');
+      const emailInput = document.getElementById('FarmOrderEmail');
+
+      const orderNumber = orderNumberInput.value.trim().toUpperCase();
+      const email = emailInput.value.trim();
+
+      if (!orderNumber || !email) {
+        renderError('Please enter both an order number and email address.');
+        return;
+      }
+
+      const order = demoOrders[orderNumber];
+
+      if (!order) {
+        renderError('We could not find that demo order. Try FS1001, FS1002, or FS1003.');
+        return;
+      }
+
+      renderOrder(orderNumber, order);
+    });
+
+    function renderOrder(orderNumber, order) {
+      const timelineMarkup = steps.map(function (step, index) {
+        const stepNumber = index + 1;
+        const isComplete = stepNumber < order.currentStep;
+        const isCurrent = stepNumber === order.currentStep;
+
+        let statusClass = '';
+
+        if (isComplete) {
+          statusClass = 'is-complete';
+        } else if (isCurrent) {
+          statusClass = 'is-current';
+        }
+
+        return `
+          <div class="farm-order-tracker__step ${statusClass}">
+            <div class="farm-order-tracker__step-marker">
+              ${isComplete ? '✓' : stepNumber}
+            </div>
+
+            <div class="farm-order-tracker__step-content">
+              <h4>${step.label}</h4>
+              <p>${step.description}</p>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      resultContainer.innerHTML = `
+        <div class="farm-order-tracker__status-header">
+          <div>
+            <p class="farm-order-tracker__eyebrow">Order ${orderNumber}</p>
+            <h2>${order.statusLabel}</h2>
+            <p>${order.message}</p>
+          </div>
+
+          <div class="farm-order-tracker__status-pill">
+            ${order.statusLabel}
+          </div>
+        </div>
+
+        <div class="farm-order-tracker__summary">
+          <div>
+            <span>Order Type</span>
+            <strong>${order.orderType}</strong>
+          </div>
+
+          <div>
+            <span>Fulfillment</span>
+            <strong>${order.fulfillment}</strong>
+          </div>
+
+          <div>
+            <span>Estimated Ready</span>
+            <strong>${order.estimatedReady}</strong>
+          </div>
+        </div>
+
+        <div class="farm-order-tracker__timeline">
+          ${timelineMarkup}
+        </div>
+
+        <div class="farm-order-tracker__notice">
+          <strong>Prototype note:</strong>
+          In a live version, this status would be powered by Shopify order metafields,
+          order tags, Shopify Flow, or a connected custom backend.
+        </div>
+      `;
+    }
+
+    function renderError(message) {
+      resultContainer.innerHTML = `
+        <div class="farm-order-tracker__empty-state farm-order-tracker__empty-state--error">
+          <div class="farm-order-tracker__empty-icon">⚠️</div>
+          <h2>Order not found</h2>
+          <p>${message}</p>
+        </div>
+      `;
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Farm Order Tracker",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Farm Order Tracker"
+    }
+  ]
+}
+{% endschema %}
