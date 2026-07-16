@@ -21,7 +21,7 @@
       <h2>Order Lookup</h2>
 
       <p>
-        Use the order number from your confirmation email or receipt.
+      Use the order number and tracking code provided by the Farm Store team.
       </p>
 
       <form id="FarmLiveOrderTrackerForm" class="farm-live-order-tracker__form">
@@ -40,19 +40,19 @@
           >
         </div>
 
-        <div class="farm-live-order-tracker__field">
-          <label for="FarmLiveOrderEmail">
-            Email Address
-          </label>
+  <div class="farm-live-order-tracker__field">
+  <label for="FarmLiveTrackingCode">
+    Tracking Code
+  </label>
 
-          <input
-            id="FarmLiveOrderEmail"
-            name="email"
-            type="email"
-            placeholder="example@email.com"
-            required
-          >
-        </div>
+  <input
+    id="FarmLiveTrackingCode"
+    name="trackingCode"
+    type="text"
+    placeholder="Example: FS1004-A7F39C"
+    required
+  >
+</div>
 
         <button type="submit" class="farm-live-order-tracker__button">
           Track Order
@@ -131,12 +131,12 @@
       event.preventDefault();
 
       const orderNumber = document.getElementById('FarmLiveOrderNumber').value.trim();
-      const email = document.getElementById('FarmLiveOrderEmail').value.trim();
+      const trackingCode = document.getElementById('FarmLiveTrackingCode').value.trim();
 
-      if (!orderNumber || !email) {
-        renderError('Please enter both an order number and email address.');
-        return;
-      }
+    if (!orderNumber || !trackingCode) {
+  renderError('Please enter both an order number and tracking code.');
+  return;
+}
 
       renderLoading();
 
@@ -148,9 +148,9 @@
     'ngrok-skip-browser-warning': 'true'
   },
   body: JSON.stringify({
-    orderNumber: orderNumber,
-    email: email
-  })
+  orderNumber: orderNumber,
+  trackingCode: trackingCode
+})
 });
 
         const data = await response.json();
