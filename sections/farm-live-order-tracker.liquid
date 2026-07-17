@@ -155,10 +155,10 @@
 
         const data = await response.json();
 
-        if (!response.ok || !data.found) {
-          renderError(data.message || 'We could not find that order.');
-          return;
-        }
+ if (!response.ok || (!data.found && !data.success)) {
+  renderError(data.message || 'We could not find that order.');
+  return;
+}
 
         renderOrder(data);
       } catch (error) {
