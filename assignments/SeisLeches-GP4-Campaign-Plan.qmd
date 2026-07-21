@@ -1,0 +1,186 @@
+---
+title: "GP4: Mini Campaign Plan"
+subtitle: "\"Fresh This Week\" — An Integrated Campaign for the CPP Farm Store"
+author: "Seis Leches (Group 1): Jake Evans, Mickyas Shawel, Tim Arana, Luis Berumen"
+date: today
+format:
+  html:
+    theme: sandstone
+    toc: true
+    toc-depth: 4
+    toc-expand: true
+    number-sections: true
+    code-link: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    embed-resources: true
+editor: visual
+execute:
+  freeze: auto
+  warning: false
+  message: false
+---
+
+*IBM 6300 — Retailing in the Digital Economy • Professor Jung*
+
+::: {.callout-note title="Key Question"}
+How should CPP Farm Store attract, convert, and retain customers through an integrated campaign?
+:::
+
+This campaign plan builds directly on the group's earlier deliverables: the GP1 omnichannel journey map, the GP2 Shopify mini-store prototype, and the GP3 Google Merchant Center product feed. Rather than proposing a generic advertising idea, it responds to a specific gap those earlier deliverables surfaced — low student awareness and a weak connection between online browsing and an in-store visit.
+
+# Business Problem or Opportunity {#sec-problem}
+
+Our GP1 omnichannel journey map identified a consistent gap: CPP students — the largest customer group physically closest to the store — have low awareness of the Farm Store, are unsure of its hours and location, and have no reliable digital path from discovering a product online to purchasing it in person. Our GP2 Shopify prototype and GP3 Google Merchant Center feed (18 offers across 14 products) built the digital infrastructure to close that gap, but infrastructure alone does not generate demand: the prototype and the feed are discoverable only by customers who already know to look.
+
+The problem this campaign addresses is therefore twofold:
+
+- Low awareness among CPP students, who pass within walking distance of the store daily but rarely convert into first-time visitors; and
+- A weak connection between online browsing and in-store purchase — customers who find Farm Store products through Google or social media have no guided path to a visit, a pickup, or a repeat purchase.
+
+This is as much an opportunity as a problem: the store's differentiators (campus-grown produce, student-made products, seasonal freshness) are exactly the attributes that perform well in short-form social content and local search — the channels our target audience already uses.
+
+# Campaign Objective {#sec-objective}
+
+**Primary objective:** Increase awareness of the CPP Farm Store among CPP students and convert that awareness into measurable action — visits to the Shopify prototype and in-store visits/pickup interest — during a six-week campaign window at the start of the fall term.
+
+Specific, measurable targets for the six-week window:
+
+- Reach 5,000 unique CPP students across Instagram, TikTok, and campus touchpoints.
+- Drive 1,000 sessions to the Shopify prototype, with at least 40% of sessions viewing a product page.
+- Generate 150 in-store visits attributable to the campaign (measured via QR-code scans and a "how did you hear about us" checkout question).
+- Collect 200 email signups for the Fresh This Week list to support retention after the campaign ends.
+
+# Target Audience {#sec-audience}
+
+## Primary Audience: CPP Students
+
+| Dimension | Description |
+|----|----|
+| Demographics | CPP students aged roughly 18–30, living on or near campus in Pomona; commuters and residents; budget-tolerable (willing to pay for quality); heavy mobile-first internet users. |
+| Motivations | Affordable fresh food near where they already are; supporting their own campus and fellow students; convenient snacks and small gifts; the novelty of campus-grown products (produce boxes, honey, CPP Farms ice cream). |
+| Shopping behavior | Discover products through Instagram, TikTok, and Google; research on their phones; buy in short, convenience-driven trips between classes; respond well to limited-time and seasonal offers. |
+| Pain points | Do not know the store exists or where it is; unclear on hours and what is stocked this week; assume campus retail is expensive; no easy way to check availability online before walking over. |
+| Relevant touchpoints | Meta (Instagram & Facebook), Google Search and Maps, the Shopify site, campus signage and events, the student newsletter, and in-store displays. |
+| Why they matter | Students are the highest-volume, lowest-cost audience to reach (they are already on campus), and converting them builds the habitual, repeat-visit customer base the store needs for sustainable weekly revenue. |
+
+: Primary audience profile — CPP students
+
+## Secondary Audience: Faculty, Staff, and Local Gift Buyers
+
+Faculty, staff, and nearby community members are a smaller but higher-basket-value audience, especially for gift baskets, honey, and seasonal bundles. The campaign reaches them through the same Google listings, email, and in-store displays without additional spend; the seasonal gift bundle tactic in @sec-tactics is aimed primarily at this group.
+
+# Core Campaign Message {#sec-message}
+
+**Campaign tagline: "Fresh This Week — Grown at Cal Poly Pomona."**
+
+The message connects the audience's need (fresh, affordable, convenient food near campus) with the Farm Store's distinctive value (products grown and made on the very campus students attend). "Fresh This Week" also builds in a reason to return — the featured products rotate weekly, giving every post, email, and sign a recurring hook.
+
+Supporting messages by audience and funnel stage:
+
+- **Awareness (students):** "Your campus grows food. Come taste it."
+- **Discovery (search/Maps):** "CPP Farm Store — fresh produce, local honey, and CPP Farms ice cream at Kellogg Ranch."
+- **Conversion (product pages, signage):** "See what's fresh this week — then swing by between classes."
+- **Gifting (secondary audience):** "Seasonal gifts, grown at CPP."
+- **Retention (email/rewards):** "Earn Farm Rewards every visit — 5 points per \$1."
+
+# Channel Strategy {#sec-channels}
+
+Channels were selected to align with where the primary audience already pays attention and to reuse the digital assets built in GP2 and GP3 rather than creating new infrastructure.
+
+| Channel | Role in Campaign | Why It Is Appropriate |
+|----|----|----|
+| Meta | Awareness + weekly "Fresh This Week" content series | Highest-reach platform for CPP students; visual format suits produce, ice cream, and behind-the-scenes farm content; supports Stories countdowns and location tags. |
+| TikTok | Awareness (short-form video) | Strong organic reach with student audiences at zero media cost; "what we harvested this week" and taste-test formats are proven low-effort content types. |
+| Google Shopping / GMC | Product discovery | Our GP3 feed already lists 18 offers; free listings surface Farm Store products to anyone searching for honey, produce, or gifts near Pomona. |
+| Google Search + Maps | Local discovery + hours/location | Directly fixes the "don't know hours or location" pain point from GP1; the Business Profile links to the Shopify prototype. |
+| Shopify prototype | Consideration + landing page | The GP2 prototype hosts the campaign landing page, product detail, the FAQ (hours, parking), and the gift-basket pages that ads and QR codes point to. |
+| Email (Fresh This Week list) | Retention + repeat visits | Owned, zero-cost channel; weekly email mirrors the Instagram series and drives repeat visits after the paid campaign ends. |
+| Campus signage + events | Awareness + conversion on campus | Reaches students at zero ad cost in high-traffic areas (Bronco Student Center, farmers-market-style pop-ups); QR codes bridge physical signage to the Shopify prototype. |
+| In-store display + Farm Rewards | Conversion + retention | Signage at the register promotes the rewards program (5 pts/\$1 via Smile.io) and email signup, converting first-time campaign visitors into repeat customers. |
+
+: Channel strategy
+
+# Omnichannel Flow {#sec-flow}
+
+The channels are sequenced so each one hands the customer to the next, closing the online-to-in-store gap identified in @sec-problem:
+
+1.  **Awareness** — Instagram and TikTok posts in the Fresh This Week series, plus campus signage, introduce students to the store and this week's featured products.
+2.  **Discovery** — Students who search land on Google Shopping listings (GP3 feed) and the Google Business Profile with accurate hours, location, and a link to the prototype — removing the hours/location confusion from GP1.
+3.  **Consideration** — Shopify product and collection pages (GP2) provide details, prices, photos, and the campaign landing page; the FAQ answers parking, hours, and pickup questions.
+4.  **Conversion** — The purchase completes in-store (or as a pickup interest via the gift-order form); QR codes on signage and receipts tie the visit back to the campaign.
+5.  **Retention** — At checkout, staff promote Farm Rewards and the email list; the weekly email and Instagram series give customers a standing reason to come back.
+
+Every stage reuses an asset the group has already built — the journey map defines the stages, the prototype hosts consideration, and the product feed powers discovery — which is what makes this an integrated campaign rather than a set of disconnected ads.
+
+# Campaign Tactics {#sec-tactics}
+
+| Tactic | Description |
+|----|----|
+| "Fresh This Week" content series | One Instagram post + Story and one TikTok per week for six weeks, each featuring 2–3 products currently in stock (e.g., Seasonal Produce Box, Raw Local Honey, CPP Farms Ice Cream). The same photo set is reused in the weekly email. |
+| Fall Harvest Bundle | A seasonal product bundle (produce box + honey + salsa) listed on Shopify and in the GMC feed, promoted in weeks 3–6 as the campaign's hero offer for gift buyers. |
+| Google Shopping Ads concept | A small paid Shopping campaign boosting the GP3 feed's best-performing offers (honey, ice cream, gift baskets) to searchers within \~10 miles of campus. |
+| Campaign landing page | A "Fresh This Week" page on the Shopify prototype listing this week's features, store hours, a map, and the email signup — the single destination for all QR codes and ad clicks. |
+| Campus signage with QR codes | Posters and A-frames at the Bronco Student Center, library, and dining areas; each QR code points to the landing page with a tracking parameter. |
+| Email announcement + weekly digest | A launch announcement to existing contacts, then a weekly Fresh This Week digest mirroring the social series. |
+| Campus ambassador | One student ambassador (or partnership with an agriculture club) posts weekly and staffs one pop-up table event, compensated in store credit. |
+| Event-based promotion | A mid-campaign pop-up/tasting event (week 3) at a high-traffic campus location, sampling ice cream and other student favorite products and handing out QR cards linking to the Farm Store landing page. |
+| In-store rewards push | Register signage and a staff script promoting Farm Rewards enrollment and the email list to every store visitor. |
+
+: Campaign tactics
+
+# Budget Recommendation {#sec-budget}
+
+Total hypothetical budget: **\$1,500** for the six-week campaign.
+
+The allocation is deliberately organic-first: the store's advantages (campus location, free social reach, an existing product feed) mean most tactics cost effort rather than money. Paid spend is concentrated where organic reach cannot go — Google Shopping — and where a small boost meaningfully extends reach (Instagram).
+
+| Channel / Item | Amount | \% of Total | Reason for Allocation |
+|----|----|----|----|
+| Google Shopping Ads | \$500 | 33% | Priority paid channel: intent-driven, reuses the GP3 feed, and reaches gift buyers beyond campus. |
+| Instagram boosted posts | \$350 | 23% | Extends the Fresh This Week series beyond current followers to CPP-geotargeted students. |
+| Signage + print (posters, QR cards) | \$250 | 17% | One-time production cost for the highest-traffic zero-media-cost placements on campus. |
+| Activations + samples | \$200 | 13% | Product samples and table materials for the week-3 tasting event. |
+| Ambassador store credit | \$100 | 7% | Low-cost incentive for weekly student-generated content and event staffing. |
+| Contingency/reallocation\* | \$100\* | 7% | Shifted mid-campaign to whichever paid channel shows the best cost per landing-page session. |
+
+: Budget allocation by channel
+
+**Organic vs. paid:** TikTok, email, Google free listings, Maps, in-store display, and the landing page carry \$0 media cost. Paid spend (\$850 across Shopping and Instagram) is 57% of the budget but supports channels that compound the organic work rather than replacing it. **Priority channels if budget were cut:** Google Shopping first, signage second.
+
+# KPIs and Measurement {#sec-kpis}
+
+Each KPI maps to a funnel stage and to a specific objective target from @sec-objective, so measurement directly tests whether the campaign did what it claimed.
+
+| Stage | KPI | Six-Week Target | Measurement Source |
+|----|----|----|----|
+| Awareness | Social reach + engagement rate | 5,000 reach; 4% engagement | Instagram/TikTok analytics |
+| Discovery | Shopping listing impressions + CTR | 10,000 impressions; 1.5% CTR | Google Merchant Center reports |
+| Consideration | Landing-page sessions; product page views per session | 1,000 sessions; 40% view a product page | Shopify analytics |
+| Conversion | QR scans; attributed store visits; add-to-cart rate on gift items | 300 scans; 150 visits; 5% add-to-cart | QR tracking links; checkout survey; Shopify |
+| Retention | Email signups; Farm Rewards enrollments; repeat-visit rate | 200 signups; 100 enrollments; 20% repeat | Email platform; Smile.io dashboard |
+| Efficiency | Cost per landing-page session; ROAS on Shopping | Under \$1.00/session; 2.0 ROAS | Ads reporting + Shopify revenue |
+
+: KPIs by funnel stage
+
+# Optimization Plan {#sec-optimization}
+
+The campaign should be reviewed on a two-week cycle, with three checkpoints across the six weeks:
+
+**Weeks 1–2 (learn):** Compare two creative messages in the social series (product-focused vs. campus-pride-focused) and two product-title formats in the GMC feed; monitor which listings earn impressions and clicks.
+
+**Weeks 3–4 (adjust):** Shift the contingency budget and Shopping bids toward the best-selling products; fix any feed-quality issues surfaced in Merchant Center (continuing the GP3 diagnosis work); improve the landing page based on drop-off data (e.g., move hours and map higher if bounce is high).
+
+**Weeks 5–6 (double down):** Concentrate remaining spend on the single best-performing channel; feature the top seller in the final Fresh This Week posts; push rewards enrollment hardest while campaign traffic peaks.
+
+After the campaign, the Farm Store should keep the durable assets running — the weekly content rhythm, the email digest, the maintained product feed, and seasonal demand tracking — so each future season (holiday gift baskets, spring produce) starts from an audience rather than from zero.
+
+# Appendix {#sec-appendix}
+
+- **GitHub Pages (published report):** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html>
+- **GitHub Repository (GP4 folder):** <https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP4>
+- **GP1 Omnichannel Journey Map:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html>
+- **GP2 Mini-Store Prototype Report:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html>
+- **GP3 Product Media Report:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html>
+- **Shopify dev store:** <https://cpp-farm-store-dev.myshopify.com> (password: `tairtu`)
