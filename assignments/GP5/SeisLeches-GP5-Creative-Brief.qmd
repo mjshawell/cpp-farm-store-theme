@@ -49,7 +49,7 @@ This is short, ownable, and does two jobs at once: it names the audience's benef
 **Funnel-stage variants** (carried over from GP4, reused across assets below so the campaign feels consistent rather than re-invented per channel):
 
 | Funnel stage | Message |
-|----|----|
+|------------------------------------|------------------------------------|
 | Awareness | "Your campus grows food. Come taste it." |
 | Discovery (search/Maps) | "CPP Farm Store — fresh produce, local honey, and CPP Farms ice cream at Kellogg Ranch." |
 | Conversion | "See what's fresh this week, then swing by between classes." |
@@ -69,7 +69,7 @@ This is short, ownable, and does two jobs at once: it names the audience's benef
 ## Channel Recommendations
 
 | Channel | Role | Why it fits |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | Instagram (feed + Stories) | Awareness + weekly content series | Highest-reach platform with this audience; visual format suits produce and behind-the-scenes content; Stories support countdown stickers and location tags |
 | Email (Farm Rewards list) | Retention + gifting | Reaches people who have already visited once; supports a slightly longer, benefit-driven message that Instagram can't carry |
 | Website banner (Shopify prototype) | Conversion | Captures anyone who clicks through from an ad, Google listing, or QR code and needs an immediate "what's fresh" answer |
@@ -178,7 +178,7 @@ Each asset maps directly to a piece of the GP4 Campaign Plan rather than standin
 ## Appendix
 
 - **GitHub Repository (GP5 folder):** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5)
-- **GitHub Pages (this report):** *add after publishing — pattern: `https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html`*
+- **GitHub GP5 Page Report:** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5/SeisLeches-GP5-Creative-Brief.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html)
 - **GP1 Omnichannel Journey Map:** [mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html)
 - **GP2 Mini-Store Prototype Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html)
 - **GP3 Product Media Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html)
