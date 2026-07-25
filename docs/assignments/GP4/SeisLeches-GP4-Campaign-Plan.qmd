@@ -176,11 +176,11 @@ The campaign should be reviewed on a two-week cycle, with three checkpoints acro
 
 After the campaign, the Farm Store should keep the durable assets running — the weekly content rhythm, the email digest, the maintained product feed, and seasonal demand tracking — so each future season (holiday gift baskets, spring produce) starts from an audience rather than from zero.
 
-# Appendix {#sec-appendix}
+# Appendix  {#sec-appendix}
 
 - **GitHub Pages (published report):** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html>
 
-- **GitHub Repository (GP4 folder):** <https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP4>
+- **GitHub Repository (GP4 folder):** [https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP4](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/docs/assignments/GP4){.uri}
 
 - **GP1 Omnichannel Journey Map:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html>
 
