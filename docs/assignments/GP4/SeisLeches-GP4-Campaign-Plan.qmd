@@ -57,7 +57,7 @@ Specific, measurable targets for the six-week window:
 ## Primary Audience: CPP Students
 
 | Dimension | Description |
-|----|----|
+|------------------------------------|------------------------------------|
 | Demographics | CPP students aged roughly 18–30, living on or near campus in Pomona; commuters and residents; budget-tolerable (willing to pay for quality); heavy mobile-first internet users. |
 | Motivations | Affordable fresh food near where they already are; supporting their own campus and fellow students; convenient snacks and small gifts; the novelty of campus-grown products (produce boxes, honey, CPP Farms ice cream). |
 | Shopping behavior | Discover products through Instagram, TikTok, and Google; research on their phones; buy in short, convenience-driven trips between classes; respond well to limited-time and seasonal offers. |
@@ -90,7 +90,7 @@ Supporting messages by audience and funnel stage:
 Channels were selected to align with where the primary audience already pays attention and to reuse the digital assets built in GP2 and GP3 rather than creating new infrastructure.
 
 | Channel | Role in Campaign | Why It Is Appropriate |
-|----|----|----|
+|------------------------|------------------------|------------------------|
 | Meta | Awareness + weekly "Fresh This Week" content series | Highest-reach platform for CPP students; visual format suits produce, ice cream, and behind-the-scenes farm content; supports Stories countdowns and location tags. |
 | TikTok | Awareness (short-form video) | Strong organic reach with student audiences at zero media cost; "what we harvested this week" and taste-test formats are proven low-effort content types. |
 | Google Shopping / GMC | Product discovery | Our GP3 feed already lists 18 offers; free listings surface Farm Store products to anyone searching for honey, produce, or gifts near Pomona. |
@@ -117,7 +117,7 @@ Every stage reuses an asset the group has already built — the journey map defi
 # Campaign Tactics {#sec-tactics}
 
 | Tactic | Description |
-|----|----|
+|------------------------------------|------------------------------------|
 | "Fresh This Week" content series | One Instagram post + Story and one TikTok per week for six weeks, each featuring 2–3 products currently in stock (e.g., Seasonal Produce Box, Raw Local Honey, CPP Farms Ice Cream). The same photo set is reused in the weekly email. |
 | Fall Harvest Bundle | A seasonal product bundle (produce box + honey + salsa) listed on Shopify and in the GMC feed, promoted in weeks 3–6 as the campaign's hero offer for gift buyers. |
 | Google Shopping Ads concept | A small paid Shopping campaign boosting the GP3 feed's best-performing offers (honey, ice cream, gift baskets) to searchers within \~10 miles of campus. |
@@ -137,7 +137,7 @@ Total hypothetical budget: **\$1,500** for the six-week campaign.
 The allocation is deliberately organic-first: the store's advantages (campus location, free social reach, an existing product feed) mean most tactics cost effort rather than money. Paid spend is concentrated where organic reach cannot go — Google Shopping — and where a small boost meaningfully extends reach (Instagram).
 
 | Channel / Item | Amount | \% of Total | Reason for Allocation |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | Google Shopping Ads | \$500 | 33% | Priority paid channel: intent-driven, reuses the GP3 feed, and reaches gift buyers beyond campus. |
 | Instagram boosted posts | \$350 | 23% | Extends the Fresh This Week series beyond current followers to CPP-geotargeted students. |
 | Signage + print (posters, QR cards) | \$250 | 17% | One-time production cost for the highest-traffic zero-media-cost placements on campus. |
@@ -154,7 +154,7 @@ The allocation is deliberately organic-first: the store's advantages (campus loc
 Each KPI maps to a funnel stage and to a specific objective target from @sec-objective, so measurement directly tests whether the campaign did what it claimed.
 
 | Stage | KPI | Six-Week Target | Measurement Source |
-|----|----|----|----|
+|------------------|------------------|------------------|------------------|
 | Awareness | Social reach + engagement rate | 5,000 reach; 4% engagement | Instagram/TikTok analytics |
 | Discovery | Shopping listing impressions + CTR | 10,000 impressions; 1.5% CTR | Google Merchant Center reports |
 | Consideration | Landing-page sessions; product page views per session | 1,000 sessions; 40% view a product page | Shopify analytics |
@@ -179,8 +179,13 @@ After the campaign, the Farm Store should keep the durable assets running — th
 # Appendix {#sec-appendix}
 
 - **GitHub Pages (published report):** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html>
+
 - **GitHub Repository (GP4 folder):** <https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP4>
+
 - **GP1 Omnichannel Journey Map:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html>
+
 - **GP2 Mini-Store Prototype Report:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html>
+
 - **GP3 Product Media Report:** <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html>
+
 - **Shopify dev store:** <https://cpp-farm-store-dev.myshopify.com> (password: `tairtu`)
