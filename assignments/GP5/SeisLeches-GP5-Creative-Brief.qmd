@@ -25,10 +25,10 @@ This creative brief translates the **GP4 Campaign Plan** ("Fresh This Week — G
 
 **Supporting objectives (from GP4):**
 
-- Encourage students to visit CPP Farm Store between classes
-- Highlight that products are grown and made on campus (not just "local," but *this* campus)
-- Introduce Farm Rewards as a reason to come back weekly
-- Build a light gifting angle for the secondary audience (faculty, staff, parents)
+-   Encourage students to visit CPP Farm Store between classes
+-   Highlight that products are grown and made on campus (not just "local," but *this* campus)
+-   Introduce Farm Rewards as a reason to come back weekly
+-   Build a light gifting angle for the secondary audience (faculty, staff, parents)
 
 ## Target Audience
 
@@ -58,11 +58,11 @@ This is short, ownable, and does two jobs at once: it names the audience's benef
 
 ## Tone and Style
 
-- **Friendly, not corporate** — copy reads like a classmate telling you about a good find, not a retail ad
-- **Local and specific** — always "Cal Poly Pomona" / "Kellogg Ranch," never generic "local farm" language
-- **Fresh and seasonal** — content changes weekly by design; nothing here should read as evergreen stock copy
-- **Practical** — every asset answers "what, where, when" quickly, since the GP1 gap was awareness of hours/location, not interest
-- **Student-friendly** — short sentences, casual verbs ("swing by," "stop by"), minimal jargon
+-   **Friendly, not corporate** — copy reads like a classmate telling you about a good find, not a retail ad
+-   **Local and specific** — always "Cal Poly Pomona" / "Kellogg Ranch," never generic "local farm" language
+-   **Fresh and seasonal** — content changes weekly by design; nothing here should read as evergreen stock copy
+-   **Practical** — every asset answers "what, where, when" quickly, since the GP1 gap was awareness of hours/location, not interest
+-   **Student-friendly** — short sentences, casual verbs ("swing by," "stop by"), minimal jargon
 
 **Visual style:** campus greens and warm neutrals (carried from the Shopify prototype's palette), real produce/product photography over stock imagery, and simple bold typography that reads at a glance on a phone screen.
 
@@ -76,6 +76,20 @@ This is short, ownable, and does two jobs at once: it names the audience's benef
 | In-store signage | Conversion + repeat-visit reminder | Reinforces the weekly hook for people already on campus, and gives Farm Rewards a physical prompt at the point of purchase |
 
 This satisfies the assignment minimum (3+ assets, 2+ channels) with assets built across four channels below.
+
+## Suggested Weekly Publishing Schedule
+
+To maintain consistent engagement, the campaign should follow a recurring weekly publishing schedule that reinforces the "Fresh This Week" message and encourages repeat visits throughout the semester.
+
+| Day | Channel | Content |
+|------------------------|------------------------|------------------------|
+| Monday | Instagram Feed + Website | Launch the week's featured products and update the homepage banner. |
+| Wednesday | Instagram Story | Share a midweek reminder, behind-the-scenes content, or a featured product highlight. |
+| Thursday | Email Newsletter | Promote seasonal products, Farm Rewards, and campus gift ideas. |
+| Friday | Instagram Story | Create urgency by reminding customers that featured products may sell out before the weekend. |
+| Weekend | Campaign Planning | Prepare photography, verify inventory, and schedule content for the following week's campaign. |
+
+The schedule should remain flexible to accommodate seasonal inventory changes and product availability while maintaining a consistent weekly content cadence.
 
 ## Sample Creative Assets
 
@@ -131,6 +145,19 @@ This satisfies the assignment minimum (3+ assets, 2+ channels) with assets built
 
 ![Website banner mockup — conceptual layout, not final photography](img/website-banner-mockup.png){#fig-banner width="90%"}
 
+## Creative Asset Strategy Summary
+
+The campaign assets are designed to work together as an integrated marketing campaign rather than as separate promotional pieces. Each channel supports a different stage of the customer journey while maintaining consistent messaging, branding, and the "Fresh This Week" campaign theme.
+
+| Asset | Primary Audience | Funnel Stage | Primary Call to Action | Intended Outcome |
+|---------------|---------------|---------------|---------------|---------------|
+| Instagram Feed Post | CPP students | Awareness | Visit the Farm Store this week | Increase awareness of weekly featured products |
+| Instagram Story | Students on or near campus | Consideration | Stop by before Friday | Encourage immediate in-store visits |
+| Farm Rewards Email | Returning customers, faculty, and staff | Retention | See What's Fresh | Increase repeat visits and loyalty participation |
+| Website Banner | Website visitors | Conversion | Shop This Week's Picks | Drive visitors toward featured products and store information |
+
+Together, these assets create a consistent customer experience by introducing the campaign on social media, reinforcing it through email, and guiding customers to the website for additional information and in-store visits.
+
 ## AI Prompt Documentation
 
 Per the assignment requirement, all AI-assisted copy in this brief was generated, then reviewed and edited by the group before inclusion.
@@ -139,19 +166,19 @@ Per the assignment requirement, all AI-assisted copy in this brief was generated
 
 **Example prompts used:**
 
-- "Write a short, friendly Instagram caption for a campus farm store announcing this week's featured produce, using the tagline 'Fresh This Week — Grown at Cal Poly Pomona.'"
-- "Draft an email subject line and body for a farm store loyalty program, encouraging a repeat visit this week and mentioning a rewards point bonus."
-- "Suggest a short line of on-screen text for an Instagram Story countdown encouraging students to visit before the week's stock runs out."
+-   "Write a short, friendly Instagram caption for a campus farm store announcing this week's featured produce, using the tagline 'Fresh This Week — Grown at Cal Poly Pomona.'"
+-   "Draft an email subject line and body for a farm store loyalty program, encouraging a repeat visit this week and mentioning a rewards point bonus."
+-   "Suggest a short line of on-screen text for an Instagram Story countdown encouraging students to visit before the week's stock runs out."
 
 **Original AI output (summary):** The first-pass captions and email draft were longer and more formal than what appears above — the initial Instagram caption ran three sentences and used phrasing like "we are delighted to showcase this week's harvest," and the email draft opened with a generic "Dear valued customer."
 
 **Edits made by the group:**
 
-- Shortened all copy to fit mobile-first, scan-in-two-seconds reading habits
-- Replaced formal/corporate phrasing ("we are delighted to showcase") with casual, student-facing language ("stop by between classes")
-- Added the specific location cue ("Kellogg Ranch") to every asset, since GP1 identified location/hours confusion as a real barrier
-- Personalized the email greeting and tied the CTA directly to the Farm Rewards mechanic already documented in GP4
-- Removed a specific numeric claim ("locally rated #1") the AI draft had invented with no source
+-   Shortened all copy to fit mobile-first, scan-in-two-seconds reading habits
+-   Replaced formal/corporate phrasing ("we are delighted to showcase") with casual, student-facing language ("stop by between classes")
+-   Added the specific location cue ("Kellogg Ranch") to every asset, since GP1 identified location/hours confusion as a real barrier
+-   Personalized the email greeting and tied the CTA directly to the Farm Rewards mechanic already documented in GP4
+-   Removed a specific numeric claim ("locally rated #1") the AI draft had invented with no source
 
 **Reason for edits:** The unedited drafts read as generic small-business marketing copy — accurate in spirit but not specific to CPP, not sized for the channels they'd run on, and in one case containing an unverifiable claim. Editing grounded every asset in facts already established across GP1–GP4 (the awareness gap, the GP3 product feed, the Farm Rewards program).
 
@@ -159,28 +186,65 @@ Per the assignment requirement, all AI-assisted copy in this brief was generated
 
 ## Ethical and Practical Considerations
 
-- **Accuracy of product claims:** All copy above references only products and programs already documented in GP2–GP4 (produce, honey, CPP Farms ice cream, Farm Rewards). No pricing, quantities, or availability claims are made that the store would need to independently verify before this creative goes live — the original AI-invented "#1 locally rated" claim was removed for this reason.
-- **Use of real brand identity:** These assets use the CPP Farm Store name and the "Fresh This Week" tagline developed by this group in GP4. They should not be published externally until reviewed by an actual store representative, since this remains a course project, not an approved store campaign.
-- **Image ownership/licensing:** The banner mockup above is a layout concept generated for this assignment and explicitly labeled as a placeholder — it does not depict a real, licensed product photo. Before production use, the product panel would need to be replaced with an actual photo taken by or licensed to CPP Farm Store.
-- **Avoiding misleading visuals:** Any real photography used in place of the placeholder should depict actual current inventory, not a staged image implying a permanent product that may not be in stock the following week — the "this week" premise only works if the imagery stays honest about rotation.
-- **Respecting CPP Farm Store's reputation:** Tone was kept warm and community-oriented rather than aggressive or sales-heavy, consistent with a campus-run store rather than a commercial retailer.
-- **Conceptual vs. ready-to-use:** All four assets are **conceptual drafts** suitable for course submission and internal review. None are ready to publish as-is — captions would need final photography, the email needs integration into the store's actual email platform, and the banner needs a real product photo before it could go live on the Shopify site.
+-   **Accuracy of product claims:** All copy above references only products and programs already documented in GP2–GP4 (produce, honey, CPP Farms ice cream, Farm Rewards). No pricing, quantities, or availability claims are made that the store would need to independently verify before this creative goes live — the original AI-invented "#1 locally rated" claim was removed for this reason.
+
+-   **Use of real brand identity:** These assets use the CPP Farm Store name and the "Fresh This Week" tagline developed by this group in GP4. They should not be published externally until reviewed by an actual store representative, since this remains a course project, not an approved store campaign.
+
+-   **Image ownership/licensing:** The banner mockup above is a layout concept generated for this assignment and explicitly labeled as a placeholder — it does not depict a real, licensed product photo. Before production use, the product panel would need to be replaced with an actual photo taken by or licensed to CPP Farm Store.
+
+-   **Avoiding misleading visuals:** Any real photography used in place of the placeholder should depict actual current inventory, not a staged image implying a permanent product that may not be in stock the following week — the "this week" premise only works if the imagery stays honest about rotation.
+
+-   **Respecting CPP Farm Store's reputation:** Tone was kept warm and community-oriented rather than aggressive or sales-heavy, consistent with a campus-run store rather than a commercial retailer.
+
+-   **Conceptual vs. ready-to-use:** All four assets are **conceptual drafts** suitable for course submission and internal review. None are ready to publish as-is — captions would need final photography, the email needs integration into the store's actual email platform, and the banner needs a real product photo before it could go live on the Shopify site.
+
+    ## Accessibility and Inclusive Design
+
+    The campaign assets should be designed to remain accessible and easy to understand across devices while supporting a wide range of users.
+
+    -   Include descriptive alternative (alt) text for product and promotional images.
+    -   Maintain sufficient color contrast between text and backgrounds.
+    -   Use readable font sizes on both desktop and mobile devices.
+    -   Provide captions for video and Instagram Story content.
+    -   Avoid communicating important information through color alone.
+    -   Use descriptive call-to-action buttons such as "See What's Fresh" instead of generic labels like "Click Here."
+    -   Ensure website buttons and navigation remain keyboard accessible.
+
+    Applying these accessibility practices helps create a more inclusive experience while supporting the campaign's mobile-first audience.
 
 ## How These Assets Support the Campaign Plan
 
 Each asset maps directly to a piece of the GP4 Campaign Plan rather than standing alone:
 
-- The Instagram post and Story deliver on GP4's Instagram awareness channel and reuse the exact "Fresh This Week" funnel-stage message
-- The email activates the Farm Rewards retention mechanic GP4 already proposed, and adds the gifting message for the secondary audience without needing a separate campaign
-- The website banner gives GP4's channel strategy a real landing destination on the GP2 Shopify prototype, closing the loop between "see an ad" and "arrive at a page that matches it"
-- Together, they cover awareness (Instagram), retention (email), and conversion (website + in-store), matching the funnel structure already defined in GP4's channel strategy table
+-   The Instagram post and Story deliver on GP4's Instagram awareness channel and reuse the exact "Fresh This Week" funnel-stage message
+
+-   The email activates the Farm Rewards retention mechanic GP4 already proposed, and adds the gifting message for the secondary audience without needing a separate campaign
+
+-   The website banner gives GP4's channel strategy a real landing destination on the GP2 Shopify prototype, closing the loop between "see an ad" and "arrive at a page that matches it"
+
+-   Together, they cover awareness (Instagram), retention (email), and conversion (website + in-store), matching the funnel structure already defined in GP4's channel strategy table
+
+    ## Creative Performance Indicators
+
+    To evaluate whether the campaign assets are successfully supporting the GP4 marketing objectives, the group recommends monitoring the following performance indicators after implementation.
+
+    | Campaign Goal | Performance Indicator |
+    |------------------------------------|------------------------------------|
+    | Increase awareness | Instagram reach, impressions, and profile visits |
+    | Generate interest | Story replies, saves, shares, and website clicks |
+    | Encourage store visits | QR-code scans, direction requests, and in-store customer mentions |
+    | Build customer retention | Farm Rewards sign-ups and repeat visits |
+    | Support email engagement | Email open rate and click-through rate |
+    | Improve product discovery | Visits to the weekly featured-products collection |
+
+    These indicators are recommended measures for evaluating campaign performance.
 
 ## Appendix
 
-- **GitHub Repository (GP5 folder):** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5)
-- **GitHub GP5 Page Report:** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5/SeisLeches-GP5-Creative-Brief.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html)
-- **GP1 Omnichannel Journey Map:** [mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html)
-- **GP2 Mini-Store Prototype Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html)
-- **GP3 Product Media Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html)
-- **GP4 Campaign Plan:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html)
-- **Shopify dev store:** [cpp-farm-store-dev.myshopify.com](https://cpp-farm-store-dev.myshopify.com) (password: `tairtu`)
+-   **GitHub Repository (GP5 folder):** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5)
+-   **GitHub GP5 Page Report:** [github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP5/SeisLeches-GP5-Creative-Brief.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html)
+-   **GP1 Omnichannel Journey Map:** [mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html)
+-   **GP2 Mini-Store Prototype Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html)
+-   **GP3 Product Media Report:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html)
+-   **GP4 Campaign Plan:** [mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html)
+-   **Shopify dev store:** [cpp-farm-store-dev.myshopify.com](https://cpp-farm-store-dev.myshopify.com) (password: `tairtu`)
