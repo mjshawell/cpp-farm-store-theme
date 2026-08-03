@@ -159,6 +159,8 @@ what should carry over once a real GA4 property is connected post-launch.
 
 ## Appendix
 
-- **GitHub Repository:** [mjshawell/cpp-farm-store-theme](https://github.com/mjshawell/cpp-farm-store-theme)
-- **GitHub Pages:** [Live Site](PASTE_GITHUB_PAGES_URL_HERE)
-- **Simulated GA4 Dataset (CSV):** included in `docs/assignments/GP6/data/ga4_simulated_data.csv`
+## Appendix
+
+- **GitHub Repository:** [mjshawell/cpp-farm-store-theme — GP6](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP6)
+- **GitHub Pages:** [Live Site](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP6/GP6-CPP-Farm-Store-GA4-Looker-Dashboard.html)
+- **Simulated GA4 Dataset (CSV):** included in `assignments/GP6/data/ga4_simulated_data.csv`
