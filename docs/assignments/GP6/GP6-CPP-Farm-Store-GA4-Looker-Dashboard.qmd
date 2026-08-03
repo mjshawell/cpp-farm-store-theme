@@ -18,9 +18,11 @@ format:
 This dashboard evaluates how CPP Farm Store could measure the success of its
 omnichannel "Fresh This Week — Grown at Cal Poly Pomona" campaign (established
 in GP4) and the ecommerce experience built out in GP2/GP3. Because CPP Farm
-Store's live Shopify store does not yet have production GA4 traffic, this
+Store's live Shopify Prototype (GP2) — ecommerce pages and simulated customer journey store does not yet have production GA4 traffic, this
 report uses a **simulated GA4-style dataset**, clearly labeled as such
 throughout.
+
+This report represents the final measurement stage of the semester-long consulting project. GP1 identified customer journey challenges, GP2 developed the Shopify Prototype (GP2) — ecommerce pages and simulated customer journey storefront, GP3 expanded digital product visibility through Google Merchant Center (GP3) — product categories and campaign structure, GP4 created the **Fresh This Week** campaign strategy, GP5 developed campaign-ready creative assets, and GP6 evaluates the effectiveness of those efforts using a simulated GA4 reporting framework.
 
 **Key question:** How should CPP Farm Store measure the success of its
 omnichannel campaign and ecommerce efforts?
@@ -44,7 +46,8 @@ Tied directly to the GP4 campaign plan and GP3 product feed:
 - Track product page engagement across the 6 GMC product categories
 - Monitor paid, social, and email campaign performance
 - Compare channel effectiveness (Organic, Paid Search, Social, Email, Direct, Referral)
-- Track conversion behavior through the funnel (view → cart → checkout → purchase)
+- Track conversion behavior
+- Evaluate which campaign assets (Instagram, Email, Website Banner) generated the strongest customer response through the funnel (view → cart → checkout → purchase)
 - Measure store pickup interest as a proxy for omnichannel (online-to-offline) success
 
 ## KPIs Selected
@@ -70,9 +73,9 @@ rather than included simply because they were available in the dataset.
 - **GA4 (simulated):** 30 days of session, engagement, and funnel data across
   6 traffic channels (June 1–30, 2026), reflecting a campaign launch around
   day 10. *Simulated — no live GA4 property connected to the CPP Farm Store
-  Shopify store yet.*
-- **Shopify (GP2):** informs which pages/products are being measured
-- **Google Merchant Center (GP3):** informs the 6 product categories tracked
+  Shopify Prototype (GP2) — ecommerce pages and simulated customer journey store yet.*
+- **Shopify Prototype (GP2) — ecommerce pages and simulated customer journey (GP2):** informs which pages/products are being measured
+- **Google Merchant Center (GP3) — product categories and campaign structure (GP3):** informs the 6 product categories tracked
   in the product performance section
 - **Campaign plan (GP4):** informs which channels and KPIs matter
 
@@ -133,13 +136,15 @@ budget toward Paid Search (where it is currently outperforming Social and
 Email on conversion) is a low-risk next move.
 
 **Data limitations:**
-This dashboard uses simulated GA4 data because CPP Farm Store's Shopify store
+This dashboard uses simulated GA4 data because CPP Farm Store's Shopify Prototype (GP2) — ecommerce pages and simulated customer journey store
 is a development-stage practice site without live customer traffic. Absolute
 numbers (sessions, revenue, purchases) are illustrative rather than actual
 performance; the KPI structure, funnel logic, and channel comparisons are
 what should carry over once a real GA4 property is connected post-launch.
 
 ## Recommended Actions
+
+- Continue expanding Organic Search optimization because it generated the highest simulated traffic and revenue throughout the reporting period.
 
 - Reallocate a larger share of campaign budget toward Paid Search, which
   currently shows the strongest click-to-purchase performance of the three
@@ -159,7 +164,13 @@ what should carry over once a real GA4 property is connected post-launch.
 
 ## Appendix
 
+- Looker Studio Dashboard
+- Shopify Prototype
+
 ## Appendix
+
+- Looker Studio Dashboard
+- Shopify Prototype
 
 - **GitHub Repository:** [mjshawell/cpp-farm-store-theme — GP6](https://github.com/mjshawell/cpp-farm-store-theme/tree/main/assignments/GP6)
 - **GitHub Pages:** [Live Site](https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP6/GP6-CPP-Farm-Store-GA4-Looker-Dashboard.html)
