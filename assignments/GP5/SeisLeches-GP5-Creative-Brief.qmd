@@ -141,7 +141,7 @@ The following four assets translate the campaign strategy developed in GP4 into 
 
 **Body copy:**
 
-> Hi [First Name],
+> Hi \[First Name\],
 >
 > This week's Farm Store selections are ready. Explore seasonal produce, CPP Farms honey, and other products grown or made right here at Cal Poly Pomona.
 >
@@ -149,7 +149,7 @@ The following four assets translate the campaign strategy developed in GP4 into 
 >
 > Shopping for someone else? Our seasonal gift bundles offer a campus-grown option for faculty, staff, family members, and visitors.
 >
-> **[See What's Fresh →]**
+> **\[See What's Fresh →\]**
 >
 > — CPP Farm Store
 
@@ -180,7 +180,7 @@ The following four assets translate the campaign strategy developed in GP4 into 
 AI tools assisted with the first drafts of campaign copy and the creation of visual mockups. All outputs were reviewed, edited, and organized by the group before being included in this report.
 
 | Documentation item | Details |
-|---|---|
+|----|----|
 | Tools used | Claude for initial copy development and Google Gemini for visual mockup generation |
 | Purpose | Generate initial concepts for Instagram, email, and website campaign assets |
 | Human review | Group members checked wording, product claims, brand consistency, layout, and channel fit |
