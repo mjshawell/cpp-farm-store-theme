@@ -116,7 +116,7 @@ The CPP Farm store occupies a position that no other competitor can enter regard
 For each stage, identify what the customer is doing, thinking, feeling, and needing.
 
 | Stage | Actions | Thoughts | Feelings | Needs |
-|---------------|---------------|---------------|---------------|---------------|
+|----|----|----|----|----|
 | **Awareness** | Discover the Farm Store through Google, Instagram, or campus signage. | "I didn't know CPP had a Farm Store." | Curious | Learn about the store, location, and products. |
 | **Consideration** | Browses products, hours, and seasonal offerings. | "Do they have what I need?" | Interested | Product availability, pricing, and store information. |
 | **Purchase** | Shops in-store or places an online order. | "Can I buy this easily?" | Motivated | Fast, mobile-friendly checkout and payment options. |
@@ -177,7 +177,7 @@ Customers interact with the CPP Farm Store through both digital and physical tou
 ### Omnichannel Ecosystem Overview
 
 | Stage | Primary Channels |
-|------------------------------------|------------------------------------|
+|----|----|
 | **Discovery** | Google Search, Google Maps, Instagram, campus signage, word of mouth |
 | **Evaluation** | CPP Farm Store website / Shopify store, product pages, seasonal content, reviews |
 | **Transaction** | Online cart, in-store POS, mobile checkout, Apple Pay, Google Pay, student discounts |
@@ -296,7 +296,7 @@ The KPI dashboard below maps measurable metrics to each stage of the customer jo
 ![](slide-10.png){fig-align="center"}
 
 | Journey Stage | Metric | Why It Matters |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | **Awareness** | Google impressions, Maps views, profile clicks | Indicates whether discovery channels are working |
 | **Consideration** | Product page views, collection views, IG link clicks | Indicates whether the catalog is compelling |
 | **Purchase** | Add-to-cart rate, checkout starts, conversion rate | Indicates whether the transaction path is functional |
@@ -330,7 +330,7 @@ Finally, with **GP5, the Analytics Dashboard** should make the strategy measurab
 ### Grading Criteria {.unnumbered}
 
 | Criterion | Points Possible | Where Addressed |
-|------------------------|------------------------|------------------------|
+|----|----|----|
 | Clear target customer segment | 15 | @sec-segments |
 | Complete journey stages | 15 | @sec-journey |
 | Strong identification of touchpoints | 15 | @sec-touchpoints |
