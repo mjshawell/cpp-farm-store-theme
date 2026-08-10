@@ -1,0 +1,805 @@
+---
+title: "CPP Farm Store GP7 Final Report"
+subtitle: "Omnichannel Consulting Project — Final Report and Recommendations"
+author: "Seis Leches (Group 1): Jake Evans, Mickyas Shawel, Tim Arana, Luis Berumen"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    toc-expand: 2
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    code-overflow: wrap
+    embed-resources: true
+    theme: sandstone
+editor: visual
+execute:
+  freeze: auto
+  echo: false
+  warning: false
+  message: false
+---
+
+```{=html}
+<style>
+img { border-radius: 10px; border: 1px solid #ddd; max-width: 100%; }
+.caption-note { font-size: .92rem; color: #6f6258; font-style: italic; }
+</style>
+```
+
+> This report has been cleaned up and proofread from the group's final-report template. Editorial fixes include correcting duplicated phrases, unfinished sentences, spelling, and punctuation, and renumbering figures sequentially (the original document accidentally reused "Figure 1" and "Figure 16" later in the report). No factual content, data, or recommendations were changed.
+
+This document outlines the recommended structure for the final consulting report and presentation for the CPP Farm Store Omnichannel Consulting Project.
+
+# Executive Summary
+
+## The Opportunity
+
+CPP Farm Store offers fresh, campus-grown produce and specialty products that nearby competitors cannot easily replicate. However, the GP1 journey analysis found that many students are unaware the store exists, and even those who know about it cannot browse products or plan a purchase before visiting because orders currently require a phone call. The issue is not the product offering; it is the lack of visibility and a convenient digital shopping experience. Closing that gap is the main opportunity this project and report address.
+
+## Primary Recommendation
+
+Launch the Shopify prototype developed in GP2 as the CPP Farm Store's live storefront and address the largest point of customer drop-off identified in the GP6 dashboard before increasing marketing spend. Currently, only about 15% of product page visitors add an item to their cart. The other recommendations in this report — rebalancing channel spend and expanding loyalty and gifting — depend on the storefront being live and converting effectively first. Sections 4, 8, 9, and 10 provide the supporting evidence, recommendations, and 90-day rollout.
+
+## Key Supporting Evidence from GP1–GP6
+
+Each earlier project deliverable produced a finding or asset that directly supports the recommendations in this report, so the final strategy builds on work already completed rather than starting over.
+
+| Deliverable | Key Finding Carried Forward |
+|---|---|
+| GP1 – Omnichannel Journey Map | Identified the core gap: customers cannot browse a catalog, ordering relies on phone or email, and discovery channels are underused. These issues were mapped across six stages of the CPP student journey. |
+| GP2 – Shopify Prototype | Built a working storefront that directly addresses the GP1 pain points with a product catalog, gift basket customization, cart, and BOPIS checkout, as detailed in Section 4. |
+| GP3 – Google Merchant Center Feed | Created an 18-offer product feed across six categories to support the Google Shopping channel used in the GP4 campaign and referenced in Section 6. |
+| GP4 – Campaign Plan | Designed the "Fresh This Week – Grown at Cal Poly Pomona" campaign with a \$1,500 organic-first budget across seven channels, as detailed in Section 6. |
+| GP5 – Creative Brief & AI Assets | Developed funnel-stage creative and copy based on the GP4 message strategy, including messaging that is reused in Section 9's top-priority recommendation. |
+| GP6 – Analytics Dashboard | Evaluated campaign performance using 9,023 sessions, \$4,125.51 in tracked revenue, and a 1.75% conversion rate. The dashboard also showed a clear channel gap: Email and Paid Search converted checkout starts to purchases at 30.1% and 23.4%, compared with 5.7% for Social, as detailed in Section 8. |
+
+## Expected Business Benefits
+
+Launching a live, self-service storefront would remove one of the largest friction points in the current customer journey. Instead of relying on phone or email orders, customers could browse, purchase, and choose BOPIS online, helping turn existing awareness and store interest into completed orders and pickups.
+
+Rebalancing campaign spending toward Email and Paid Search, which showed stronger conversion performance than Social, could improve the return on the existing \$1,500 budget without requiring additional marketing dollars.
+
+Expanding Farm Rewards and introducing a seasonal gift bundle calendar would address Loyalty, the weakest stage identified in the GP1 journey map. Because gift baskets are among the highest-value products in the catalog, this strategy also creates an opportunity to increase average order value and repeat purchases from existing customers.
+
+# Client and Situation Analysis
+
+## Current Situation
+
+The CPP Farm Store operates as a distinctive campus-based retail destination that connects Cal Poly Pomona's agricultural identity with students, faculty and staff, campus, and the surrounding community. Its assortment combines fresh and locally relevant products with grocery, beverage, specialty, and gift-oriented merchandise, giving the Farm Store a position that differs from both conventional grocery retailers and traditional campus stores.
+
+The strongest customer experience currently occurs within its physical location, where customers can browse products, interact with staff, and discover merchandise organically. However, this creates an opportunity to strengthen the connection between the physical and digital shopping experience. Customers increasingly expect to discover products online, confirm availability, understand their options, and move conveniently between digital channels and a physical store.
+
+Our project therefore approaches ecommerce as an extension of the Farm Store rather than a replacement for the physical location. The proposed omnichannel strategy uses Shopify, digital marketing, product feeds, improved customer communications, gift-basket ordering, and analytics to create a more connected journey from discovery, to consideration, to purchase, to fulfillment, and finally post-purchase engagement.
+
+## Target Customers
+
+CPP Farm Store serves several overlapping customer groups rather than a single traditional grocery-store audience.
+
+**CPP Students.** Students represent an important convenience-driven audience because of their proximity to campus. Their shopping behavior may include beverages, snacks, fresh products, grab-and-go purchases, specialty merchandise, and products discovered through campus or social channels.
+
+**Faculty and Staff.** This group represents a recurring campus audience with greater opportunities for planned purchase orders, fresh and specialty products, and seasonal or gift-related purchases.
+
+**Alumni and Campus Visitors.** These customers may have less frequent contact with the Farm Store but can have a stronger emotional connection to CPP. Specialty products and gift baskets provide opportunities to extend the Farm Store relationship beyond routine grocery shopping.
+
+**Local Community Members.** Customers from surrounding communities provide an opportunity to position the Farm Store as a destination for distinctive products and a retail experience associated with Cal Poly Pomona's agricultural identity.
+
+**Gift Purchasers.** Gift-oriented customers are especially important to the proposed ecommerce strategy. Unlike routine shoppers, they may want to research, customize an order, and coordinate fulfillment before arriving at the store. This makes gift baskets particularly well suited for an omnichannel purchasing experience.
+
+## Product Categories
+
+CPP Farm Store's assortment creates opportunities for both routine purchasing and destination shopping. For the omnichannel strategy, products can be organized into customer-friendly categories rather than relying exclusively on internal merchandising classifications.
+
+| Product Category | Customer Need | Omnichannel Role |
+|---|---|---|
+| Fresh Produce | Fresh, locally relevant food | Seasonal discovery and store visits |
+| Grocery & Specialty Foods | Everyday and distinctive products | Online product discovery |
+| Beverages & Grab-and-Go | Convenience | Student and campus promotion |
+| Local/Farm-Connected Products | Authenticity and differentiation | Product storytelling |
+| Gift Baskets & Gift Items | Gifting and special occasions | Online ordering and customization |
+| CPP/Specialty Merch | Campus connection | Alumni, visitor, and gift demand |
+
+*Not all products necessarily need to be sold online immediately. A curated ecommerce assortment allows the Farm Store to begin with the products that have the strongest combination of customer demand, operational feasibility, margin potential, giftability, and promotional value.*
+
+## Strengths
+
+CPP Farm Store begins its omnichannel development with several advantages. Most importantly, the Farm Store has a distinctive identity and physical experience that conventional retailers cannot easily replicate. Its relationship with Cal Poly Pomona provides built-in recognition among students, employees, alumni, and visitors.
+
+The physical store also provides opportunities for product discovery that extend beyond a narrowly defined grocery mission. Customers can encounter fresh products alongside beverages, specialty goods, locally relevant merchandise, and giftable items. This assortment creates multiple reasons to visit and provides content that can translate effectively into ecommerce and digital campaigns.
+
+Additional strengths include the Farm Store's physical campus presence, differentiated assortment, connection to the university, existing customer relationships, and potential to use seasonal products and gift offerings to create recurring marketing moments throughout the year.
+
+## Weaknesses
+
+The primary weakness identified by the project is that the Farm Store's physical and digital customer touchpoints are not yet well connected. A customer who discovers the Farm Store online should be able to move easily from awareness to product exploration, purchase planning, and fulfillment. Product information, digital merchandising, customer communications, and online ordering therefore need to operate as parts of the same journey. Without that integration, customers may have difficulty determining what products are available, understanding fulfillment options, or completing higher-consideration purchases such as customized gifts.
+
+There are also operational considerations. Expanding ecommerce introduces new requirements for product data, inventory accuracy, order processing, customer communication, pickup coordination, and staff workflows. Digital expansion must therefore be designed around what the Farm Store can reliably execute rather than simply adding as many online features as possible.
+
+## Market Opportunities
+
+The largest opportunity is to transform the Farm Store's digital presence from primarily an informational touchpoint into a customer acquisition and commerce channel.
+
+Several opportunities emerge from this strategy. Shopify can provide a curated digital storefront for priority products. Gift baskets can create a higher-value ecommerce use case for holidays, celebrations, alumni, parents, faculty, staff, and campus organizations. Improved product feeds can make products easier to discover through search and advertising platforms. Social media and paid campaigns can direct customers toward specific products rather than generating awareness without a clear next action.
+
+There is also an opportunity to use digital channels to increase physical store activity. Ecommerce does not have to mean shipping every item directly to customers. Features such as online discovery, ordering, and in-store pickup allow the Farm Store to use digital convenience while preserving the value of its physical location.
+
+Finally, improved analytics provide an opportunity to learn from customer behavior. Connecting Shopify, GA4, campaign platforms, and reporting dashboards would allow management to better understand which channels generate traffic, which products attract interest, where customers leave the purchasing funnel, and which promotions produce meaningful business outcomes.
+
+## Challenges
+
+The most significant challenge is ensuring that the digital experience remains operationally realistic. A sophisticated ecommerce storefront creates little value if inventory, fulfillment, or customer communication cannot consistently support the experience being promised.
+
+Inventory synchronization is particularly important because the Farm Store serves both physical and digital customers. Online availability should accurately reflect what customers can actually purchase or pick up.
+
+Staff capacity and workflow represent another consideration. Online orders, gift-basket customization, customer questions, status updates, and pickup preparation introduce tasks that must be incorporated into existing store operations. This is why the project has explored supporting operational tools, including a staff-facing order-management workflow.
+
+A final challenge is data integration and measurement. Shopify, website analytics, advertising platforms, and campaign tools currently track performance separately, which makes it harder to build a single, reliable view of the customer journey without additional integration work.
+
+## SWOT Analysis
+
+**Strengths**
+
+- Strong association with Cal Poly Pomona
+- Distinctive campus retail experience
+- Diverse product assortment
+- Fresh, specialty, local, and giftable products
+- Existing physical location and customer base
+- Multiple customer segments already connected to CPP
+
+**Weaknesses**
+
+- Digital and physical touchpoints can be better connected
+- Limited ecommerce functionality relative to the proposed journey
+- Product information requires standardization for digital channels
+- Ecommerce introduces additional staff workflow requirements
+- Limited integrated digital performance measurement
+- Some products may not be practical for immediate ecommerce
+
+**Opportunities**
+
+- Expand Shopify as an omnichannel storefront
+- Develop gift-basket ecommerce
+- Introduce online ordering and store pickup
+- Improve product feeds and search visibility
+- Use social and paid media to promote priority products
+- Reach alumni, parents, visitors, and local customers digitally
+- Connect GA4, Shopify, campaigns, and dashboards
+
+**Threats / Challenges**
+
+- Competition from highly convenient grocery and ecommerce alternatives
+- Inventory inaccuracies could damage customer experience
+- Limited staff capacity for digital fulfillment
+- Operational complexity as digital sales expand
+- Customer expectations may rise faster than capabilities
+- Fragmented data across retail and marketing platforms
+- Maintaining product information requires ongoing ownership
+
+## Strategic Interpretation
+
+The SWOT analysis suggests that CPP Farm Store should build its omnichannel strategy around differentiation rather than attempting to compete directly with large grocery retailers on scale or convenience alone. Its competitive advantage comes from its relationship with CPP, distinctive assortment, physical experience, and ability to offer products and gifts connected to that identity.
+
+The recommended strategy therefore focuses on using digital channels to make those existing strengths more discoverable, accessible, purchasable, and measurable. Shopify, product feeds, campaigns, gift-basket ordering, customer communications, and analytics should function as a connected system that drives customers toward both ecommerce transactions and the physical Farm Store.
+
+This gives a strong transition into Section 3, Omnichannel Journey Analysis, because it can now show where in the actual customer journey these strengths and weaknesses appear and how GP1 directly led to the solutions developed in GP2 through GP6.
+
+# Omnichannel Journey Analysis
+
+## Target Customer Segment
+
+The journey analysis identified CPP students and local community members as important customer segments. CPP students include undergraduate and graduate students who spend significant time on campus and regularly use digital platforms such as social media, online shopping, and on-demand services. Their goals include purchasing snacks and meals between classes, finding affordable food and campus products, discovering seasonal offerings, placing orders for quick pickup, and earning rewards or discounts.
+
+Local community members represent an important secondary audience and include nearby families, working professionals, and other residents or visitors. Their goals include purchasing fresh produce and specialty foods, supporting Cal Poly Pomona and local agriculture, finding unique gifts, learning about seasonal products and promotions, and having a convenient experience both online and in-store.
+
+## Journey Stages
+
+| Journey Stage | Customer Goal |
+|---|---|
+| Awareness | Discover CPP Farm Store and understand what makes it worth visiting |
+| Consideration | Evaluate products, prices, store hours, and seasonal availability |
+| Purchase | Complete a convenient purchase in-store or through a digital shopping experience |
+| Fulfillment / Pickup | Receive the order with clear pickup, parking, and fulfillment information |
+| Post-Purchase | Stay connected through confirmations, product updates, recipes, and other follow-up communication |
+| Loyalty | Return for seasonal products, promotions, rewards, and future purchases |
+
+The journey begins with awareness, where customers may encounter CPP Farm Store through Google, Instagram, campus signage, events, or word of mouth. During consideration, customers need enough information about products, prices, availability, hours, and location to decide whether a visit or purchase is worthwhile. The purchase and fulfillment stages require a convenient transaction and clear instructions that connect the digital experience with the physical store. Finally, post-purchase and loyalty touchpoints create opportunities to maintain the relationship through email communication, seasonal updates, reviews, and rewards.
+
+## Touchpoints
+
+GP1 showed that customers interact with CPP Farm Store through a combination of digital and physical touchpoints. Important discovery touchpoints include Google Search, Google Business Profile, Instagram, campus signage, and community or campus events. This puts importance on the website, Shopify product pages, seasonal collections, and mobile checkout.
+
+After purchase, order confirmations, pickup instructions, email communication, reviews, recipes, seasonal promotions, and loyalty rewards can extend the customer relationship. The goal is for these touchpoints to support one another rather than operate independently. For example, an Instagram post can introduce a seasonal product, the Shopify storefront can provide additional information, mobile checkout can support the transaction, and follow-up email or loyalty communication can encourage a future visit.
+
+## Pain Points
+
+**Discovery Gap.** Customers may have difficulty discovering the Farm Store or finding current information about it. The Google Business Profile was under-optimized, Instagram activity was inconsistent, there was no paid discovery channel, and campus signage was concentrated around the Kellogg Ranch area rather than higher-traffic student locations. These limitations reduce awareness before customers even enter the consideration stage.
+
+**Product Visibility Gap.** The current website isn't functioning as a browsable product catalog. Customers have limited ability to browse current products online before deciding whether to visit. This makes it more difficult to evaluate product selection, pricing, and seasonal availability.
+
+**Conversion Gap.** GP1 identified the lack of a seamless digital purchase path as a major source of friction. A mobile-friendly ecommerce experience and clear online-to-pickup process could make purchasing more convenient. GP1 also identified the absence of a complete ecommerce checkout and BOPIS workflow as an important disadvantage compared with competitors offering stronger digital purchasing infrastructure.
+
+**Pricing Gap.** Field observations and the group's conversation with the store manager indicated that some product categories required updated pricing. Campus-made products are especially important because of their scarcity, exclusivity, and connection to CPP. This creates value that was not being clearly communicated through existing digital channels.
+
+**Retention Gap.** The customer relationship largely ended after the transaction. GP1 identified the absence of post-purchase emails, review requests, restock notifications, and a reliable digital loyalty system. Without these touchpoints, CPP Farm Store had limited ways to reconnect with customers and encourage them to return.
+
+## Opportunities
+
+**Improve Digital and Campus Discovery.** CPP Farm Store can strengthen awareness by optimizing its Google Business Profile with accurate hours, current photos, product information, and categories. A consistent Instagram schedule, stronger search visibility, and QR-code signage placed in higher-traffic campus locations can help students discover the store before they reach the Kellogg Ranch area. Search campaigns should focus on exclusive products that differentiate CPP Farm Store from competing retailers.
+
+**Create a Browsable Digital Storefront.** The Farm Store can use an ecommerce storefront to organize its major product categories and make products easier to explore before a customer visits. Product pages should include clear titles, descriptions, pricing, photography, and availability information, along with seasonal collections. This would allow the digital storefront to support both customers who intend to purchase online and those researching products before an in-store visit.
+
+**Connect Digital Purchasing with In-Store Pickup.** A mobile-friendly ecommerce checkout and Buy Online, Pick Up In Store (BOPIS) process can reduce the friction associated with phone or email ordering. Automated order confirmations, pickup instructions, parking information, and estimated times can create a smoother transition from the online transaction to the physical Farm Store. Gift baskets are especially well suited to this approach because customers could submit customization and fulfillment preferences digitally before pickup.
+
+**Strengthen Product Value Communication.** Digital channels provide an opportunity to communicate why campus-grown and campus-made products are distinctive. Product pages and promotional content can emphasize seasonal availability, CPP affiliation, local production, and the limited or exclusive nature of certain products. This can help customers better understand the value of products as pricing is updated.
+
+**Build Post-Purchase Engagement and Loyalty.** CPP Farm Store can extend the customer relationship beyond the transaction through email communication, restock notifications, seasonal product announcements, review requests, recipes, referral incentives, and a digital loyalty program. These touchpoints can give customers reasons to return while also creating measurable opportunities for retention.
+
+## How GP1 Informed Later Recommendations
+
+The GP1 journey map provided the foundation for the recommendations developed throughout the project. The discovery, product visibility, conversion, pricing, and retention gaps identified in the customer journey helped the group focus later work on specific areas of friction.
+
+The product visibility and conversion gaps influenced the Shopify prototype and product feed recommendations by emphasizing easier product discovery, stronger product information, and a clearer path from online browsing to purchase and pickup. The discovery and value communication gaps helped shape the campaign strategy and creative assets, which focused on increasing awareness and communicating the value of CPP's campus-grown and campus-made products.
+
+The retention gap supported recommendations for email communication, Farm Rewards, and other post-purchase touchpoints, while the analytics dashboard provided a framework for measuring customer behavior across the journey. Together, GP2 through GP6 address the friction identified in GP1 and create a connected strategy for product discovery, ecommerce, promotion, customer retention, and performance measurement.
+
+# Ecommerce / Shopify Prototype
+
+## Purpose of the Shopify Store
+
+The Shopify prototype provides a functional alternative to the Farm Store's current phone-and-email ordering process. Each screen was designed and tested around the key pain points identified in the customer journey analysis, including the lack of a browsable product catalog, digital checkout, and a structured process for gift orders. Instead of presenting these solutions only as recommendations, the prototype demonstrates how they would work in practice from product discovery through in-store pickup.
+
+## Homepage Strategy
+
+The homepage opens with a full-width image of the Kellogg Ranch fields and the headline, "Fresh from the farm, built for your table," supported by two clear calls to action: "Shop Products" and "Explore Gift Options." This split allows the two customer segments identified in Section 3 to quickly choose the path that best fits their needs. Students making a quick purchase can go directly to the product catalog, while gift shoppers are guided toward the more detailed gift-ordering experience. A promotional bar above the hero section highlights seasonal messaging, such as "Summer Harvest Now Available," without requiring changes to the overall homepage layout. Below the fold, the "Shop by Collections" section introduces product categories immediately, allowing the homepage to function as both a strong brand introduction and a practical entry point into the store's catalog.
+
+![Figure 1: Homepage hero, value proposition, and primary CTAs.](images/fig01-homepage-hero.png)
+
+## Product Page Strategy
+
+The CPP Fresh Orange Juice product page demonstrates the standard layout used throughout the catalog. Each product page includes photography, a category label such as "Student Snacks & Drinks," pricing, a short description highlighting the product's CPP-grown origin, a quantity selector, and a pickup availability notice placed directly above the Add to Cart button. Below the main product information, the "Pickup Information" and "Farm Store Experience" sections address common questions a first-time customer may have about purchasing and pickup. Providing this information early helps set clear expectations before the customer reaches checkout.
+
+![Figure 2: Product detail page showing imagery, pickup availability, and Add to Cart.](images/fig02-product-detail.png)
+
+## Navigation
+
+The navigation was designed around how customers are most likely to shop. On the All Products page (Figure 3), customers can browse by category, including Fresh Produce, CPP Favorites, Specialty Foods, Gifts, Student Snacks & Drinks, and Seasonal Bundles, or use filters for availability and price. This gives customers an easy way to narrow down their options depending on what they are looking for. The "Pickup & Availability" message also stays visible while customers browse, so they are reminded of the pickup process while comparing products.
+
+The header menu (Figure 4) uses the same categories in a mobile-friendly slide-out menu. It also includes links to pages like Our Story, Contact, Visit & Pickup FAQ, and Farm Rewards. This keeps important store information easy to find instead of placing everything at the bottom of the website.
+
+![Figure 3: All Products page with category filters and sort controls.](images/fig03-all-products.png)
+
+![Figure 4: Header menu with category dropdown open.](images/fig04-header-menu.png)
+
+Search was tested using the term "baskets" to make sure customers could easily find the Farm Store's gift basket options. As the customer types, the live search suggestions (Figure 5) show six matching products with images and prices. The full search results page (Figure 6) then displays five matching gift baskets priced between about \$50 and \$75. Since gift baskets are one of the Farm Store's more involved purchases, making sure they were easy to find through search was an important part of testing the site.
+
+![Figure 5: Search bar with an in-progress query and live suggestions.](images/fig05-search-suggestions.png)
+
+![Figure 6: Search results page for a matching query.](images/fig06-search-results.png)
+
+## Gift Basket Flow
+
+The gift basket form was designed to improve one of the most manual parts of the Farm Store's current ordering process. It collects important information such as the recipient's name, occasion, card message, allergy or dietary needs, requested items, substitution preferences, and whether the customer wants pickup or shipping. This is the same type of information the store currently has to collect over the phone. The form also lets customers know that custom gift orders may take 1–2 business days to prepare, so they understand the expected turnaround time before placing their order.
+
+![Figure 7: Gift basket customization form with card message and fulfillment preferences.](images/fig07-gift-basket-form.png)
+
+## Online-to-Offline Customer Experience
+
+This part of the prototype follows one order from the cart through pickup confirmation to make sure all of the gift customization details carry through the checkout process. The test order includes a Local Cold Brew, CPP Fresh Orange Juice, and a Farm Store Gift Basket for a subtotal of \$73.00.
+
+In the cart (Figure 8), customers are reminded again about pickup timing and can either check out as a guest or sign in to an account. This means first-time customers do not have to create an account just to complete a purchase. At checkout (Figure 9), the gift basket details (including the recipient, occasion, card message, allergy notes, and requested date) are shown directly in the order summary. This confirms that the information entered earlier in the gift form stays with the order throughout checkout.
+
+![Figure 8: Shopping cart with order summary and pickup reminder.](images/fig08-cart.png)
+
+![Figure 9: Checkout page with contact, delivery, and payment sections.](images/fig09-checkout.png)
+
+After payment, the confirmation page (Figure 10) gives the customer a confirmation number, order and payment details, a map of the pickup or shipping area, and the option to track the order through Shop. The customer also receives an automated confirmation email (Figure 11) with the same order information and a five-step status tracker showing when the order is received, reviewed, being prepared, ready for pickup or shipping, and completed. This gives customers a clear way to follow their order without having to call the store for updates.
+
+The Shopify Shop App (Figure 13) also displays the order and gives customers quick access to manage it, visit the store, or view the full order details. Together, these features help keep customers informed after checkout and create a smoother connection between the website, email updates, and mobile order tracking.
+
+![Figure 10: On-site order confirmation after checkout.](images/fig10-order-confirmation.png)
+
+![Figure 11: Order confirmation email sent to the customer.](images/fig11-confirmation-email.png)
+
+![Figure 12: Order confirmation email with live order tracker information.](images/fig12-confirmation-email-tracker.png)
+
+![Figure 13: Customer order tracking in the Shop App.](images/fig13-shop-app-tracking.jpeg)
+
+## Farm Rewards and Customer Support
+
+Farm Rewards was created to address the lack of a loyalty program in the Farm Store's current experience. The program is explained in three simple steps: create an account, earn 5 points for every \$1 spent, and redeem those points for discounts on future purchases. A rewards table clearly shows what those points are worth, including \$1 off for 100 points, \$6 off for 500 points, and \$10 off for 1,000 points. This makes the benefits of returning to the store easy for customers to understand.
+
+A floating rewards widget (Figure 15) is also available throughout the website, giving customers an easy way to join the program without leaving the page they are currently browsing.
+
+![Figure 14: Farm Rewards dashboard explaining how points are earned and redeemed.](images/fig14-farm-rewards-dashboard.png)
+
+![Figure 15: Farm Rewards sign-up widget.](images/fig15-farm-rewards-widget.png)
+
+The Contact Us and FAQ page (Figure 16) combines the store's Google Maps location with answers to common customer questions. The FAQ is organized into sections for Store Information, Pickup Information, and Gift Baskets & Gift Boxes, covering questions such as "How does pickup work?" and "Can I add a card message?" Keeping directions and frequently asked questions in one place makes it easier for first-time customers to find the information they need without having to call the store.
+
+![Figure 16: Contact Us page with store location map and FAQ accordion.](images/fig16-contact-faq.png)
+
+The prototype also includes a staff-facing dashboard (Figure 17) where store staff can look up an order, update its production status, and push that update to the customer-facing live order tracker (Figure 18) and confirmation emails shown earlier in this section.
+
+![Figure 17: Staff order dashboard where staff can update order status and customer contact information.](images/fig17-staff-dashboard.png)
+
+![Figure 18: Customer-facing live order tracker.](images/fig18-live-order-tracker.png)
+
+# Product Feed / Retail Media Setup
+
+## Selected Products
+
+CPP Farm Store should begin its retail-media strategy with a small, high-quality digital product assortment rather than attempting to digitize and advertise the entire store immediately. The first phase should prioritize roughly 10–20 ecommerce-ready products with standardized titles, complete descriptions, professional imagery, reliable pricing, and manageable availability. Gift baskets, signature Farm Store products, specialty foods, and selected seasonal items should form the core assortment. Once the Farm Store demonstrates that it can reliably maintain these products across Shopify and promotional channels, the feed can expand progressively.
+
+This creates a manageable progression: clean product data → Shopify catalog → product feed → digital discovery → campaigns → purchase/pickup → performance measurement. That sequence is important to the overall GP7 consulting story because it connects the Shopify prototype directly to Section 6, Campaign Plan. The campaign does not simply send people to the Farm Store homepage; it can promote specific, structured products and move customers directly from an advertisement or social post into the ecommerce journey.
+
+A standardized product feed would allow CPP Farm Store to transform its Shopify product catalog into a reusable source of product information for ecommerce, search, social media, and future retail-media campaigns. Rather than recreating product information separately for every platform, the Farm Store can maintain structured product data that supports Shopify and can later be distributed to platforms such as Google Merchant Center and Meta product catalogs.
+
+For CPP Farm Store, the initial feed should prioritize a curated assortment rather than the entire physical inventory. Products should be selected based on customer interest, ecommerce suitability, visual appeal, margin potential, availability consistency, and their ability to represent the Farm Store's distinctive brand. This approach reduces operational complexity while giving the Farm Store a manageable set of products with which to test online discovery and promotion.
+
+The Shopify prototype provides an opportunity to begin with products that represent several different customer shopping missions. The initial feed should include a mix of fresh, specialty, convenience, and gift-oriented products.
+
+| Product | Product Category | Primary Customer Need | Promotion Potential |
+|---|---|---|---|
+| Seasonal Produce Box | Fresh Produce | Fresh/local shopping | High |
+| Raw Local Honey | Local & Specialty Goods | Specialty/local product | High |
+| CPP Farms Ice Cream | Campus Favorite | Experience/indulgence | High |
+| Farm Store Gift Basket | Gifts | Gifting | Very High |
+| Local Cold Brew | Beverages/Grab-and-Go | Convenience | Medium–High |
+| Farm Store Salsa | Pantry/Specialty Foods | Specialty product | Medium |
+| Curated Fruit Box | Gifts/Fresh Produce | Gifting/occasions | High |
+| Seasonal Gift Box | Gifts | Holiday/event gifting | Very High |
+
+These products are appropriate for the initial feed because they collectively communicate the Farm Store's assortment and provide different promotional opportunities throughout the year. Gift baskets and gift boxes should receive particularly strong consideration because they represent a product experience where customers benefit from researching, customizing, and ordering before arriving at the store.
+
+## Feed Structure
+
+The product feed should use consistent fields across products. At minimum, each digital product record should contain:
+
+| Feed Field | Purpose | CPP Farm Store Example |
+|---|---|---|
+| id | Unique product identifier | CPP-GIFT-001 |
+| title | Customer-facing product name | CPP Farm Store Seasonal Gift Basket |
+| description | Detailed product information | Curated assortment of Farm Store favorites |
+| link | Product-page destination | Shopify product URL |
+| image_link | Primary product image | Hosted Shopify image |
+| availability | Inventory status | in_stock |
+| price | Current selling price | \$49.99 USD |
+| brand | Product brand | CPP Farm Store |
+| condition | Product condition | new |
+| product_type | Internal merchandising category | Gifts \> Gift Baskets |
+| google_product_category | Standardized category | Appropriate Google taxonomy |
+| item_group_id | Groups product variants | Gift basket family |
+| custom_label | Campaign segmentation | Seasonal / Giftable / Campus Favorite |
+
+The key principle is a single, reliable source of product truth. The title, price, availability, product image, and description shown in advertising should match what the customer sees after clicking through Shopify.
+
+## Product Titles
+
+Product titles should be written for customers first. Internal inventory names, abbreviations, or SKU-oriented naming structures may be understandable to store employees but are not necessarily effective for search engines or digital shoppers.
+
+A practical title structure is:
+
+**Brand or Source + Product Name + Important Attribute / Size**
+
+| Less Effective Title | Recommended Digital Title |
+|---|---|
+| Honey | CPP Farm Store Raw Local Honey |
+| Ice Cream | CPP Farms Ice Cream |
+| Cold Brew | Local Cold Brew Coffee – Ready to Drink |
+| Basket | CPP Farm Store Seasonal Gift Basket |
+| Fruit Box | CPP Farm Store Fresh Seasonal Fruit Box |
+| Salsa | CPP Farm Store Specialty Salsa |
+
+Titles should communicate the primary product clearly before adding secondary descriptors. Keyword stuffing should be avoided because titles still need to remain natural and readable. For products with sizes or variants, those attributes should be incorporated consistently, for example:
+
+**CPP Farm Store Raw Local Honey – 12 oz**
+
+rather than creating inconsistent names for otherwise related products.
+
+## Product Descriptions
+
+Descriptions should do more than list product specifications. They should answer the questions a digital shopper cannot resolve by physically examining the merchandise. Each description should communicate four core pieces of information:
+
+**What is the product?** Clearly identify it and its primary characteristics.
+
+**Why is it distinctive?** Explain its relationship to the Farm Store, campus, local sourcing, seasonality, or customer experience where applicable.
+
+**Who or what occasion is it for?** This is particularly useful for gift products.
+
+**How is it fulfilled?** Clearly communicate pickup, shipping, customization, seasonality, or availability restrictions.
+
+For example, a gift-basket description could read:
+
+> *CPP Farm Store Seasonal Gift Basket brings together a curated selection of Farm Store favorites for birthdays, celebrations, campus occasions, alumni gifts, and seasonal giving. Product contents may vary based on availability, allowing the basket to highlight fresh and specialty items currently available at the Farm Store. Customers can submit recipient and pickup information during the ordering process.*
+
+A produce item might instead emphasize freshness, seasonality, and availability:
+
+> *CPP Farm Store Seasonal Produce Box features a rotating selection of fresh fruits and vegetables based on current seasonal availability. The assortment provides customers with a convenient way to discover a variety of Farm Store produce in one purchase.*
+
+The writing should remain informative and credible rather than making unsupported claims such as "best," "healthiest," or "100% locally grown" unless those claims can be verified.
+
+## Product Imagery
+
+Product imagery is one of the most important feed-quality components because digital customers cannot physically inspect merchandise before purchase. The Farm Store should establish a basic photography standard for feed-enabled products.
+
+Primary product images should have:
+
+- High resolution and sharp focus
+- Consistent lighting
+- Minimal visual clutter
+- Product centered prominently in the frame
+- Consistent background treatment
+- No unnecessary text overlays
+- Accurate representation of the actual product
+- Sufficient resolution for Shopify, Google, and social placements
+
+Whenever practical, each important product should also have secondary imagery showing context, for example:
+
+**Gift baskets:** full basket image, close-up, packaging presentation, lifestyle or gifting image.
+
+**Food products:** front packaging, product close-up, serving/use context where appropriate.
+
+**Fresh produce:** clean product image, grouped produce image, seasonal or Farm Store merch context.
+
+Lifestyle photography is particularly valuable for paid and organic social media, while clean product photography should remain the primary feed image.
+
+## Feed-Quality Risk
+
+The largest risk is not whether CPP Farm Store can technically generate a product feed. The larger issue is whether the underlying product information is sufficiently standardized and maintained. Key feed-quality concerns include:
+
+- Inconsistent product naming
+- Incomplete descriptions
+- Image inconsistency
+- Availability accuracy
+- Price accuracy
+- Variant management
+- Seasonal inventory
+- Product identifiers
+
+# Campaign Plan
+
+## Business Problem
+
+The journey analysis in Section 3 identified two major challenges for the CPP Farm Store: many students are unaware that the store exists, and those who do know about it have no easy way to browse products or plan a purchase before visiting. The Shopify prototype in Section 4 helps solve the shopping side of that problem by introducing an online catalog, gift basket ordering, and BOPIS checkout. However, having a functional online store only creates value if customers actually visit it. The goal of this campaign is to drive qualified student traffic to the new storefront during the launch period and increase awareness of the Farm Store across campus.
+
+## Campaign Objective
+
+The goal of the campaign is to build awareness of the CPP Farm Store's new online storefront among CPP students and turn that awareness into measurable actions, including product page visits, add-to-cart activity, and completed online orders. The campaign will place extra focus on campus-exclusive products and gift baskets, which were identified in Section 3 as key points of differentiation. Performance will be measured over a six-week campaign period, with Section 8 reviewing the actual traffic and conversion results against these goals.
+
+## Target Audience
+
+The primary audience for the campaign is the CPP student segment identified in Section 3 and represented by the Emily Rodriguez persona. This audience is mobile-first, budget-conscious, and often shopping between classes, so the campaign focuses on what is most likely to appeal to them: seasonal products, CPP pride, and a quick, convenient way to plan a purchase. A secondary audience, the Proud CPP Gifter, includes alumni, parents, and campus visitors and is targeted more heavily through gift basket and seasonal bundle messaging during weeks three through six.
+
+## Message Strategy
+
+The campaign is centered around the tagline "Fresh This Week — Grown at Cal Poly Pomona." "Fresh This Week" gives students a reason to keep checking back for new products, while "Grown at Cal Poly Pomona" highlights what makes the Farm Store unique from other retailers. The messaging also changes depending on where the customer is in the buying process. Awareness content focuses on curiosity and seasonal products, consideration content highlights specific items and prices, and purchase-focused content adds urgency along with the Farm Rewards incentive of 5 points for every \$1 spent.
+
+## Channel Strategy
+
+The channel strategy builds on the opportunities identified in Section 3. Organic channels are used to build awareness with little to no media cost, while paid advertising is focused on audiences that are harder to reach organically.
+
+| Channel | Role | Cost |
+|---|---|---|
+| Instagram + TikTok weekly series | One post + Story and one TikTok per week, each featuring 2–3 in-stock products; drives awareness and consideration. | Organic |
+| Google Shopping Ads | Boosts the GP3 product feed's best-performing offers to searchers within roughly 10 miles of campus; the only channel reaching gift buyers beyond the student segment. | \$500 |
+| Campus signage with QR codes | Posters and A-frames at the Bronco Student Center, library, and dining areas, each QR-coded to the campaign landing page. | \$250 |
+| Pop-up / tasting event | A week-3 on-campus event sampling seasonal products and handing out QR cards; the campaign's one experiential touchpoint. | \$200 |
+| Student ambassador | One student posts weekly and staffs the pop-up event, compensated in store credit. | \$100 |
+| Email + landing page | Launch announcement and weekly digest to existing contacts; the landing page is the single destination every QR code and ad click resolves to. | Organic |
+| In-store Farm Rewards push | Register signage and a staff script enrolling every campaign-driven visitor in Farm Rewards at the point of pickup. | Organic |
+
+## Omnichannel Flow
+
+Each stage of the campaign uses tools and assets that have already been developed for the project. Instagram, TikTok, Google Shopping, and campus signage help customers discover the Farm Store, while each channel directs them to the same "Fresh This Week" landing page on the Shopify prototype. That page highlights featured products, store hours, location information, and the email signup before guiding customers into the normal shopping and checkout process.
+
+After pickup, staff can encourage customers to join Farm Rewards and the email list to help build repeat visits. Directing every channel to one landing page also makes campaign performance easier to track because traffic and conversions can be measured through one consistent customer journey.
+
+## Budget
+
+The campaign has a hypothetical budget of \$1,500 over six weeks. Because the Farm Store already has several low-cost ways to reach students, including its campus location, social media, and existing GP3 product feed, most of the campaign relies on organic promotion. Paid advertising is focused on Google Shopping to reach customers beyond the store's existing audience, with a smaller portion going toward Instagram to give key campaign posts an extra boost.
+
+| Channel / Item | Amount | % of Total | Reason for Allocation |
+|---|---|---|---|
+| Google Shopping Ads | \$500 | 33% | Priority paid channel: intent-driven, reuses the GP3 feed, and reaches gift buyers beyond campus. |
+| Instagram boosted posts | \$350 | 23% | Extends the Fresh This Week series beyond current followers to CPP-geotargeted students. |
+| Signage + print (posters, QR cards) | \$250 | 17% | One-time production cost for the highest-traffic, zero-ongoing-cost placements on campus. |
+| Pop-up event + samples | \$200 | 13% | Product samples and table materials for the week-3 tasting event. |
+| Ambassador store credit | \$100 | 7% | Low-cost incentive for weekly student-generated content and event staffing. |
+| Contingency / reallocation | \$100 | 7% | Reserved to shift mid-campaign toward whichever paid channel shows the best cost per landing-page session. |
+
+Paid advertising accounts for \$850, or about 57% of the total campaign budget, and is used to support the organic strategy rather than replace it. If the budget had to be reduced, Google Shopping would be the first priority to keep, followed by campus signage, since both are most likely to reach customers who are already close to making a purchase.
+
+## KPIs
+
+Each KPI maps to a specific journey stage from Section 3, so measurement tests directly whether the campaign moved customers through the funnel it was built for rather than only generating impressions.
+
+| Journey Stage | KPI | Result During Campaign Window |
+|---|---|---|
+| Awareness | Impressions, Google Maps views, QR scans | Traffic across all channels rose measurably following the campaign's June 10 launch. |
+| Consideration | Product page views, Instagram link clicks | 382 product page views recorded in the reporting window. |
+| Purchase | Add-to-cart rate, checkout starts, conversion rate | 59 add-to-cart actions (~15% of page views); 26 checkout starts (~44% of add-to-cart). |
+| Fulfillment | Completed orders, BOPIS pickups | 3 completed purchases (~12% of checkout starts). |
+| Retention | Email open rate, Farm Rewards signups | Tracked going forward via the register enrollment script; not yet material in this window. |
+
+Paid Search was the strongest-performing paid channel in the reporting window, producing a click-through rate between 0.51% and 4.24% depending on the date range reviewed, higher than Social or Email. Full channel-level detail and the underlying dashboard are reported in Section 8.
+
+## Optimization Plan
+
+The biggest opportunity in the campaign data is the drop-off between product page views and add-to-cart activity. About 85% of customers who view a product do not add it to their cart, making this the largest point of loss in the funnel. One way to improve this would be to reinforce the "Fresh This Week — Grown at Cal Poly Pomona" message directly on product pages, such as placing the CPP-grown story closer to the Add to Cart button.
+
+Paid Search also converted better than Social, even though both channels generated similar click volume. Because of this, the \$100 contingency budget could be shifted toward Paid Search while the team reviews whether Social performance is being affected by targeting or the landing-page experience.
+
+# Creative Brief / AI Assets
+
+## Creative Objective
+
+The creative strategy translates the "Fresh This Week" campaign into customer-facing content designed to increase awareness and encourage repeat visits to CPP Farm Store. The primary objective is to make the store's rotating, campus-grown inventory more visible to students and turn awareness into action. Supporting objectives include encouraging between-class visits, emphasizing that products are grown or made at Cal Poly Pomona, promoting Farm Rewards as a reason to return, and incorporating a secondary gifting message for faculty, staff, parents, and visitors.
+
+## Key Message
+
+The campaign's central message is "Fresh This Week — Grown at Cal Poly Pomona." The phrase combines two important ideas: "Fresh This Week" emphasizes changing seasonal inventory and gives customers a reason to check back regularly, while "Grown at Cal Poly Pomona" communicates the Farm Store's strongest point of differentiation. Supporting messages are adapted to different stages of the customer journey, including awareness, discovery, conversion, gifting, and retention.
+
+## Tone and Style
+
+The creative direction is friendly, student-focused, practical, and specific to CPP rather than generic farm-store advertising. Copy uses short sentences, casual language, and clear information about what is available, where customers can find it, and when they should visit. Visually, the campaign uses campus greens and warm neutrals consistent with the Shopify prototype, product-focused photography, and simple typography designed to remain readable on mobile devices.
+
+## Sample Assets
+
+Four coordinated assets were developed to demonstrate how the campaign could appear across customer touchpoints:
+
+**Instagram Feed Post:** builds weekly awareness by highlighting rotating seasonal products.
+
+**Instagram Story:** creates urgency through timely product reminders, countdown messaging, and location cues to encourage immediate visits from students already on or near campus.
+
+**Farm Rewards Email:** encourages repeat visits while also supporting seasonal gifting.
+
+**Website Banner:** provides a conversion-focused destination for customers arriving from social media, search, advertising, or QR codes.
+
+## Channel Fit
+
+Each asset provides a different role in the customer journey while maintaining the same campaign message. Instagram provides awareness and timely product discovery, the Shopify website supports conversion by directing visitors toward featured products, and email supports retention and gifting among customers who have already interacted with the Farm Store. In-store messaging can reinforce the campaign and Farm Rewards at the point of purchase. This approach allows customers to encounter the same "Fresh This Week" message across multiple channels rather than receiving disconnected promotions.
+
+## AI Usage
+
+AI was used as a creative development tool for campaign copy and visual concepts, with the group reviewing and editing before final inclusion. For copy development, initial AI-generated drafts were revised to make language shorter, more mobile-friendly, and more specific to CPP. Formal or generic wording was replaced with more student-facing language, Kellogg Ranch location cues were added, and unsupported promotional claims were removed. GP5 also documents AI-assisted image generation, providing transparency about how the creative mocks were developed.
+
+## Brand-Fit Explanation
+
+The creative assets were designed to feel specific to the CPP Farm Store rather than a general grocery or farm advertisement. The campaign builds around the Farm Store's strongest point of differentiation, its connection with Cal Poly Pomona and the products that are grown, made, or sold through the campus community. The message "Fresh This Week — Grown at Cal Poly Pomona" reinforces this connection while also giving customers a real reason to regularly check in at the store for any seasonal items it might change or add. This follows the report's overall strategy of focusing on the Farm Store's distinct connection to CPP rather than trying to compete with larger retailers.
+
+The visuals stay consistent with the Shopify prototype by using the same CPP colors, typography, and product-focused photography. Keeping these elements consistent across multiple channels helps customers recognize that each message is part of the same CPP Farm Store experience. The assets can also support the different customer groups identified earlier in the project without changing the overall brand. Student-focused content can emphasize fresh products, convenience, and CPP pride, while gift-basket-focused content can highlight the Farm Store's connection to the university and its unique gift offerings. This allows the campaign to appeal to different customers while still maintaining a consistent CPP Farm Store identity.
+
+# Analytics Dashboard
+
+## Measurement Objectives
+
+The dashboard was created to answer a simple question: did the "Fresh This Week — Grown at Cal Poly Pomona" campaign actually move customers through the buying process, and which channels performed well enough to justify continued investment? To answer that, the dashboard looks at three areas: whether traffic increased during the campaign launch, how effectively each channel moved customers beyond the initial click toward a purchase, and whether customers actually used the BOPIS/pickup option built into the Shopify prototype.
+
+## Data Sources
+
+The dashboard was built in Looker Studio using data from the GA4 property connected to the CPP Farm Store Shopify prototype. It also includes campaign-level click and channel data for Social, Paid Search, and Email, which were tracked as part of the campaign in Section 6. Product-level information comes from the GP3 Google Merchant Center feed, while the overall channel structure follows the same six traffic sources identified in the GP1 journey map: Organic Search, Social, Paid Search, Direct, Email, and Referral.
+
+## KPIs
+
+KPIs are organized at two levels: site-wide summary metrics, and channel-level campaign performance metrics that isolate how each channel contributes to the funnel.
+
+| Level | KPI | Value |
+|---|---|---|
+| Site-wide | Sessions | 9,023 |
+| Site-wide | Revenue | \$4,125.51 |
+| Site-wide | Conversion rate | 1.75% |
+| Site-wide | Store Pickup Interest | 241 |
+| Channel | Campaign clicks, CTR, checkout starts, purchases | Tracked per channel — see Key Insights |
+
+## Dashboard Screenshot
+
+![Figure 19: Looker Studio dashboard — summary KPIs, channel revenue share, campaign launch trend, channel performance table, conversion funnel, and channel session/trend breakdowns.](images/fig19-looker-dashboard.png)
+
+## Key Insights
+
+Organic Search generated the largest share of revenue at 42.5%, followed by Paid Search at 23.2% and Email at 17.9%. Since Organic Search produced the most revenue without any media cost, this supports the organic-first budget strategy outlined in Section 6.
+
+The channel performance table also shows why clicks alone do not tell the full story. Social generated the most campaign clicks at 2,107, but only 5.7% of checkout starts resulted in a purchase. Paid Search converted 23.4% of checkout starts, while Email performed best at 30.1%. When looking at completed purchases per click, Social was the weakest of the three at 0.62%, compared with 2.43% for Paid Search and 2.98% for Email. This shows that although Social was effective at generating traffic, Paid Search and Email were more effective at turning that traffic into purchases.
+
+The Campaign Launch chart shows a noticeable increase in both product page views and add-to-cart activity during the second week of June, with activity remaining higher through the rest of the month. A similar increase appears in the channel trend data, especially for Organic Search and Social. This suggests that the campaign created a sustained increase in traffic rather than only a short-term spike.
+
+Store Pickup Interest reached 241 during the reporting period, showing that customers were actively using the pickup option built into the Shopify prototype. The site also generated \$4,125.51 in tracked revenue with a 1.75% overall conversion rate. Based on the recorded purchases, the average order value was approximately \$26, which fits the Farm Store's mix of lower-priced snacks and beverages along with higher-priced gift baskets.
+
+## Recommended Actions
+
+Future spending should shift more toward Email and Paid Search rather than Social. Social generated plenty of traffic, but its 5.7% checkout-to-purchase rate was much lower than Paid Search and Email. This suggests the issue may be with audience targeting or the experience after customers click, so that should be reviewed before putting more money into Social.
+
+Organic content and on-site SEO should also remain a priority. Organic Search already generated the largest share of revenue without any media spend, which shows the value of continuing the Instagram and TikTok content strategy while improving the store's visibility in search.
+
+Store Pickup Interest should become a regular KPI in future reports. It provides a clear indication of whether customers are actually using the pickup experience created in the Shopify prototype, and tracking it over time will be more useful than looking at a single result.
+
+Finally, the \$100 contingency budget could be used to test improvements for customers coming from Social. For example, the checkout experience could reinforce the "Fresh This Week" message or highlight the Farm Rewards incentive. Testing these changes first would help determine whether Social performance can be improved before reducing investment in the channel.
+
+## Data Limitations
+
+The dashboard uses simulated GA4 data because the CPP Farm Store Shopify prototype is still a development-stage practice site and does not have live customer traffic. This means the figures shown for sessions, revenue, and purchases are illustrative rather than actual sales results. The main value of the dashboard is the KPI structure, funnel design, and channel comparisons, which can be used once a real GA4 property is connected after launch. The simulated numbers themselves should not be used to make real budget decisions.
+
+The channel performance table also has some limitations. Social, Paid Search, and Email include detailed click, checkout, and purchase data, while Organic Search, Direct, and Referral only appear in the broader revenue and session charts. Because of this, a complete funnel comparison across every channel is not yet possible. Store Pickup Interest should also be treated as a directional measure for now because it has not yet been formally defined as a specific GA4 event.
+
+# Final Recommendations
+
+The three recommendations below are listed in order of priority rather than size of opportunity. Recommendation 1 needs to happen first because Recommendations 2 and 3 depend on having a live storefront that is converting real customers. Until then, those recommendations can only be evaluated using the prototype and simulated dashboard data.
+
+| Recommendation | Priority | Timeframe | Primary Data Source |
+|---|---|---|---|
+| 1. Launch the storefront and fix the page-to-cart leak | Highest priority | Immediate (0–30 days) | Sections 4 & 8 |
+| 2. Rebalance channel spend toward what's already working | Medium-term opportunity | 31–60 days | Sections 6 & 8 |
+| 3. Build out loyalty and gifting as a retention program | Future opportunity | 61–90+ days | Sections 3 & 4 |
+
+## Recommendation 1 — Launch the Storefront and Fix the Page-to-Cart Leak
+
+*Highest priority*
+
+**What to do.** Move the Shopify prototype from Section 4 out of development and into a live, published storefront connected to real inventory and a payment processor. Before sending more traffic to the site, address the biggest issue identified in Sections 6 and 8: only about 15% of product page visitors add an item to their cart. This does not require a redesign. The existing "Grown at Cal Poly Pomona" message and pickup-availability notice (Section 4, Figure 2) should simply be moved closer to the Add to Cart button so customers see those key benefits at the point of purchase.
+
+**Why it matters.** Every other recommendation in this report depends on having a live storefront that can convert visitors into customers. The GP6 dashboard data in Section 8 shows that the product-page-to-cart step is the largest drop-off in the customer journey. Driving more traffic to a page where roughly 85% of visitors leave without adding an item would make additional marketing spend less effective. For that reason, this issue should be addressed before Recommendations 2 and 3 are evaluated using real customer data.
+
+**Required resources.** Upgrading Shopify from a development store to a paid, published plan, connecting a payment processor, and spending an estimated one to two hours updating the product page template. No new content, photography, or design work should be needed because the necessary messaging already exists in the prototype.
+
+**Success measures.** Success would mean the storefront is live and accepting real orders, the product-page add-to-cart rate rises above the current ~15% baseline in the next reporting period, and Store Pickup Interest (Section 8) continues to increase as customers begin using the pickup flow built in Section 4.
+
+## Recommendation 2 — Rebalance Channel Spend Toward What's Already Working
+
+*Medium-term opportunity*
+
+**What to do.** Shift additional campaign spending away from Social and toward Email and Paid Search, which have the highest checkout-to-purchase rates at 30.1% and 23.4%, compared with 5.7% for Social (Section 8). Before reducing Social further, use the \$100 contingency budget from Section 6 to test one checkout-page change specifically for Social traffic. At the same time, continue the weekly Instagram and TikTok content from Section 6, which is already supporting Organic Search as the channel generating the largest share of revenue at 42.5% with no media cost.
+
+**Why it matters.** The dashboard shows that the store is not lacking traffic or interest; the larger issue is converting that traffic efficiently. Social generates the most clicks of the three tracked channels, but its checkout-to-purchase rate is about one-fifth of Email's. This means additional dollars spent on Social are currently producing fewer completed purchases. Reallocating the existing budget, rather than requesting more funding, is the fastest way to improve the return on the \$1,500 campaign budget from Section 6.
+
+**Required resources.** No additional budget is required. The main resources are a reallocation of the existing Section 6 budget, use of the built-in \$100 contingency, marketing team time to create one checkout-page test for Social traffic, and continued weekly content production from the student ambassador role already included in the budget.
+
+**Success measures.** Success would mean Social's checkout-to-purchase rate improves from the current 5.7% baseline, Email and Paid Search account for a larger share of total purchases, and the site-wide conversion rate (currently 1.75%, per Section 8) increases without raising total media spend.
+
+## Recommendation 3 — Build Out Loyalty and Gifting as a Retention Program
+
+*Future opportunity*
+
+**What to do.** Expand Farm Rewards (Section 4) beyond its current points-for-discounts structure by adding an automated post-purchase email sequence and a referral incentive for the Proud CPP Gifter segment (Section 3). The \$65 gift basket tested throughout Section 4 could also become part of a seasonal calendar with offerings for Welcome Week, finals week, graduation, and the holidays. This would give the "Fresh This Week" content series new reasons to bring customers back throughout the academic year instead of limiting it to a six-week campaign.
+
+**Why it matters.** The journey analysis in Section 3 identified Loyalty as the weakest stage of the customer journey, and it is still the least developed part of the current prototype. There is no automated post-purchase email sequence yet, and Farm Rewards does not currently include a retention strategy beyond the points table. Gift baskets also have the highest per-order value among the products tested in Section 4, making them a strong opportunity to increase average order value and encourage repeat purchases without relying entirely on new customer acquisition.
+
+**Required resources.** The main resources needed are an email marketing platform connected to Shopify customer data, such as Shopify Email or Klaviyo, and a content calendar planned around the academic year instead of a single campaign window. No major technical build is required because the Gift Basket flow and Farm Rewards structure already exist in the Section 4 prototype.
+
+**Success measures.** Success can be measured through the repeat purchase rate among Farm Rewards members, average order value for gift basket orders compared with the current \$65 baseline, and the open and click-through rates of the new post-purchase email sequence. Email performance can be benchmarked against the 7.46% CTR achieved during the initial campaign (Section 8).
+
+# Implementation Roadmap
+
+The roadmap below sequences the three recommendations from Section 9 into a single 90-day timeline. The phases are dependent, not parallel: Recommendation 2 cannot be evaluated on real data until the storefront in Recommendation 1 is live and generating actual GA4 traffic rather than the simulated dashboard data used in Section 8, and Recommendation 3's retention build-out assumes a stable, converting storefront and a confirmed channel mix are already in place.
+
+## 0–30 Days: Launch and Stabilize
+
+This phase executes Recommendation 1 in full. Its purpose is narrow and specific: get the storefront live, fix the single largest funnel leak identified in Section 8, and start collecting real customer data to replace the simulated data every prior section has relied on.
+
+| Week | Action | Ties to |
+|---|---|---|
+| Week 1 | Upgrade the Shopify prototype from a development store to a live, published plan and connect a payment processor. | Rec. 1 |
+| Week 1–2 | Reposition the "Grown at Cal Poly Pomona" story and pickup-availability notice directly next to the Add to Cart button across all product page templates (Section 4, Figure 2). | Rec. 1 |
+| Week 2 | Connect a live GA4 property to the now-public storefront, replacing the simulated dashboard data used throughout Section 8. | Rec. 1 |
+| Week 3 | Re-run the Section 6 campaign channels (Instagram/TikTok series, Google Shopping, signage, pop-up event) against the live store using the existing \$1,500 budget structure. | Rec. 1, Sec. 6 |
+| Week 4 | Pull the first live-data funnel report and compare the real add-to-cart rate against the ~15% prototype baseline to confirm the page-to-cart fix worked. | Rec. 1 |
+
+**Checkpoint:** storefront live and accepting real orders; live GA4 data flowing; first real add-to-cart rate measured against the Section 8 baseline.
+
+## 31–60 Days: Optimize Channel Spend
+
+This phase executes Recommendation 2, using the first 30 days of live traffic data to confirm whether the channel patterns identified in Section 8's simulated dashboard, Social's low checkout-to-purchase rate against Email and Paid Search's stronger performance, hold up under real customer behavior.
+
+| Week | Action | Ties to |
+|---|---|---|
+| Weeks 5–6 | Compare 30 days of live GA4 data against the Section 8 findings to confirm or revise the channel performance gaps before reallocating spend. | Rec. 2 |
+| Week 6 | Shift incremental campaign budget from Social toward Email and Paid Search, the two channels with the strongest checkout-to-purchase rates. | Rec. 2 |
+| Weeks 6–7 | Run the Social-specific checkout-page test funded by the \$100 contingency line from the Section 6 budget. | Rec. 2, Sec. 6 |
+| Ongoing | Continue the weekly Instagram/TikTok content cadence and monitor whether Organic Search's revenue share holds near the 42.5% simulated figure under real traffic. | Rec. 2 |
+| Week 8 | Formally add Store Pickup Interest as a standing KPI in ongoing reporting rather than a one-time dashboard figure. | Sec. 8 |
+
+**Checkpoint:** reallocated budget in effect; Social checkout-page test complete with a keep/cut decision; the Section 8 dashboard rebuilt on live data in place of the simulated version.
+
+## 61–90 Days: Build Out Retention
+
+This phase executes Recommendation 3. It assumes the storefront is stable and the channel mix from the prior phase is confirmed, so effort here shifts from acquisition to converting existing customers into repeat, higher-value ones.
+
+| Week | Action | Ties to |
+|---|---|---|
+| Weeks 9–10 | Select and connect an email marketing platform (Shopify Email or Klaviyo) to storefront customer data. | Rec. 3 |
+| Weeks 10–11 | Build the automated post-purchase email sequence and a referral incentive aimed at the Proud CPP Gifter segment. | Rec. 3, Sec. 3 |
+| Weeks 10–12 | Plan a seasonal gift bundle calendar (Welcome Week, finals week, graduation, holidays) to replace the single \$65 evergreen basket tested in Section 4. | Rec. 3, Sec. 4 |
+| Week 12 | Launch the first seasonal bundle tied to whichever campus event falls within this window. | Rec. 3 |
+| Week 13 | Report first repeat-purchase rate and Farm Rewards enrollment numbers against the pre-campaign baseline. | Rec. 3 |
+
+**Checkpoint:** retention program live; first seasonal bundle shipped; initial repeat-purchase rate and Farm Rewards enrollment trend measurable for the first time.
+
+# Recommendation Priority Matrix
+
+Plotting the three recommendations from Section 9 by business impact and implementation effort supports the same priority order used in the roadmap (Section 10). The recommendation with the greatest potential impact also requires the least amount of new work, making it the clear place to start.
+
+![Figure 20: Business impact vs. implementation effort for all three Final Recommendations.](images/fig20-priority-matrix.png)
+
+| Rank | Recommendation | Impact | Effort | Quadrant |
+|---|---|---|---|---|
+| 1 | Launch storefront + fix page-to-cart leak | High | Low | Quick Win |
+| 2 | Rebalance channel spend | High | Low | Quick Win |
+| 3 | Build out loyalty + gifting program | High | Medium–High | Major Project |
+
+**Rank 1: Launch Storefront + Fix Page-to-Cart Leak.** Recommendation 1 falls furthest into the Quick Wins quadrant because most of the work involves repositioning content that already exists, including the "Grown at Cal Poly Pomona" message and pickup notice from Section 4, rather than creating anything new. It also has the greatest impact because the rest of the report cannot be evaluated with real customer data until the storefront is live. With high impact and relatively low effort, this should be the first recommendation implemented.
+
+**Rank 2: Rebalance Channel Spend.** Recommendation 2 also falls into Quick Wins, although slightly lower than Rank 1. Its impact is high but limited by the existing \$1,500 campaign budget in Section 6, since reallocating spend can improve the return on the current investment but cannot generate new demand on its own. The effort is low because it requires no new budget, platform, or content system, only a budget shift and one checkout-page test using the existing contingency funds.
+
+**Rank 3: Build Out Loyalty + Gifting Program.** Recommendation 3 falls into Major Projects because it requires more work to implement. Its potential impact is still high because it targets Loyalty, the weakest stage in the GP1 journey map, through one of the catalog's highest-value product lines. However, it requires selecting and integrating an email marketing platform, building an automated email sequence, and planning a seasonal content calendar. It ranks third not because it is less important, but because it requires a longer implementation period than the other two recommendations.
+
+# Expected Business Impact
+
+The estimates below are intentionally conservative. The GP6 dashboard used throughout this report is based on simulated GA4 data because the Shopify prototype is still a development-stage site without live customer traffic (Section 8), and none of the recommendations in Section 9 have been implemented yet. These estimates are meant to show the direction of impact supported by the existing evidence, not serve as a revenue forecast. Each should be tested again using real data once the storefront in Recommendation 1 is live.
+
+## Conversion and Revenue
+
+The strongest finding in the data is also the most straightforward: about 85% of product page visitors do not add an item to their cart. Because so few visitors currently move forward to checkout, even a small improvement at this step could lead to a measurable increase in completed purchases. However, it would be too early to assume revenue would rise at the same rate, since checkout completion is also affected by channel quality, payment friction, and gift-order complexity. The most realistic expectation is a modest improvement in the add-to-cart rate during the first live reporting period, which can then be confirmed or adjusted using real GA4 data.
+
+## Marketing Efficiency
+
+If the channel pattern in the simulated dashboard continues with live traffic, shifting more of the existing campaign budget toward Email and Paid Search should improve the number of purchases generated per dollar spent, since both channels converted checkout starts at higher rates than Social. This would be an efficiency improvement within the existing \$1,500 campaign budget (Section 6), not a guarantee of higher total reach or revenue. Because Social currently generates a large amount of click volume, moving spend away from it could reduce total clicks even while purchase efficiency improves, which would be an expected tradeoff rather than a negative result.
+
+## Customer Retention
+
+Farm Rewards and the proposed post-purchase email sequence are designed to strengthen Loyalty, the weakest stage identified in GP1. However, the store does not yet have a baseline repeat-purchase rate because the loyalty program has not been tested with live customers. The first 60–90 days after launch should therefore be used as a measurement period to establish baseline repeat-purchase and Farm Rewards enrollment rates. Future performance can then be compared against those results.
+
+## Operational Efficiency
+
+Moving gift baskets and general orders from phone and email to self-service checkout should reduce the amount of staff time spent taking orders manually. This is especially important for gift baskets, which currently require staff to collect recipient, occasion, and fulfillment details through a back-and-forth conversation. Because actual order volume is not yet known, the exact time savings cannot be estimated in advance. The reasonable expectation is simply that manual order-taking time will decrease once customers can complete more of the process themselves.
+
+*All figures and rates referenced above (add-to-cart rate, channel conversion rates, and campaign budget) come from Sections 6 and 8 of this report and are subject to the same limitations noted there. They are based on a simulated GA4 property connected to a development-stage storefront, not live sales data.*
+
+# Conclusion
+
+At the start of this project, CPP Farm Store's biggest challenge was not a lack of demand for its products. The journey analysis in Section 3 showed that many students either do not know the store exists or, if they do, have no easy way to browse products or plan a purchase without calling the store. The work that followed, the GP2 Shopify prototype, the GP4 campaign, the GP6 dashboard, and the recommendations in this report, was designed to close that gap rather than reinvent a store that already has a strong product offering.
+
+The omnichannel strategy proposed in this report builds on what already makes CPP Farm Store unique. Locally grown produce sold through a working campus farm is something nearby competitors cannot easily replicate. The strategy makes that value easier for customers to access by adding a browsable catalog, self-service checkout, and channels that reach students where they already spend time. Together, these changes replace a process that currently relies heavily on customers calling the store.
+
+The value of this approach can continue well beyond the 90-day roadmap in Section 10. Organic Search already represents the largest share of tracked revenue at 42.5% (Section 8) without any media spend, which suggests that continued investment in content and search visibility could reduce reliance on paid acquisition over time. The Farm Rewards and post-purchase strategy recommended in Section 9 can also create a stronger customer data foundation. As more purchase history is collected, the store can make better decisions about inventory, seasonal promotions, and customer outreach, insights that are difficult to build through walk-in traffic and phone orders alone.
+
+The infrastructure created for this project is also designed to grow with the store. The same Shopify catalog and GP3 product feed used for seasonal produce and gift baskets can support new products, campus partnerships, and event-based offers without rebuilding the entire system. Likewise, the GA4 and Looker Studio measurement structure from Section 8 can continue to be used once real customer data replaces the simulated data used throughout this project.
+
+Because the prototype has not yet been tested with live customers, the recommendations in this report should be treated as starting points to validate with real data rather than guaranteed outcomes. Still, each part of the project supports the same overall direction: the journey map identified the gap, the prototype addressed it, the campaign tested the approach, and the dashboard established a way to measure performance. Across all six deliverables, the findings consistently point to the same opportunity, giving CPP Farm Store a clear and practical starting point for improving the customer experience.
+
+# Appendix
+
+Links below are pulled from the group's actual repository and publishing history rather than inferred from the folder-naming pattern. A few are flagged as unresolved; those had confirmed 404 or missing-link issues in prior GPs that were not verified fixed as of this report and should be click-tested before final submission rather than assumed working.
+
+## Core Project Links
+
+| Resource | Link |
+|---|---|
+| Shopify Prototype | <https://cpp-farm-store-dev.myshopify.com> (password: tairtu) |
+| Gift Basket Form | Included in the Shopify prototype above as a page in the storefront (Section 4, Figure 7) — not a separate standalone link. |
+| Product Feed (GP3 Merchant Center) | Internal to Google Merchant Center; not a public URL. Documented in the GP3 published report below. |
+| GA4 / Looker Studio Dashboard | <https://datastudio.google.com/s/hzW_gTjvD48> |
+| Creative Assets (GP5) | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html> |
+| GitHub Repository | <https://github.com/mjshawell/cpp-farm-store-theme> |
+| Published Report (this document, GP7) | Not yet published — add the GitHub Pages URL once this report is rendered and pushed to `docs/assignments/GP7/`. |
+
+## Prior GP1–GP6 Deliverables
+
+| Deliverable | Status | Link |
+|---|---|---|
+| GP1 – Omnichannel Journey Map | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/Group6-GP1-Omni-map.html> |
+| GP2 – Shopify Mini-Store Prototype | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP2/Seis-Leches-GP2-Mini-Store-Prototype.html> |
+| GP3 – Product Feed / Media Report | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP3/SeisLeches-GP3-Product-Media.html> |
+| GP4 – Campaign Plan | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP4/SeisLeches-GP4-Campaign-Plan.html> |
+| GP5 – Creative Brief / AI Assets | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP5/SeisLeches-GP5-Creative-Brief.html> |
+| GP6 – Analytics Dashboard Report | Confirmed live | <https://mjshawell.github.io/cpp-farm-store-theme/assignments/GP6/GP6-CPP-Farm-Store-GA4-Looker-Dashboard.html> |
+
+## Suggested Project Folder Structure
+
+- assets/screenshots
+- assets/shopify
+- assets/creative
+- assets/dashboard
+- data
+- appendix
+- presentation
